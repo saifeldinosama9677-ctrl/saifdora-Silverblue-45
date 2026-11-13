@@ -66,8 +66,7 @@ modules:
       - pciutils
       - mokutil
 
-      # Rumman media converters & processors
-      - ffmpeg
+      # Rumman media converters & processors (ffmpeg is provided by pre-installed ffmpeg-free + libavcodec-freeworld)
       - ImageMagick
       - ghostscript
       - poppler-utils
