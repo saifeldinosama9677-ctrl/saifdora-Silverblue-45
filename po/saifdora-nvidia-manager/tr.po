@@ -1,0 +1,186 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saifdora-nvidia-manager 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 14:01+0200\n"
+"PO-Revision-Date: 2026-11-13 14:05+0200\n"
+"Last-Translator: Saifdora Localization Team\n"
+"Language-Team: tr <support@saifdora.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:173
+msgid "Official Modern Branch (Latest stable NVIDIA drivers)"
+msgstr "Resmi Modern Dal (En son kararlı NVIDIA sürücüleri)"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:175
+msgid "Legacy Compatibility Branch (Pascal, Maxwell, and MX series)"
+msgstr "Eski Uyumluluk Dalı (Pascal, Maxwell ve MX serisi)"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:177
+msgid "Legacy generation cards no longer officially supported"
+msgstr "Resmi desteği sonlandırılmış eski nesil kartlar"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:224
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:240
+msgid "NVIDIA Driver Manager"
+msgstr "NVIDIA Sürücü Yöneticisi"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:269
+msgid "No NVIDIA GPU Found"
+msgstr "NVIDIA Ekran Kartı Bulunamadı"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:271
+msgid ""
+"The system did not detect any NVIDIA graphics card connected to your device.\n"
+"If your computer has hybrid graphics (Optimus), please ensure it is enabled in your BIOS/UEFI settings."
+msgstr ""
+"Sistem, cihazınıza bağlı herhangi bir NVIDIA ekran kartı algılamadı.\n"
+"Bilgisayarınızda hibrit grafik (Optimus) varsa, lütfen BIOS/UEFI ayarlarından etkinleştirildiğinden emin olun."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:282
+msgid "NVIDIA Driver is Installed and Active!"
+msgstr "NVIDIA Sürücüsü Yüklü ve Etkin!"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:285
+#, python-brace-format
+msgid ""
+"The NVIDIA driver is already installed on your system for ({card_names}).\n"
+"The system is configured and ready with full hardware acceleration and Wayland support."
+msgstr ""
+"({card_names}) için sisteminizde NVIDIA sürücüsü zaten yüklü.\n"
+"Sistem tam donanım hızlandırma ve Wayland desteğiyle yapılandırılmış ve hazırdır."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:300
+msgid "Detected Hardware Status"
+msgstr "Algılanan Donanım Durumu"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:304
+msgid "Detected GPU:"
+msgstr "Algılanan GPU:"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:310
+msgid "Software Support Status:"
+msgstr "Yazılım Destek Durumu:"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:311
+msgid ""
+"NVIDIA has officially discontinued proprietary driver support for this "
+"legacy series"
+msgstr ""
+"NVIDIA bu eski seri için tescilli sürücü desteğini resmi olarak sonlandırdı"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:316
+msgid "System Explanation for Stability"
+msgstr "Kararlılık İçin Sistem Açıklaması"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:323
+msgid ""
+"• This GPU belongs to a legacy generation (Kepler / Fermi series or earlier) which is no longer compatible with modern Linux kernels and Wayland.\n"
+"\n"
+"• <b>Saifdora Silverblue</b> automatically utilizes the built-in, stable open-source driver (<b>Nouveau / NVK</b>) to prevent display server crashes and ensure maximum stability.\n"
+"\n"
+"• <b>No action is required;</b> your system is ready and operating efficiently."
+msgstr ""
+"• Bu GPU, artık modern Linux çekirdekleri ve Wayland ile uyumlu olmayan eski bir nesle (Kepler / Fermi serisi veya öncesi) aittir.\n"
+"\n"
+"• <b>Saifdora Silverblue</b>, ekran sunucusu çökmelerini önlemek ve maksimum kararlılık sağlamak için otomatik olarak yerleşik ve kararlı açık kaynaklı sürücüyü (<b>Nouveau / NVK</b>) kullanır.\n"
+"\n"
+"• <b>Herhangi bir işlem yapmanız gerekmez;</b> sisteminiz hazır ve verimli çalışmaktadır."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:333
+msgid "Detected Graphics Card Information"
+msgstr "Algılanan Ekran Kartı Bilgileri"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:337
+msgid "Card Name:"
+msgstr "Kart Adı:"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:343
+msgid "Recommended Driver Package:"
+msgstr "Önerilen Sürücü Paketi:"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:352
+msgid "Additional Package Options"
+msgstr "Ek Paket Seçenekleri"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:356
+msgid "Include Compute Acceleration & AI Libraries (CUDA)"
+msgstr "Hesaplama Hızlandırma ve Yapay Zeka Kütüphanelerini (CUDA) Dahil Et"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:359
+#, python-brace-format
+msgid ""
+"Install {pkg} required for Blender, video editing, and deep learning "
+"workflows"
+msgstr ""
+"Blender, video düzenleme ve derin öğrenme iş akışları için gerekli {pkg} "
+"paketini kurun"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:367
+msgid "Secure Boot Protection"
+msgstr "Secure Boot Koruması"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:371
+msgid "Secure Boot is enabled on your system"
+msgstr "Sisteminizde Secure Boot etkin"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:372
+msgid ""
+"Linux requires signing the kernel module with a temporary MOK key to load "
+"during boot."
+msgstr ""
+"Linux, önyükleme sırasında çekirdek modülünün yüklenebilmesi için geçici bir"
+" MOK anahtarıyla imzalanmasını gerektirir."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:377
+msgid "Temporary MOK password (save it to enter upon reboot):"
+msgstr "Geçici MOK parolası (yeniden başlatmada girmek üzere kaydedin):"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:384
+msgid "Start Installation"
+msgstr "Kurulumu Başlat"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:387
+msgid "Install Drivers Now"
+msgstr "Sürücüleri Şimdi Kur"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:404
+msgid "Preparing installation environment..."
+msgstr "Kurulum ortamı hazırlanıyor..."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:428
+msgid "Restart Now to Apply Drivers"
+msgstr "Sürücüleri Uygulamak İçin Şimdi Yeniden Başlat"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:447
+msgid "Please enter a temporary MOK password before proceeding."
+msgstr "Lütfen devam etmeden önce geçici bir MOK parolası girin."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:521
+msgid "Requesting administrator privileges and connecting to repositories..."
+msgstr "Yönetici ayrıcalıkları isteniyor ve depolara bağlanılıyor..."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:547
+msgid "Installation completed successfully!"
+msgstr "Kurulum başarıyla tamamlandı!"
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:548
+msgid ""
+"NVIDIA driver installation completed successfully! Please restart your "
+"computer to activate."
+msgstr ""
+"NVIDIA sürücü kurulumu başarıyla tamamlandı! Etkinleştirmek için lütfen "
+"bilgisayarınızı yeniden başlatın."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:554
+msgid "An error occurred or the installation was cancelled."
+msgstr "Bir hata oluştu veya kurulum iptal edildi."
+
+#: /home/saifeldin/Projects/saifdora-Silverblue-45/files/system/usr/bin/saifdora-nvidia-manager:555
+msgid "Installation failed or authorization was cancelled by the user."
+msgstr ""
+"Kurulum başarısız oldu veya yetkilendirme kullanıcı tarafından iptal edildi."

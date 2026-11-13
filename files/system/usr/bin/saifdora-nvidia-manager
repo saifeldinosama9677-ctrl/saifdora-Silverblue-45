@@ -3,6 +3,7 @@
 """
 Saifdora Silverblue 45 - NVIDIA & CUDA Driver Manager
 GUI Application built with Python 3, GTK 4, and Libadwaita.
+Supports multi-language localization via gettext.
 """
 
 import sys
@@ -12,16 +13,41 @@ import threading
 import json
 import urllib.request
 import re
+import gettext
+import locale
 
 import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 from gi.repository import Gtk, Adw, GLib, Gio, Pango
 
-# Set RTL direction for full Arabic support
-Gtk.Widget.set_default_direction(Gtk.TextDirection.RTL)
-
 APP_ID = "org.saifdora.NvidiaManager"
+LOCALE_DOMAIN = "saifdora-nvidia-manager"
+LOCALEDIR = "/usr/share/locale"
+
+# Setup gettext localization
+gettext.bindtextdomain(LOCALE_DOMAIN, LOCALEDIR)
+gettext.textdomain(LOCALE_DOMAIN)
+try:
+    _trans = gettext.translation(LOCALE_DOMAIN, LOCALEDIR, fallback=True)
+    _ = _trans.gettext
+except Exception:
+    _ = lambda s: s
+
+# Setup text direction based on current locale
+try:
+    _curr_loc = locale.getlocale()[0] or ""
+except Exception:
+    _curr_loc = ""
+if not _curr_loc:
+    _curr_loc = os.environ.get("LC_ALL") or os.environ.get("LC_MESSAGES") or os.environ.get("LANG") or ""
+
+_is_rtl = any(_curr_loc.lower().startswith(prefix) for prefix in ["ar", "ur", "fa", "he"])
+if _is_rtl:
+    Gtk.Widget.set_default_direction(Gtk.TextDirection.RTL)
+else:
+    Gtk.Widget.set_default_direction(Gtk.TextDirection.LTR)
+
 REMOTE_DB_URL = "https://raw.githubusercontent.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45/main/data/nvidia-gpu-ids.json"
 LOCAL_DB_PATHS = [
     "/usr/share/saifdora-nvidia/gpu-ids.json",
@@ -48,14 +74,11 @@ def detect_nvidia_gpus():
             match = re.search(r'\[10de:([0-9a-fA-F]{4})\]', line)
             if match:
                 dev_id = match.group(1).lower()
-                # Extract human-readable device name from lspci line
-                # Format typically: 01:00.0 VGA compatible controller [0300]: NVIDIA Corporation Device [Model Name] [10de:XXXX]
                 raw_name = line
                 if ":" in line:
                     parts = line.split(":", 2)
                     if len(parts) >= 3:
                         raw_name = parts[2].strip()
-                # Clean up revision tag
                 raw_name = re.sub(r'\(rev\s+[0-9a-fA-F]+\)', '', raw_name).strip()
                 gpus.append({
                     "slot": line.split()[0] if line.split() else "",
@@ -97,7 +120,6 @@ def get_secure_boot_state():
         )
         if "SecureBoot enabled" in res.stdout:
             sb_enabled = True
-            # Check if akmods key is already enrolled
             key_path = "/etc/pki/akmods/certs/public_key.der"
             if os.path.exists(key_path):
                 test_res = subprocess.run(
@@ -145,6 +167,17 @@ def load_database():
     return {"categories": {}}
 
 
+def get_branch_description(branch_key):
+    """Returns localized branch description."""
+    if branch_key == "modern":
+        return _("Official Modern Branch (Latest stable NVIDIA drivers)")
+    elif branch_key == "legacy_580xx":
+        return _("Legacy Compatibility Branch (Pascal, Maxwell, and MX series)")
+    elif branch_key == "unsupported":
+        return _("Legacy generation cards no longer officially supported")
+    return ""
+
+
 def classify_gpu(gpu, db):
     """Classifies a GPU into 'modern', 'legacy_580xx', or 'unsupported'."""
     dev_id = gpu["device_id"].lower()
@@ -161,29 +194,24 @@ def classify_gpu(gpu, db):
     try:
         val = int(dev_id, 16)
         if val >= 0x1E00:
-            # Turing (0x1E00+) -> Ampere -> Ada -> Blackwell
             cat_data = categories.get("modern", {
                 "branch": "akmod-nvidia",
                 "driver_package": "akmod-nvidia",
                 "userspace_package": "xorg-x11-drv-nvidia",
                 "cuda_package": "xorg-x11-drv-nvidia-cuda",
-                "description_ar": "الفرع الرسمي الحديث (أحدث تعريفات NVIDIA المستقرة)"
             })
             return "modern", gpu["raw_name"], cat_data
         elif val >= 0x1340:
-            # Maxwell (0x1340+) & Pascal (0x1B00+)
             cat_data = categories.get("legacy_580xx", {
                 "branch": "akmod-nvidia-580xx",
                 "driver_package": "akmod-nvidia-580xx",
                 "userspace_package": "xorg-x11-drv-nvidia-580xx",
                 "cuda_package": "xorg-x11-drv-nvidia-580xx-cuda",
-                "description_ar": "فرع التوافق السابق (كروت Pascal و Maxwell و MX)"
             })
             return "legacy_580xx", gpu["raw_name"], cat_data
         else:
             cat_data = categories.get("unsupported", {
                 "branch": None,
-                "description_ar": "بطاقات الجيل القديم المتوقفة عن الدعم الرسمي"
             })
             return "unsupported", gpu["raw_name"], cat_data
     except Exception:
@@ -193,7 +221,7 @@ def classify_gpu(gpu, db):
 class NvidiaManagerWindow(Adw.ApplicationWindow):
     def __init__(self, app, gpus, db):
         super().__init__(application=app)
-        self.set_title("مدير تعريفات نفيديا")
+        self.set_title(_("NVIDIA Driver Manager"))
         self.set_default_size(720, 680)
 
         self.gpus = gpus
@@ -203,14 +231,13 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
         self.build_ui()
 
     def build_ui(self):
-        # Main box
         main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.set_content(main_box)
 
         # HeaderBar
         header = Adw.HeaderBar()
         title_widget = Adw.WindowTitle(
-            title="مدير تعريفات نفيديا",
+            title=_("NVIDIA Driver Manager"),
             subtitle="Saifdora Silverblue 45"
         )
         header.set_title_widget(title_widget)
@@ -239,10 +266,10 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
         if not self.gpus:
             status = Adw.StatusPage()
             status.set_icon_name("video-display-symbolic")
-            status.set_title("لم يتم العثور على بطاقة NVIDIA")
+            status.set_title(_("No NVIDIA GPU Found"))
             status.set_description(
-                "لم يعثر النظام على أي بطاقة رسوميات تابعة لشركة NVIDIA متصلة بالجهاز.\n"
-                "إذا كان جهازك يحتوي على بطاقة هجينة (Optimus)، تأكد من تفعيلها في إعدادات اللوحة الأم (BIOS/UEFI)."
+                _("The system did not detect any NVIDIA graphics card connected to your device.\n"
+                  "If your computer has hybrid graphics (Optimus), please ensure it is enabled in your BIOS/UEFI settings.")
             )
             page.add(Adw.PreferencesGroup())
             clamp.set_child(status)
@@ -252,11 +279,13 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
         if is_driver_installed():
             status = Adw.StatusPage()
             status.set_icon_name("emblem-ok-symbolic")
-            status.set_title("تعريف NVIDIA مثبت ونشط!")
-            detected_names = "، ".join([g["raw_name"] for g in self.gpus])
+            status.set_title(_("NVIDIA Driver is Installed and Active!"))
+            detected_names = ", ".join([g["raw_name"] for g in self.gpus])
             status.set_description(
-                f"تم تثبيت تعريف NVIDIA مسبقاً على نظامك للبطاقة ({detected_names}).\n"
-                "النظام مهيأ وجاهز للعمل مع كامل تسريع العتاد ودعم Wayland."
+                _("The NVIDIA driver is already installed on your system for ({card_names}).\n"
+                  "The system is configured and ready with full hardware acceleration and Wayland support.").format(
+                      card_names=detected_names
+                  )
             )
             clamp.set_child(status)
             return
@@ -268,32 +297,32 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
         # Scenario 3: Unsupported GPU
         if self.category == "unsupported":
             group = Adw.PreferencesGroup()
-            group.set_title("حالة العتاد المكتشف")
+            group.set_title(_("Detected Hardware Status"))
             page.add(group)
 
             row_card = Adw.ActionRow()
-            row_card.set_title("البطاقة المكتشفة:")
+            row_card.set_title(_("Detected GPU:"))
             row_card.set_subtitle(f"{self.card_name} [10de:{primary_gpu['device_id']}]")
             row_card.set_icon_name("dialog-warning-symbolic")
             group.add(row_card)
 
             row_status = Adw.ActionRow()
-            row_status.set_title("حالة الدعم البرمجي:")
-            row_status.set_subtitle("أوقفت شركة NVIDIA الدعم الرسمي للتعريفات المغلقة لهذه السلسلة القديمة")
+            row_status.set_title(_("Software Support Status:"))
+            row_status.set_subtitle(_("NVIDIA has officially discontinued proprietary driver support for this legacy series"))
             row_status.set_icon_name("emblem-important-symbolic")
             group.add(row_status)
 
             info_group = Adw.PreferencesGroup()
-            info_group.set_title("توضيح النظام لضمان الاستقرار")
+            info_group.set_title(_("System Explanation for Stability"))
             page.add(info_group)
 
             label_info = Gtk.Label()
             label_info.set_wrap(True)
             label_info.set_xalign(0.0)
             label_info.set_markup(
-                "• هذه البطاقة تتبع الجيل القديم (سلسلة Kepler / Fermi أو ما قبلها) والتي لم تعد متوافقة مع إصدارات النواة الحديثة وواجهة Wayland.\n\n"
-                "• يعمل نظام <b>Saifdora Silverblue</b> تلقائياً باستخدام المشغل المفتوح المدمج والمستقر (<b>Nouveau / NVK</b>) لتفادي انهيار الواجهة الرسومية وضمان أعلى درجات الاستقرار.\n\n"
-                "• <b>لا يلزمك اتخاذ أي إجراء؛</b> نظامك جاهز ويعمل بكفاءة."
+                _("• This GPU belongs to a legacy generation (Kepler / Fermi series or earlier) which is no longer compatible with modern Linux kernels and Wayland.\n\n"
+                  "• <b>Saifdora Silverblue</b> automatically utilizes the built-in, stable open-source driver (<b>Nouveau / NVK</b>) to prevent display server crashes and ensure maximum stability.\n\n"
+                  "• <b>No action is required;</b> your system is ready and operating efficiently.")
             )
             info_group.add(label_info)
             return
@@ -301,59 +330,61 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
         # Scenario 4: Modern or Legacy 580xx GPU -> Supported for installation
         # 1. Hardware Info Group
         hw_group = Adw.PreferencesGroup()
-        hw_group.set_title("معلومات البطاقة المكتشفة")
+        hw_group.set_title(_("Detected Graphics Card Information"))
         page.add(hw_group)
 
         row_card = Adw.ActionRow()
-        row_card.set_title("اسم البطاقة:")
+        row_card.set_title(_("Card Name:"))
         row_card.set_subtitle(f"{self.card_name} [PCI: {primary_gpu['device_id']}]")
         row_card.set_icon_name("video-display-symbolic")
         hw_group.add(row_card)
 
         row_branch = Adw.ActionRow()
-        row_branch.set_title("حزمة التعريف الموصى بها:")
+        row_branch.set_title(_("Recommended Driver Package:"))
         branch_name = self.cat_info.get("driver_package", "akmod-nvidia")
-        desc = self.cat_info.get("description_ar", "")
+        desc = get_branch_description(self.category)
         row_branch.set_subtitle(f"{branch_name} ({desc})")
         row_branch.set_icon_name("package-x-generic-symbolic")
         hw_group.add(row_branch)
 
         # 2. Options Group
         opt_group = Adw.PreferencesGroup()
-        opt_group.set_title("خيارات الحزم الإضافية")
+        opt_group.set_title(_("Additional Package Options"))
         page.add(opt_group)
 
         self.cuda_switch = Adw.SwitchRow()
-        self.cuda_switch.set_title("تضمين مكتبات تسريع الحوسبة والذكاء الاصطناعي (CUDA)")
+        self.cuda_switch.set_title(_("Include Compute Acceleration & AI Libraries (CUDA)"))
         cuda_pkg = self.cat_info.get("cuda_package", "xorg-x11-drv-nvidia-cuda")
-        self.cuda_switch.set_subtitle(f"تثبيت حزمة {cuda_pkg} المطلوبة لبرامج Blender والمونتاج والتعلم العميق")
+        self.cuda_switch.set_subtitle(
+            _("Install {pkg} required for Blender, video editing, and deep learning workflows").format(pkg=cuda_pkg)
+        )
         self.cuda_switch.set_active(True)
         opt_group.add(self.cuda_switch)
 
         # 3. Secure Boot Group (if needed)
         if self.sb_enabled:
             sb_group = Adw.PreferencesGroup()
-            sb_group.set_title("حماية الإقلاع الآمن (Secure Boot)")
+            sb_group.set_title(_("Secure Boot Protection"))
             page.add(sb_group)
 
             sb_notice = Adw.ActionRow()
-            sb_notice.set_title("الإقلاع الآمن مفعّل في نظامك")
-            sb_notice.set_subtitle("يتطلب نظام لينكس توقيع تعريف النواة برقم سري مؤقت عبر MOK ليعمل أثناء الإقلاع.")
+            sb_notice.set_title(_("Secure Boot is enabled on your system"))
+            sb_notice.set_subtitle(_("Linux requires signing the kernel module with a temporary MOK key to load during boot."))
             sb_notice.set_icon_name("channel-secure-symbolic")
             sb_group.add(sb_notice)
 
             self.mok_password_row = Adw.PasswordEntryRow()
-            self.mok_password_row.set_title("كلمة مرور مؤقتة لـ MOK (احفظها لإدخالها عند إعادة التشغيل):")
+            self.mok_password_row.set_title(_("Temporary MOK password (save it to enter upon reboot):"))
             sb_group.add(self.mok_password_row)
         else:
             self.mok_password_row = None
 
         # 4. Installation Action Group
         action_group = Adw.PreferencesGroup()
-        action_group.set_title("بدء التثبيت")
+        action_group.set_title(_("Start Installation"))
         page.add(action_group)
 
-        self.btn_install = Gtk.Button(label="تثبيت التعريفات الآن")
+        self.btn_install = Gtk.Button(label=_("Install Drivers Now"))
         self.btn_install.add_css_class("suggested-action")
         self.btn_install.add_css_class("pill")
         self.btn_install.set_size_request(-1, 50)
@@ -370,7 +401,7 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
         self.progress_bar.set_pulse_step(0.1)
         self.progress_box.append(self.progress_bar)
 
-        self.lbl_status = Gtk.Label(label="جاري تجهيز بيئة التثبيت...")
+        self.lbl_status = Gtk.Label(label=_("Preparing installation environment..."))
         self.lbl_status.set_xalign(0.0)
         self.lbl_status.add_css_class("dim-label")
         self.progress_box.append(self.lbl_status)
@@ -394,7 +425,7 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
         log_scrolled.set_child(self.text_view)
 
         # Post-install Reboot Button (initially hidden)
-        self.btn_reboot = Gtk.Button(label="إعادة التشغيل الآن لتطبيق التعريف")
+        self.btn_reboot = Gtk.Button(label=_("Restart Now to Apply Drivers"))
         self.btn_reboot.add_css_class("destructive-action")
         self.btn_reboot.add_css_class("pill")
         self.btn_reboot.set_size_request(-1, 50)
@@ -405,17 +436,15 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
     def append_log(self, text):
         end_iter = self.text_buffer.get_end_iter()
         self.text_buffer.insert(end_iter, text)
-        # Auto-scroll to end
         mark = self.text_buffer.create_mark(None, self.text_buffer.get_end_iter(), False)
         self.text_view.scroll_to_mark(mark, 0.05, True, 0.0, 1.0)
 
     def on_install_clicked(self, button):
-        # Validate MOK password if Secure Boot is active
         mok_pass = ""
         if self.mok_password_row:
             mok_pass = self.mok_password_row.get_text().strip()
             if not mok_pass:
-                self.banner.set_title("يرجى إدخال كلمة مرور مؤقتة لـ MOK قبل المتابعة.")
+                self.banner.set_title(_("Please enter a temporary MOK password before proceeding."))
                 self.banner.set_revealed(True)
                 self.mok_password_row.grab_focus()
                 return
@@ -427,11 +456,8 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
             self.mok_password_row.set_sensitive(False)
 
         self.progress_box.set_visible(True)
-
-        # Start pulsing progress bar
         self.pulse_timer = GLib.timeout_add(150, self.pulse_progress)
 
-        # Build list of packages to install
         packages = []
         driver_pkg = self.cat_info.get("driver_package", "akmod-nvidia")
         userspace_pkg = self.cat_info.get("userspace_package", "xorg-x11-drv-nvidia")
@@ -441,7 +467,6 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
             cuda_pkg = self.cat_info.get("cuda_package", "xorg-x11-drv-nvidia-cuda")
             packages.append(cuda_pkg)
 
-        # Run installation in background thread
         thread = threading.Thread(
             target=self.run_installation,
             args=(packages, mok_pass),
@@ -458,43 +483,42 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
     def run_installation(self, packages, mok_pass):
         pkg_str = " ".join(packages)
 
-        # Construct bash commands to run with pkexec
         script_commands = [
             "set -euo pipefail",
             "echo '=================================================='",
-            "echo ' بدء عملية تثبيت وتجهيز تعريفات NVIDIA لنظام Saifdora '",
+            "echo ' Starting NVIDIA Driver Setup for Saifdora '",
             "echo '=================================================='",
         ]
 
         if self.sb_enabled and mok_pass:
             script_commands.extend([
-                "echo '[1/3] فحص وإعداد مفتاح توقيع النواة لـ Secure Boot...'",
+                "echo '[1/3] Checking and preparing Secure Boot kernel signing key...'",
                 "if [ ! -f /etc/pki/akmods/certs/public_key.der ]; then",
-                "    echo '--> توليد شهادة التوقيع الرقمي kmodgenca...'",
+                "    echo '--> Generating MOK signing key pair via kmodgenca...'",
                 "    kmodgenca -a || true",
                 "fi",
                 "if [ -f /etc/pki/akmods/certs/public_key.der ]; then",
-                "    echo '--> تسجيل المفتاح في قائمة MOK باللوحة الأم...'",
+                "    echo '--> Enrolling key in motherboard MOK list...'",
                 f"    printf '%s\\n%s\\n' '{mok_pass}' '{mok_pass}' | mokutil --import /etc/pki/akmods/certs/public_key.der || true",
-                "    echo '--> تم تجهيز طلب تسجيل المفتاح بنجاح.'",
+                "    echo '--> MOK enrollment request prepared successfully.'",
                 "fi",
-                "echo '[2/3] بدء تنزيل وتثبيت حزم التعريف عبر rpm-ostree...'"
+                "echo '[2/3] Downloading and layering driver packages via rpm-ostree...'"
             ])
         else:
-            script_commands.append("echo '[1/2] بدء تنزيل وتثبيت حزم التعريف عبر rpm-ostree...'")
+            script_commands.append("echo '[1/2] Downloading and layering driver packages via rpm-ostree...'")
 
         script_commands.extend([
-            f"echo 'الحزم المحددة: {pkg_str}'",
+            f"echo 'Target packages: {pkg_str}'",
             f"rpm-ostree install -y {pkg_str}",
             "echo '=================================================='",
-            "echo ' اكتملت عملية التثبيت وتحديث صورة النظام بنجاح! '",
+            "echo ' Driver installation and system layering completed! '",
             "echo '=================================================='"
         ])
 
         full_script = "\n".join(script_commands)
 
         try:
-            GLib.idle_add(self.lbl_status.set_text, "جاري طلب صلاحيات المدير والاتصال بالمستودعات...")
+            GLib.idle_add(self.lbl_status.set_text, _("Requesting administrator privileges and connecting to repositories..."))
             proc = subprocess.Popen(
                 ["pkexec", "/usr/bin/bash", "-c", full_script],
                 stdout=subprocess.PIPE,
@@ -510,26 +534,25 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
             GLib.idle_add(self.on_install_finished, rc)
 
         except Exception as e:
-            GLib.idle_add(self.append_log, f"\n[خطأ]: تعذر تنفيذ أمر التثبيت: {e}\n")
+            GLib.idle_add(self.append_log, f"\n[Error]: {e}\n")
             GLib.idle_add(self.on_install_finished, 1)
 
     def on_install_finished(self, returncode):
-        # Stop pulsing
         if hasattr(self, "pulse_timer") and self.pulse_timer:
             GLib.source_remove(self.pulse_timer)
             self.pulse_timer = None
 
         if returncode == 0:
             self.progress_bar.set_fraction(1.0)
-            self.lbl_status.set_text("تم اكتمال التثبيت بنجاح تام!")
-            self.banner.set_title("اكتمل تثبيت تعريف NVIDIA بنجاح! يرجى إعادة التشغيل لتفعيل التعريف.")
+            self.lbl_status.set_text(_("Installation completed successfully!"))
+            self.banner.set_title(_("NVIDIA driver installation completed successfully! Please restart your computer to activate."))
             self.banner.set_revealed(True)
             self.btn_install.set_visible(False)
             self.btn_reboot.set_visible(True)
         else:
             self.progress_bar.set_fraction(0.0)
-            self.lbl_status.set_text("حدث خطأ أو تم إلغاء عملية التثبيت.")
-            self.banner.set_title("فشل التثبيت أو تم إلغاء الإذن من قبل المستخدم.")
+            self.lbl_status.set_text(_("An error occurred or the installation was cancelled."))
+            self.banner.set_title(_("Installation failed or authorization was cancelled by the user."))
             self.banner.set_revealed(True)
             self.btn_install.set_sensitive(True)
             self.cuda_switch.set_sensitive(True)
@@ -540,7 +563,7 @@ class NvidiaManagerWindow(Adw.ApplicationWindow):
         try:
             subprocess.run(["systemctl", "reboot"], check=False)
         except Exception as e:
-            self.append_log(f"\n[خطأ]: تعذر تنفيذ إعادة التشغيل: {e}\n")
+            self.append_log(f"\n[Error]: {e}\n")
 
 
 class NvidiaManagerApp(Adw.Application):
@@ -551,7 +574,6 @@ class NvidiaManagerApp(Adw.Application):
         )
 
     def do_activate(self):
-        # Check autostart silent exit
         is_autostart = "--autostart" in sys.argv
         gpus = detect_nvidia_gpus()
 
@@ -565,7 +587,6 @@ class NvidiaManagerApp(Adw.Application):
             if all_unsupported:
                 sys.exit(0)
 
-        # Open UI
         db = load_database()
         win = self.props.active_window
         if not win:
@@ -574,12 +595,10 @@ class NvidiaManagerApp(Adw.Application):
 
 
 def main():
-    # If autostart mode, quick check before initializing full GTK
     if "--autostart" in sys.argv:
         gpus = detect_nvidia_gpus()
         if not gpus or is_driver_installed():
             sys.exit(0)
-        # If all GPUs are unsupported, silently exit
         db = load_database()
         if all(classify_gpu(g, db)[0] == "unsupported" for g in gpus):
             sys.exit(0)

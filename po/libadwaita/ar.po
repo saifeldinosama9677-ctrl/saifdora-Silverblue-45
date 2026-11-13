@@ -1,0 +1,638 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libadwaita 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 14:00+0200\n"
+"PO-Revision-Date: 2026-11-13 14:00+0200\n"
+"Last-Translator: Saifdora Localization Team\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: src/adw-about-dialog.c:219 src/adw-about-window.c:210
+msgid "GNU General Public License, version 2 or later"
+msgstr "رخصة جنو العمومية، الإصدار 2 أو أي إصدار أحدث"
+
+#: src/adw-about-dialog.c:221 src/adw-about-window.c:212
+msgid "GNU General Public License, version 3 or later"
+msgstr "رخصة جنو العمومية، الإصدار 3 أو أي إصدار أحدث"
+
+#: src/adw-about-dialog.c:223 src/adw-about-window.c:214
+msgid "GNU Lesser General Public License, version 2.1 or later"
+msgstr "رخصة جنو العمومية الصغرى، الإصدار 2.1 أو أي إصدار أحدث"
+
+#: src/adw-about-dialog.c:225 src/adw-about-window.c:216
+msgid "GNU Lesser General Public License, version 3 or later"
+msgstr "رخصة جنو العمومية الصغرى، الإصدار 3 أو أي إصدار أحدث"
+
+#: src/adw-about-dialog.c:227 src/adw-about-window.c:218
+msgid "BSD 2-Clause License"
+msgstr "رخصة بي إس دي ذات البندين"
+
+#: src/adw-about-dialog.c:229 src/adw-about-window.c:220
+msgid "The MIT License (MIT)"
+msgstr "رخصة إم آي تي (MIT)"
+
+#: src/adw-about-dialog.c:231 src/adw-about-window.c:222
+msgid "Artistic License 2.0"
+msgstr "الرخصة الفنية 2.0"
+
+#: src/adw-about-dialog.c:233 src/adw-about-window.c:224
+msgid "GNU General Public License, version 2 only"
+msgstr "رخصة جنو العمومية، الإصدار 2 فقط"
+
+#: src/adw-about-dialog.c:235 src/adw-about-window.c:226
+msgid "GNU General Public License, version 3 only"
+msgstr "رخصة جنو العمومية، الإصدار 3 فقط"
+
+#: src/adw-about-dialog.c:237 src/adw-about-window.c:228
+msgid "GNU Lesser General Public License, version 2.1 only"
+msgstr "رخصة جنو العمومية الصغرى، الإصدار 2.1 فقط"
+
+#: src/adw-about-dialog.c:239 src/adw-about-window.c:230
+msgid "GNU Lesser General Public License, version 3 only"
+msgstr "رخصة جنو العمومية الصغرى، الإصدار 3 فقط"
+
+#: src/adw-about-dialog.c:241 src/adw-about-window.c:232
+msgid "GNU Affero General Public License, version 3 or later"
+msgstr "رخصة جنو أفيرو العمومية، الإصدار 3 أو أي إصدار أحدث"
+
+#: src/adw-about-dialog.c:243 src/adw-about-window.c:234
+msgid "GNU Affero General Public License, version 3 only"
+msgstr "رخصة جنو أفيرو العمومية، الإصدار 3 فقط"
+
+#: src/adw-about-dialog.c:245 src/adw-about-window.c:236
+msgid "BSD 3-Clause License"
+msgstr "رخصة بي إس دي ذات الثلاثة بنود"
+
+#: src/adw-about-dialog.c:247 src/adw-about-window.c:238
+msgid "Apache License, Version 2.0"
+msgstr "رخصة أباتشي، الإصدار 2.0"
+
+#: src/adw-about-dialog.c:249 src/adw-about-window.c:240
+msgid "Mozilla Public License 2.0"
+msgstr "رخصة موزيلا العمومية 2.0"
+
+#: src/adw-about-dialog.c:251 src/adw-about-window.c:242
+msgid "BSD Zero-Clause License"
+msgstr "رخصة بي إس دي الخالية من البنود"
+
+#: src/adw-about-dialog.c:611 src/adw-about-window.c:601
+msgid "Code by"
+msgstr "تطوير وبرمجة"
+
+#: src/adw-about-dialog.c:613 src/adw-about-window.c:603
+msgid "Design by"
+msgstr "تصميم"
+
+#: src/adw-about-dialog.c:615 src/adw-about-window.c:605
+msgid "Artwork by"
+msgstr "الرسوم الفنية"
+
+#: src/adw-about-dialog.c:617 src/adw-about-window.c:607
+msgid "Documentation by"
+msgstr "التوثيق"
+
+#: src/adw-about-dialog.c:619 src/adw-about-window.c:609
+msgid "Translated by"
+msgstr "الترجمة"
+
+#: src/adw-about-dialog.c:648 src/adw-about-window.c:638
+#, c-format
+msgid ""
+"This application comes with absolutely no warranty. See the <a "
+"href=\"%s\">%s</a> for details."
+msgstr ""
+"يأتي هذا التطبيق دون أي ضمان على الإطلاق. انظر <a href=\"%s\">%s</a> للاطلاع"
+" على التفاصيل."
+
+#: src/adw-about-dialog.c:732 src/adw-about-window.c:722
+msgid "This Application"
+msgstr "هذا التطبيق"
+
+#: src/adw-about-dialog.c:1037 src/adw-about-window.c:1027
+#, c-format
+msgid "Version %s"
+msgstr "الإصدار %s"
+
+#: src/adw-about-dialog.c:1061 src/adw-about-window.c:1051
+#, c-format
+msgid "Unable to parse release notes: %s at line %d, char %d"
+msgstr "تعذّر تحليل ملاحظات الإصدار: %s في السطر %d، المحرف %d"
+
+#: src/adw-about-dialog.c:1071 src/adw-about-window.c:1061
+msgid "Unable to parse release notes:"
+msgstr "تعذّر تحليل ملاحظات الإصدار:"
+
+#: src/adw-about-dialog.c:1080 src/adw-about-window.c:1070
+#, c-format
+msgid "Line: %d, character: %d"
+msgstr "السطر: %d، المحرف: %d"
+
+#: src/adw-about-dialog.c:1269
+#, c-format
+msgid "Other Apps by %s"
+msgstr "تطبيقات أخرى من %s"
+
+#: src/adw-about-dialog.c:1277
+msgid "Other Apps"
+msgstr "تطبيقات أخرى"
+
+#: src/adw-about-dialog.c:1518 src/adw-about-window.c:1334
+msgid "Copied to clipboard"
+msgstr "نُسخ إلى الحافظة"
+
+#: src/adw-about-dialog.c:1546 src/adw-about-window.c:1362
+msgid "Unable to save debugging information"
+msgstr "تعذّر حفظ معلومات استكشاف الأخطاء"
+
+#: src/adw-about-dialog.c:1552 src/adw-about-window.c:1370
+#: src/adw-sheet-controls.c:128
+msgid "Close"
+msgstr "إغلاق"
+
+#: src/adw-about-dialog.c:1570 src/adw-about-window.c:1387
+msgid "Save debugging information"
+msgstr "حفظ معلومات استكشاف الأخطاء"
+
+#: src/adw-about-dialog.ui:6 src/adw-about-window.ui:6
+msgid "About"
+msgstr "عن"
+
+#: src/adw-about-dialog.ui:102 src/adw-about-window.ui:105
+msgid "What’s _New"
+msgstr "_ما الجديد"
+
+#: src/adw-about-dialog.ui:119 src/adw-about-window.ui:122
+msgid "_Details"
+msgstr "الت_فاصيل"
+
+#: src/adw-about-dialog.ui:136 src/adw-about-dialog.ui:350
+#: src/adw-about-window.ui:139 src/adw-about-window.ui:348
+msgid "_Website"
+msgstr "الموقع الإلكترو_ني"
+
+#: src/adw-about-dialog.ui:152 src/adw-about-window.ui:155
+msgid "_Support Questions"
+msgstr "أسئلة ال_دعم"
+
+#: src/adw-about-dialog.ui:162 src/adw-about-window.ui:165
+msgid "_Report an Issue"
+msgstr "الإ_بلاغ عن مشكلة"
+
+#: src/adw-about-dialog.ui:172 src/adw-about-window.ui:175
+msgid "_Troubleshooting"
+msgstr "استكشاف الأ_خطاء وإصلاحها"
+
+#: src/adw-about-dialog.ui:193 src/adw-about-window.ui:196
+msgid "_Credits"
+msgstr "_شكر وتقدير"
+
+#: src/adw-about-dialog.ui:210 src/adw-about-window.ui:213
+msgid "_Legal"
+msgstr "معلومات _قانونية"
+
+#: src/adw-about-dialog.ui:228 src/adw-about-window.ui:231
+msgid "_Acknowledgements"
+msgstr "إ_شادات"
+
+#: src/adw-about-dialog.ui:264 src/adw-about-window.ui:262
+msgid "What’s New"
+msgstr "ما الجديد"
+
+#: src/adw-about-dialog.ui:311 src/adw-about-window.ui:309
+msgid "Details"
+msgstr "التفاصيل"
+
+#: src/adw-about-dialog.ui:371 src/adw-about-window.ui:369
+msgid "Troubleshooting"
+msgstr "استكشاف الأخطاء وإصلاحها"
+
+#: src/adw-about-dialog.ui:395 src/adw-about-window.ui:393
+msgid ""
+"To assist in troubleshooting, you can view your debugging information. "
+"Providing this information to the application developers can help diagnose "
+"any problems you encounter when you report an issue."
+msgstr ""
+"للمساعدة في استكشاف الأخطاء وإصلاحها، يمكنك معاينة معلومات التصحيح الخاصة "
+"بك. تزويد مطوري التطبيق بهذه المعلومات يساعد في تشخيص أي مشاكل تواجهها عند "
+"الإبلاغ عن مشكلة."
+
+#: src/adw-about-dialog.ui:407 src/adw-about-window.ui:405
+msgid "_Debugging Information"
+msgstr "معلومات الت_صحيح"
+
+#: src/adw-about-dialog.ui:435 src/adw-about-window.ui:433
+msgid "Debugging Information"
+msgstr "معلومات التصحيح"
+
+#: src/adw-about-dialog.ui:484 src/adw-about-window.ui:482
+msgid "_Copy Text"
+msgstr "_نسخ النص"
+
+#: src/adw-about-dialog.ui:493 src/adw-about-window.ui:491
+msgid "_Save As…"
+msgstr "ح_فظ باسم…"
+
+#: src/adw-about-dialog.ui:507 src/adw-about-window.ui:505
+msgid "Credits"
+msgstr "شكر وتقدير"
+
+#: src/adw-about-dialog.ui:539 src/adw-about-window.ui:537
+msgid "Legal"
+msgstr "معلومات قانونية"
+
+#: src/adw-about-dialog.ui:573 src/adw-about-window.ui:571
+msgid "Acknowledgements"
+msgstr "إشادات"
+
+#: src/adw-adaptive-preview.c:392
+msgid "Screenshot copied to clipboard"
+msgstr "نُسخت لقطة الشاشة إلى الحافظة"
+
+#: src/adw-adaptive-preview.ui:31 src/adw-inspector-page.c:68
+#: src/adw-inspector-page.ui:104
+msgid "Adaptive Preview"
+msgstr "معاينة متكيفة"
+
+#: src/adw-adaptive-preview.ui:42
+msgid "Display"
+msgstr "العرض"
+
+#: src/adw-adaptive-preview.ui:46
+msgid "Device"
+msgstr "الجهاز"
+
+#: src/adw-adaptive-preview.ui:53
+msgid "Width"
+msgstr "العرض"
+
+#: src/adw-adaptive-preview.ui:68
+msgid "Height"
+msgstr "الارتفاع"
+
+#: src/adw-adaptive-preview.ui:83
+msgid "Rotate"
+msgstr "تدوير"
+
+#: src/adw-adaptive-preview.ui:88
+msgid "Rotate Left"
+msgstr "تدوير لليسار"
+
+#: src/adw-adaptive-preview.ui:100
+msgid "Rotate Right"
+msgstr "تدوير لليمين"
+
+#: src/adw-adaptive-preview.ui:116
+msgid "Shell"
+msgstr "الواجهة"
+
+#: src/adw-adaptive-preview.ui:120
+msgid "Preset"
+msgstr "إعداد مسبق"
+
+#: src/adw-adaptive-preview.ui:127
+msgid "Top Bar"
+msgstr "الشريط العلوي"
+
+#: src/adw-adaptive-preview.ui:142
+msgid "Bottom Bar"
+msgstr "الشريط السفلي"
+
+#: src/adw-adaptive-preview.ui:158
+msgid "Window Controls"
+msgstr "أزرار التحكم بالنافذة"
+
+#: src/adw-adaptive-preview.ui:167
+msgid "View"
+msgstr "عرض"
+
+#: src/adw-adaptive-preview.ui:172
+msgid "Scale to Fit"
+msgstr "ملاءمة القياس"
+
+#: src/adw-adaptive-preview.ui:182
+msgid "Highlight Bezel"
+msgstr "إبراز الإطار"
+
+#: src/adw-adaptive-preview.ui:212
+msgid "Toggle Sidebar"
+msgstr "تبديل الشريط الجانبي"
+
+#: src/adw-adaptive-preview.ui:223
+msgid "Exit"
+msgstr "خروج"
+
+#: src/adw-adaptive-preview.ui:234
+msgid "Take Screenshot"
+msgstr "أخذ لقطة شاشة"
+
+#: src/adw-adaptive-preview-presets-private.h:27
+msgctxt "Shell preset"
+msgid "Desktop Shell"
+msgstr "واجهة سطح المكتب"
+
+#: src/adw-adaptive-preview-presets-private.h:31
+msgctxt "Shell preset"
+msgid "Mobile Shell"
+msgstr "واجهة الهاتف المحمول"
+
+#: src/adw-adaptive-preview-presets-private.h:36
+msgctxt "Shell preset"
+msgid "Fullscreen"
+msgstr "ملء الشاشة"
+
+#: src/adw-adaptive-preview-presets-private.h:40
+msgctxt "Shell preset"
+msgid "Custom"
+msgstr "مخصص"
+
+#: src/adw-adaptive-preview-presets-private.h:105
+msgctxt "Device preset"
+msgid "Generic Phone"
+msgstr "هاتف عام"
+
+#: src/adw-adaptive-preview-presets-private.h:117
+msgctxt "Device preset"
+msgid "Generic Tablet"
+msgstr "حاسوب لوحي عام"
+
+#: src/adw-adaptive-preview-presets-private.h:147
+msgctxt "Device preset"
+msgid "Custom"
+msgstr "مخصص"
+
+#: src/adw-avatar.c:161
+#, c-format
+msgid "Avatar of %s"
+msgstr "الصورة الرمزية لـ %s"
+
+#: src/adw-back-button.c:316 src/adw-back-button.c:417
+#: src/adw-back-button.c:525
+msgid "Back"
+msgstr "رجوع"
+
+#: src/adw-combo-row.ui:52 src/adw-preferences-dialog.ui:89
+#: src/adw-preferences-window.ui:100
+msgid "Search"
+msgstr "بحث"
+
+#: src/adw-entry-row.ui:95
+msgid "Apply"
+msgstr "تطبيق"
+
+#: src/adw-indicator-bin.c:80
+msgctxt "view switcher button badge"
+msgid "Attention requested."
+msgstr "مطلوب الانتباه."
+
+#: src/adw-indicator-bin.c:87
+msgctxt "view switcher button badge"
+msgid "Has a badge: more than 999."
+msgstr "يحمل شارة: أكثر من 999."
+
+#: src/adw-indicator-bin.c:92
+#, c-format
+msgctxt "view switcher button badge"
+msgid "Has a badge: %u."
+msgstr "يحمل شارة: %u."
+
+#: src/adw-inspector-page.c:135
+msgid "No Preference"
+msgstr "بدون تفضيل"
+
+#: src/adw-inspector-page.c:139
+msgid "Prefer Dark"
+msgstr "تفضيل النمط الداكن"
+
+#: src/adw-inspector-page.c:143
+msgid "Prefer Light"
+msgstr "تفضيل النمط الفاتح"
+
+#: src/adw-inspector-page.c:157
+msgid "Blue"
+msgstr "أزرق"
+
+#: src/adw-inspector-page.c:160
+msgid "Teal"
+msgstr "أزرق مخضر"
+
+#: src/adw-inspector-page.c:163
+msgid "Green"
+msgstr "أخضر"
+
+#: src/adw-inspector-page.c:166
+msgid "Yellow"
+msgstr "أصفر"
+
+#: src/adw-inspector-page.c:169
+msgid "Orange"
+msgstr "برتقالي"
+
+#: src/adw-inspector-page.c:172
+msgid "Red"
+msgstr "أحمر"
+
+#: src/adw-inspector-page.c:175
+msgid "Pink"
+msgstr "وردي"
+
+#: src/adw-inspector-page.c:178
+msgid "Purple"
+msgstr "أرجواني"
+
+#: src/adw-inspector-page.c:181
+msgid "Slate"
+msgstr "رمادي داكن"
+
+#: src/adw-inspector-page.c:320
+msgid "Adwaita"
+msgstr "أدوايتا"
+
+#: src/adw-inspector-page.ui:11
+msgid "System Appearance"
+msgstr "مظهر النظام"
+
+#: src/adw-inspector-page.ui:13
+msgid ""
+"Override settings for this application. They will be reset upon closing the "
+"inspector."
+msgstr "تجاوز إعدادات هذا التطبيق. ستتم إعادة تعيينها فور إغلاق أداة الفحص."
+
+#: src/adw-inspector-page.ui:19
+msgid "System Supports Color Schemes"
+msgstr "يدعم النظام أنماط الألوان"
+
+#: src/adw-inspector-page.ui:26
+msgid "Preferred Color Scheme"
+msgstr "نمط الألوان المفضل"
+
+#: src/adw-inspector-page.ui:46
+msgid "Accent Color"
+msgstr "لون التمييز"
+
+#: src/adw-inspector-page.ui:52
+msgid "System Supports Accent Colors"
+msgstr "يدعم النظام ألوان التمييز"
+
+#: src/adw-inspector-page.ui:59
+msgid "Preferred Accent Color"
+msgstr "لون التمييز المفضل"
+
+#: src/adw-inspector-page.ui:89
+msgid "Accessibility"
+msgstr "إمكانية الوصول"
+
+#: src/adw-inspector-page.ui:93
+msgid "High Contrast"
+msgstr "تباين عالٍ"
+
+#: src/adw-inspector-page.ui:106
+msgid ""
+"Test the app at specific screen sizes to simulate a mobile environment. Open"
+" the preview directly on any supported window using Shift+Ctrl+M"
+msgstr ""
+"اختبر التطبيق بأحجام شاشة محددة لمحاكاة بيئة الأجهزة المحمولة. افتح المعاينة"
+" مباشرة على أي نافذة مدعومة باستخدام Shift+Ctrl+M"
+
+#: src/adw-link-row.c:328
+msgid "_Open Link"
+msgstr "_فتح الرابط"
+
+#: src/adw-link-row.c:330
+msgid "Copy _Link Address"
+msgstr "نسخ _عنوان الرابط"
+
+#: src/adw-password-entry-row.c:71
+msgid "Hide Password"
+msgstr "إخفاء كلمة المرور"
+
+#: src/adw-password-entry-row.c:76
+msgid "Show Password"
+msgstr "إظهار كلمة المرور"
+
+#: src/adw-password-entry-row.c:171
+msgid "Caps Lock is on"
+msgstr "مفتاح Caps Lock مفعّل"
+
+#: src/adw-password-entry-row.c:180
+msgid "_Show Password"
+msgstr "إ_ظهار كلمة المرور"
+
+#: src/adw-preferences-dialog.c:222 src/adw-preferences-window.c:223
+msgid "Untitled page"
+msgstr "صفحة بدون عنوان"
+
+#: src/adw-preferences-dialog.ui:6 src/adw-preferences-window.ui:9
+msgid "Preferences"
+msgstr "التفضيلات"
+
+#: src/adw-preferences-dialog.ui:72 src/adw-preferences-window.ui:83
+msgid "Search preferences"
+msgstr "البحث في التفضيلات"
+
+#: src/adw-preferences-dialog.ui:158 src/adw-preferences-window.ui:168
+#: src/adw-shortcuts-dialog.ui:83
+msgid "No Results Found"
+msgstr "لم يُعثر على نتائج"
+
+#: src/adw-preferences-dialog.ui:160 src/adw-preferences-window.ui:170
+#: src/adw-shortcuts-dialog.ui:85 src/adw-tab-overview.ui:116
+msgid "Try a different search"
+msgstr "جرب كلمة بحث أخرى"
+
+#: src/adw-sheet-controls.c:131
+msgid "Close the window"
+msgstr "إغلاق النافذة"
+
+#: src/adw-shortcut-label.c:132
+msgctxt "keyboard side marker"
+msgid "L"
+msgstr "ي"
+
+#: src/adw-shortcut-label.c:144
+msgctxt "keyboard side marker"
+msgid "R"
+msgstr "ي"
+
+#: src/adw-shortcuts-dialog.ui:6
+msgid "Keyboard Shortcuts"
+msgstr "اختصارات لوحة المفاتيح"
+
+#: src/adw-shortcuts-dialog.ui:22 src/adw-shortcuts-dialog.ui:25
+msgid "Search shortcuts"
+msgstr "البحث في الاختصارات"
+
+#: src/adw-shortcut-row.c:259
+msgid "No Shortcut"
+msgstr "بدون اختصار"
+
+#: src/adw-split-button.c:532 src/adw-split-button.c:1050
+msgid "More Options"
+msgstr "خيارات إضافية"
+
+#: src/adw-tab-button.ui:8
+msgid "View Open Tabs"
+msgstr "عرض الألسنة المفتوحة"
+
+#: src/adw-tab-overview.c:967
+#, c-format
+msgid "%u Tab"
+msgid_plural "%u Tabs"
+msgstr[0] "ولا لسان"
+msgstr[1] "لسان واحد"
+msgstr[2] "لسانان"
+msgstr[3] "%u ألسنة"
+msgstr[4] "%u لسانًا"
+msgstr[5] "%u لسان"
+
+#: src/adw-tab-overview.ui:21
+msgid "Search Tabs"
+msgstr "البحث في الألسنة"
+
+#: src/adw-tab-overview.ui:52
+msgid "Search tabs"
+msgstr "البحث في الألسنة"
+
+#: src/adw-tab-overview.ui:100
+msgid "No Open Tabs"
+msgstr "لا توجد ألسنة مفتوحة"
+
+#: src/adw-tab-overview.ui:114
+msgid "No Tabs Found"
+msgstr "لم يُعثر على ألسنة"
+
+#: src/adw-tab-overview.ui:137
+msgid "New _Tab"
+msgstr "_لسان جديد"
+
+#: src/adw-tab-thumbnail.ui:40 src/adw-tab.ui:76
+msgid "Close Tab"
+msgstr "إغلاق اللسان"
+
+#: src/adw-toast-overlay.c:289
+#, c-format
+msgid "A toast appeared: %s, has a button: %s"
+msgstr "ظهر إشعار منبثق: %s، يحتوي على زر: %s"
+
+#: src/adw-toast-overlay.c:294
+#, c-format
+msgid "A toast appeared: %s"
+msgstr "ظهر إشعار منبثق: %s"
+
+#: src/adw-toast-overlay.c:298
+#, c-format
+msgid "A toast appeared, has a button: %s"
+msgstr "ظهر إشعار منبثق، يحتوي على زر: %s"
+
+#: src/adw-toast-overlay.c:303
+msgid "A toast appeared"
+msgstr "ظهر إشعار منبثق"
+
+#: src/adw-toast-widget.ui:67
+msgid "Dismiss"
+msgstr "تجاهل"
