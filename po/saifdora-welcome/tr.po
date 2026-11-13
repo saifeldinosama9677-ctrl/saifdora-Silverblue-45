@@ -1,0 +1,209 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saifdora-welcome 1.0 (tr)\n"
+"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language-Team: tr Translation Team\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Welcome to Saifdora"
+msgstr "Saifdora'ya Hoş Geldiniz"
+
+msgid "Previous"
+msgstr "Önceki"
+
+msgid "Next"
+msgstr "Sonraki"
+
+msgid "NVIDIA graphics card detected! Official drivers are not installed."
+msgstr "NVIDIA ekran kartı algılandı! Resmi sürücüler yüklü değil."
+
+msgid "Install NVIDIA & CUDA Driver"
+msgstr "NVIDIA ve CUDA Sürücüsünü Yükle"
+
+msgid "Show on startup"
+msgstr "Başlangıçta göster"
+
+msgid "Ready Out of the Box"
+msgstr "Kullanıma Hazır"
+
+msgid ""
+"Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
+" and essential utilities pre-configured."
+msgstr ""
+"Saifdora Silverblue 45 eksiksiz kodekler, donanım hızlandırma ve temel "
+"araçlarla gelir."
+
+msgid "Multimedia & Hardware Acceleration"
+msgstr "Multimedya ve Donanım Hızlandırma"
+
+msgid ""
+"Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
+"and AMD."
+msgstr "Intel ve AMD için tam kodek desteği ve donanımsal video hızlandırma."
+
+msgid "Curated Repositories"
+msgstr "Hazır Depolar"
+
+msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
+msgstr "Flathub ve RPM Fusion depoları varsayılan olarak etkinleştirilmiştir."
+
+msgid "Global Localization"
+msgstr "Evrensel Yerelleştirme"
+
+msgid ""
+"Full support for 12 languages with completed GNOME 51 translations and "
+"international fonts."
+msgstr ""
+"Tamamlanmış GNOME 51 çevirileri ve evrensel yazı tipleriyle 12 dil desteği."
+
+msgid "Archiving & Documents"
+msgstr "Arşivleme ve Belgeler"
+
+msgid ""
+"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+"image processing."
+msgstr "7-Zip, RAR, ZIP ve gelişmiş belge/görsel işleme araçları."
+
+msgid "Integrated Productivity Apps"
+msgstr "Entegre Üretkenlik Uygulamaları"
+
+msgid ""
+"High-performance desktop applications installed natively in your system."
+msgstr ""
+"Sisteminizde yerel olarak kurulu yüksek performanslı masaüstü uygulamaları."
+
+msgid "Rumman (File & Media Converter)"
+msgstr "Rumman (Dosya ve Medya Dönüştürücü)"
+
+msgid "High-performance media converter and file optimizer."
+msgstr "Yüksek performanslı medya dönüştürücü ve dosya optimize edici."
+
+msgid "Launch Rumman"
+msgstr "Rumman'ı Başlat"
+
+msgid "Mister Download Manager"
+msgstr "Mister Download Manager"
+
+msgid "Fast download manager automatically integrated with Firefox."
+msgstr "Firefox ile otomatik olarak entegre çalışan hızlı indirme yöneticisi."
+
+msgid "Launch MDM"
+msgstr "MDM'yi Başlat"
+
+msgid "ZapFast"
+msgstr "ZapFast"
+
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr "Rust ile geliştirilmiş hızlı ve yerel WhatsApp masaüstü istemcisi."
+
+msgid "Launch ZapFast"
+msgstr "ZapFast'ı Başlat"
+
+msgid "Interface Customization & Extensions"
+msgstr "Arayüz Özelleştirme ve Eklentiler"
+
+msgid ""
+"Enhance and personalize your GNOME desktop with pre-configured extensions "
+"and utilities."
+msgstr ""
+"Önceden yapılandırılmış eklentilerle GNOME masaüstünüzü kişiselleştirin."
+
+msgid "Pre-Activated Extensions"
+msgstr "Önceden Etkinleştirilmiş Eklentiler"
+
+msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
+msgstr "ArcMenu, Dash to Dock, Clipboard Indicator ve Adwaita Lock Clock."
+
+msgid "Extension Manager"
+msgstr "Eklenti Yöneticisi"
+
+msgid "Search, install, and update GNOME Shell extensions seamlessly."
+msgstr "GNOME Shell eklentilerini kolayca arayın, yükleyin ve güncelleyin."
+
+msgid "Manage Extensions"
+msgstr "Eklentileri Yönet"
+
+msgid "Refine"
+msgstr "Refine"
+
+msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+msgstr ""
+"Gizli GNOME ayarlarını, yazı tiplerini ve masaüstü davranışını özelleştirin."
+
+msgid "Customize Desktop"
+msgstr "Masaüstünü Özelleştir"
+
+msgid "Hardware & Graphics Drivers"
+msgstr "Donanım ve Grafik Sürücüleri"
+
+msgid ""
+"Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
+msgstr ""
+"Intel, AMD ve NVIDIA donanımlarında akıcı performans için optimize edildi."
+
+msgid "Intel & AMD Acceleration"
+msgstr "Intel ve AMD Hızlandırma"
+
+msgid ""
+"Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
+"configured and active."
+msgstr "Donanımsal video hızlandırma önceden yapılandırılmış ve etkindir."
+
+msgid "NVIDIA & CUDA Drivers"
+msgstr "NVIDIA ve CUDA Sürücüleri"
+
+msgid ""
+"Detect your GPU model, install official drivers, configure CUDA, and manage "
+"Secure Boot."
+msgstr ""
+"GPU modelinizi algılayın, resmi sürücüleri yükleyin ve CUDA'yı yapılandırın."
+
+msgid "Open NVIDIA Manager"
+msgstr "NVIDIA Yöneticisini Aç"
+
+msgid "GNOME 51 Navigation Basics"
+msgstr "GNOME 51 Gezinme Temelleri"
+
+msgid ""
+"Master simple gestures and shortcuts to move swiftly through your workspace."
+msgstr ""
+"Çalışma alanınızda hızla hareket etmek için pratik hareketler ve kısayollar."
+
+msgid "Super Key & Search"
+msgstr "Super Tuşu ve Arama"
+
+msgid ""
+"Press the Super (Windows) key to open the Activities Overview, search apps, "
+"files, or do quick math."
+msgstr ""
+"Etkinlikler genel görünümünü açmak ve arama yapmak için Super tuşuna basın."
+
+msgid "Touchpad Gestures"
+msgstr "Dokunmatik Yüzey Hareketleri"
+
+msgid ""
+"Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
+"to switch workspaces."
+msgstr ""
+"Genel görünüm için 3 parmakla yukarı/aşağı, alan değiştirmek için sağa/sola "
+"kaydırın."
+
+msgid "Dynamic Workspaces"
+msgstr "Dinamik Çalışma Alanları"
+
+msgid ""
+"Workspaces are created automatically as you open windows to keep your "
+"desktop organized."
+msgstr ""
+"Masaüstünüzü düzenli tutmak için pencereler açıldıkça alanlar otomatik "
+"oluşturulur."
+
+msgid "Get Started"
+msgstr "Başlayın"

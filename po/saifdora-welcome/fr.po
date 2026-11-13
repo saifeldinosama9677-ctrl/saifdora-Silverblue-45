@@ -1,0 +1,209 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saifdora-welcome 1.0 (fr)\n"
+"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language-Team: fr Translation Team\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Welcome to Saifdora"
+msgstr "Bienvenue dans Saifdora"
+
+msgid "Previous"
+msgstr "Précédent"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "NVIDIA graphics card detected! Official drivers are not installed."
+msgstr "Carte NVIDIA détectée ! Les pilotes officiels ne sont pas installés."
+
+msgid "Install NVIDIA & CUDA Driver"
+msgstr "Installer le pilote NVIDIA & CUDA"
+
+msgid "Show on startup"
+msgstr "Afficher au démarrage"
+
+msgid "Ready Out of the Box"
+msgstr "Prêt à l'emploi"
+
+msgid ""
+"Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
+" and essential utilities pre-configured."
+msgstr ""
+"Saifdora Silverblue 45 inclut tous les codecs, l'accélération matérielle et "
+"les outils essentiels."
+
+msgid "Multimedia & Hardware Acceleration"
+msgstr "Multimédia & Accélération matérielle"
+
+msgid ""
+"Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
+"and AMD."
+msgstr ""
+"Support complet des codecs (HEVC, AV1, HEIC) et accélération pour Intel et "
+"AMD."
+
+msgid "Curated Repositories"
+msgstr "Dépôts configurés"
+
+msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
+msgstr "Flathub et RPM Fusion sont activés par défaut."
+
+msgid "Global Localization"
+msgstr "Prise en charge multilingue"
+
+msgid ""
+"Full support for 12 languages with completed GNOME 51 translations and "
+"international fonts."
+msgstr ""
+"Support complet de 12 langues avec les traductions de GNOME 51 et des "
+"polices mondiales."
+
+msgid "Archiving & Documents"
+msgstr "Archivage & Documents"
+
+msgid ""
+"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+"image processing."
+msgstr ""
+"Support intégré de 7-Zip, RAR, ZIP, des outils PDF et du traitement d'image."
+
+msgid "Integrated Productivity Apps"
+msgstr "Applications intégrées"
+
+msgid ""
+"High-performance desktop applications installed natively in your system."
+msgstr "Des applications de bureau performantes installées nativement."
+
+msgid "Rumman (File & Media Converter)"
+msgstr "Rumman (Convertisseur de fichiers et médias)"
+
+msgid "High-performance media converter and file optimizer."
+msgstr "Convertisseur multimédia et optimiseur de fichiers haute performance."
+
+msgid "Launch Rumman"
+msgstr "Lancer Rumman"
+
+msgid "Mister Download Manager"
+msgstr "Mister Download Manager"
+
+msgid "Fast download manager automatically integrated with Firefox."
+msgstr "Gestionnaire de téléchargement rapide intégré à Firefox."
+
+msgid "Launch MDM"
+msgstr "Lancer MDM"
+
+msgid "ZapFast"
+msgstr "ZapFast"
+
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr "Client de bureau WhatsApp rapide et natif développé en Rust."
+
+msgid "Launch ZapFast"
+msgstr "Lancer ZapFast"
+
+msgid "Interface Customization & Extensions"
+msgstr "Personnalisation & Extensions"
+
+msgid ""
+"Enhance and personalize your GNOME desktop with pre-configured extensions "
+"and utilities."
+msgstr "Personnalisez votre bureau GNOME avec des extensions préconfigurées."
+
+msgid "Pre-Activated Extensions"
+msgstr "Extensions préactivées"
+
+msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
+msgstr "ArcMenu, Dash to Dock, Clipboard Indicator et Adwaita Lock Clock."
+
+msgid "Extension Manager"
+msgstr "Gestionnaire d'extensions"
+
+msgid "Search, install, and update GNOME Shell extensions seamlessly."
+msgstr ""
+"Recherchez, installez et mettez à jour vos extensions en toute simplicité."
+
+msgid "Manage Extensions"
+msgstr "Gérer les extensions"
+
+msgid "Refine"
+msgstr "Refine"
+
+msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+msgstr ""
+"Ajustez les paramètres cachés de GNOME, les polices et le comportement."
+
+msgid "Customize Desktop"
+msgstr "Personnaliser le bureau"
+
+msgid "Hardware & Graphics Drivers"
+msgstr "Matériel & Pilotes graphiques"
+
+msgid ""
+"Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
+msgstr "Performances fluides et optimisées pour Intel, AMD et NVIDIA."
+
+msgid "Intel & AMD Acceleration"
+msgstr "Accélération Intel & AMD"
+
+msgid ""
+"Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
+"configured and active."
+msgstr "Accélération vidéo matérielle préconfigurée et active."
+
+msgid "NVIDIA & CUDA Drivers"
+msgstr "Pilotes NVIDIA & CUDA"
+
+msgid ""
+"Detect your GPU model, install official drivers, configure CUDA, and manage "
+"Secure Boot."
+msgstr ""
+"Détectez votre carte, installez les pilotes officiels et configurez CUDA."
+
+msgid "Open NVIDIA Manager"
+msgstr "Ouvrir le gestionnaire NVIDIA"
+
+msgid "GNOME 51 Navigation Basics"
+msgstr "Bases de navigation dans GNOME 51"
+
+msgid ""
+"Master simple gestures and shortcuts to move swiftly through your workspace."
+msgstr "Gestes et raccourcis simples pour naviguer efficacement."
+
+msgid "Super Key & Search"
+msgstr "Touche Super & Recherche"
+
+msgid ""
+"Press the Super (Windows) key to open the Activities Overview, search apps, "
+"files, or do quick math."
+msgstr ""
+"Appuyez sur la touche Super pour ouvrir les Activités et effectuer des "
+"recherches."
+
+msgid "Touchpad Gestures"
+msgstr "Gestes sur le pavé tactile"
+
+msgid ""
+"Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
+"to switch workspaces."
+msgstr ""
+"Glissez à 3 doigts vers le haut/bas pour les Activités, gauche/droite pour "
+"les espaces."
+
+msgid "Dynamic Workspaces"
+msgstr "Espaces de travail dynamiques"
+
+msgid ""
+"Workspaces are created automatically as you open windows to keep your "
+"desktop organized."
+msgstr "Les espaces se créent automatiquement pour organiser vos fenêtres."
+
+msgid "Get Started"
+msgstr "Démarrer"

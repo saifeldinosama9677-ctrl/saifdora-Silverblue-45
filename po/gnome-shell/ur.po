@@ -1,0 +1,102 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell (ur)\n"
+"Language-Team: Urdu Team\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Activities"
+msgstr "سرگرمیاں"
+
+msgid "Type to search"
+msgstr "تلاش کے لیے لکھیں"
+
+msgid "Type to search…"
+msgstr "تلاش کے لیے لکھیں…"
+
+msgid "Settings"
+msgstr "ترتیبات"
+
+msgid "Power Off / Log Out"
+msgstr "بند کریں / لاگ آؤٹ"
+
+msgid "Power Off…"
+msgstr "بند کریں…"
+
+msgid "Restart…"
+msgstr "دوبارہ شروع کریں…"
+
+msgid "Log Out…"
+msgstr "لاگ آؤٹ…"
+
+msgid "Suspend"
+msgstr "معطل کریں"
+
+msgid "Lock"
+msgstr "لاک کریں"
+
+msgid "Take a Screenshot"
+msgstr "اسکرین شاٹ لیں"
+
+msgid "Wired"
+msgstr "تار والا نیٹ ورک"
+
+msgid "Wi-Fi"
+msgstr "وائی فائی"
+
+msgid "Bluetooth"
+msgstr "بلوٹوتھ"
+
+msgid "Night Light"
+msgstr "نائٹ لائٹ"
+
+msgid "Dark Style"
+msgstr "ڈارک موڈ"
+
+msgid "Airplane Mode"
+msgstr "ہوائی جہاز موڈ"
+
+msgid "Volume"
+msgstr "آواز"
+
+msgid "Brightness"
+msgstr "روشنی"
+
+msgid "All Settings"
+msgstr "تمام ترتیبات"
+
+msgid "Open"
+msgstr "کھولیں"
+
+msgid "Cancel"
+msgstr "منسوخ"
+
+msgid "Close"
+msgstr "بند کریں"
+
+msgid "Search"
+msgstr "تلاش"
+
+msgid "Applications"
+msgstr "ایپلیکیشنز"
+
+msgid "Frequent"
+msgstr "اکثر استعمال شدہ"
+
+msgid "All"
+msgstr "سبھی"
+
+msgid "Workspaces"
+msgstr "ورک اسپیسز"
+
+msgid "Window"
+msgstr "ونڈو"
+
+msgid "Notifications"
+msgstr "اطلاعات"

@@ -1,0 +1,105 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: nautilus (ur)\n"
+"Language-Team: Urdu Team\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Files"
+msgstr "فائلیں"
+
+msgid "Open"
+msgstr "کھولیں"
+
+msgid "Open with…"
+msgstr "کھولیں بذریعہ…"
+
+msgid "New Folder"
+msgstr "نیا فولڈر"
+
+msgid "New Tab"
+msgstr "نئی ٹیب"
+
+msgid "Close Tab"
+msgstr "ٹیب بند کریں"
+
+msgid "Close Window"
+msgstr "ونڈو بند کریں"
+
+msgid "Cut"
+msgstr "کٹ کریں"
+
+msgid "Copy"
+msgstr "کاپی کریں"
+
+msgid "Paste"
+msgstr "پیسٹ کریں"
+
+msgid "Select All"
+msgstr "سب منتخب کریں"
+
+msgid "Move to Trash"
+msgstr "ردی کی ٹوکری میں بھیجیں"
+
+msgid "Delete Permanently"
+msgstr "مستقل حذف کریں"
+
+msgid "Rename…"
+msgstr "نام تبدیل کریں…"
+
+msgid "Properties"
+msgstr "خصوصیات"
+
+msgid "Star"
+msgstr "پسندیدہ بنائیں"
+
+msgid "Unstar"
+msgstr "پسندیدہ سے ہٹائیں"
+
+msgid "Home"
+msgstr "ہوم"
+
+msgid "Documents"
+msgstr "دستاویزات"
+
+msgid "Downloads"
+msgstr "ڈاؤن لوڈز"
+
+msgid "Music"
+msgstr "موسیقی"
+
+msgid "Pictures"
+msgstr "تصاویر"
+
+msgid "Videos"
+msgstr "ویڈیوز"
+
+msgid "Trash"
+msgstr "ردی کی ٹوکری"
+
+msgid "Recent"
+msgstr "حالیہ"
+
+msgid "Starred"
+msgstr "پسندیدہ"
+
+msgid "Other Locations"
+msgstr "دیگر مقامات"
+
+msgid "Search"
+msgstr "تلاش"
+
+msgid "Sort"
+msgstr "ترتیب دیں"
+
+msgid "Grid View"
+msgstr "گرڈ ویو"
+
+msgid "List View"
+msgstr "فہرست ویو"

@@ -1,0 +1,202 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saifdora-welcome 1.0 (ru)\n"
+"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language-Team: ru Translation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Welcome to Saifdora"
+msgstr "Добро пожаловать в Saifdora"
+
+msgid "Previous"
+msgstr "Назад"
+
+msgid "Next"
+msgstr "Далее"
+
+msgid "NVIDIA graphics card detected! Official drivers are not installed."
+msgstr "Обнаружена видеокарта NVIDIA! Официальные драйверы не установлены."
+
+msgid "Install NVIDIA & CUDA Driver"
+msgstr "Установить драйвер NVIDIA и CUDA"
+
+msgid "Show on startup"
+msgstr "Показывать при запуске"
+
+msgid "Ready Out of the Box"
+msgstr "Готовность «из коробки»"
+
+msgid ""
+"Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
+" and essential utilities pre-configured."
+msgstr ""
+"Saifdora Silverblue 45 содержит все кодеки, аппаратное ускорение и "
+"необходимые утилиты."
+
+msgid "Multimedia & Hardware Acceleration"
+msgstr "Мультимедиа и аппаратное ускорение"
+
+msgid ""
+"Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
+"and AMD."
+msgstr ""
+"Полная поддержка кодеков (HEVC, AV1, HEIC) и декодирования для Intel и AMD."
+
+msgid "Curated Repositories"
+msgstr "Настроенные репозитории"
+
+msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
+msgstr "Репозитории Flathub и RPM Fusion включены по умолчанию."
+
+msgid "Global Localization"
+msgstr "Глобальная локализация"
+
+msgid ""
+"Full support for 12 languages with completed GNOME 51 translations and "
+"international fonts."
+msgstr "Поддержка 12 языков с завершенными переводами GNOME 51 и шрифтами."
+
+msgid "Archiving & Documents"
+msgstr "Архивация и документы"
+
+msgid ""
+"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+"image processing."
+msgstr "Встроенная поддержка 7-Zip, RAR, ZIP, PDF и обработки изображений."
+
+msgid "Integrated Productivity Apps"
+msgstr "Встроенные приложения для работы"
+
+msgid ""
+"High-performance desktop applications installed natively in your system."
+msgstr "Высокопроизводительные приложения, встроенные прямо в систему."
+
+msgid "Rumman (File & Media Converter)"
+msgstr "Rumman (Конвертер файлов и медиа)"
+
+msgid "High-performance media converter and file optimizer."
+msgstr "Быстрый конвертер медиа и оптимизатор файлов."
+
+msgid "Launch Rumman"
+msgstr "Запустить Rumman"
+
+msgid "Mister Download Manager"
+msgstr "Mister Download Manager"
+
+msgid "Fast download manager automatically integrated with Firefox."
+msgstr "Быстрый менеджер загрузок, интегрированный с Firefox."
+
+msgid "Launch MDM"
+msgstr "Запустить MDM"
+
+msgid "ZapFast"
+msgstr "ZapFast"
+
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr "Быстрый нативный клиент WhatsApp, написанный на Rust."
+
+msgid "Launch ZapFast"
+msgstr "Запустить ZapFast"
+
+msgid "Interface Customization & Extensions"
+msgstr "Настройка интерфейса и расширения"
+
+msgid ""
+"Enhance and personalize your GNOME desktop with pre-configured extensions "
+"and utilities."
+msgstr "Персонализируйте рабочий стол GNOME с помощью готовых расширений."
+
+msgid "Pre-Activated Extensions"
+msgstr "Предустановленные расширения"
+
+msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
+msgstr "ArcMenu, Dash to Dock, Clipboard Indicator и Adwaita Lock Clock."
+
+msgid "Extension Manager"
+msgstr "Менеджер расширений"
+
+msgid "Search, install, and update GNOME Shell extensions seamlessly."
+msgstr "Удобный поиск, установка и обновление расширений GNOME Shell."
+
+msgid "Manage Extensions"
+msgstr "Управление расширениями"
+
+msgid "Refine"
+msgstr "Refine"
+
+msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+msgstr "Настройка скрытых параметров GNOME, шрифтов и поведения системы."
+
+msgid "Customize Desktop"
+msgstr "Настроить интерфейс"
+
+msgid "Hardware & Graphics Drivers"
+msgstr "Оборудование и видеокарты"
+
+msgid ""
+"Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
+msgstr "Оптимизировано для плавной работы на Intel, AMD и NVIDIA."
+
+msgid "Intel & AMD Acceleration"
+msgstr "Ускорение Intel и AMD"
+
+msgid ""
+"Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
+"configured and active."
+msgstr ""
+"Аппаратное ускорение видео (VA-API / Mesa / Intel) настроено и активно."
+
+msgid "NVIDIA & CUDA Drivers"
+msgstr "Драйверы NVIDIA и CUDA"
+
+msgid ""
+"Detect your GPU model, install official drivers, configure CUDA, and manage "
+"Secure Boot."
+msgstr "Определение модели видеокарты, установка драйверов, настройка CUDA."
+
+msgid "Open NVIDIA Manager"
+msgstr "Менеджер драйверов NVIDIA"
+
+msgid "GNOME 51 Navigation Basics"
+msgstr "Основы навигации в GNOME 51"
+
+msgid ""
+"Master simple gestures and shortcuts to move swiftly through your workspace."
+msgstr "Простые жесты и горячие клавиши для быстрой работы."
+
+msgid "Super Key & Search"
+msgstr "Клавиша Super и поиск"
+
+msgid ""
+"Press the Super (Windows) key to open the Activities Overview, search apps, "
+"files, or do quick math."
+msgstr ""
+"Нажмите Super для открытия обзора и быстрого поиска приложений и файлов."
+
+msgid "Touchpad Gestures"
+msgstr "Жесты тачпада"
+
+msgid ""
+"Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
+"to switch workspaces."
+msgstr ""
+"Смахните тремя пальцами вверх/вниз для обзора, влево/вправо для смены "
+"столов."
+
+msgid "Dynamic Workspaces"
+msgstr "Динамические рабочие места"
+
+msgid ""
+"Workspaces are created automatically as you open windows to keep your "
+"desktop organized."
+msgstr "Рабочие столы создаются автоматически для поддержания порядка."
+
+msgid "Get Started"
+msgstr "Начать работу"

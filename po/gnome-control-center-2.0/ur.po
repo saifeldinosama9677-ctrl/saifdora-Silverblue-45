@@ -1,0 +1,123 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-control-center-2.0 (ur)\n"
+"Language-Team: Urdu Team\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Settings"
+msgstr "ترتیبات"
+
+msgid "Search"
+msgstr "تلاش"
+
+msgid "Wi-Fi"
+msgstr "وائی فائی"
+
+msgid "Network"
+msgstr "نیٹ ورک"
+
+msgid "Bluetooth"
+msgstr "بلوٹوتھ"
+
+msgid "Appearance"
+msgstr "ظاہری شکل"
+
+msgid "Displays"
+msgstr "ڈسپلے"
+
+msgid "Sound"
+msgstr "آواز"
+
+msgid "Power"
+msgstr "بجلی کی بچت"
+
+msgid "Multitasking"
+msgstr "ملٹی ٹاسکنگ"
+
+msgid "Apps"
+msgstr "ایپس"
+
+msgid "Notifications"
+msgstr "اطلاعات"
+
+msgid "Online Accounts"
+msgstr "آن لائن اکاؤنٹس"
+
+msgid "Sharing"
+msgstr "اشتراک"
+
+msgid "Mouse & Touchpad"
+msgstr "ماؤس اور ٹچ پیڈ"
+
+msgid "Keyboard"
+msgstr "کی بورڈ"
+
+msgid "Color"
+msgstr "رنگ"
+
+msgid "Printers"
+msgstr "پرنٹرز"
+
+msgid "Accessibility"
+msgstr "رسائی"
+
+msgid "Privacy & Security"
+msgstr "رازداری اور سیکیورٹی"
+
+msgid "System"
+msgstr "سسٹم"
+
+msgid "Region & Language"
+msgstr "علاقہ اور زبان"
+
+msgid "Date & Time"
+msgstr "تاریخ اور وقت"
+
+msgid "Users"
+msgstr "صارفین"
+
+msgid "About"
+msgstr "کے بارے میں"
+
+msgid "Default Applications"
+msgstr "طے شدہ ایپس"
+
+msgid "Device Name"
+msgstr "ڈیوائس کا نام"
+
+msgid "Operating System"
+msgstr "آپریٹنگ سسٹم"
+
+msgid "OS Name"
+msgstr "او ایس کا نام"
+
+msgid "OS Version"
+msgstr "او ایس ورژن"
+
+msgid "Processor"
+msgstr "پروسیسر"
+
+msgid "Memory"
+msgstr "میموری"
+
+msgid "Disk Capacity"
+msgstr "ڈسک کی گنجائش"
+
+msgid "Graphics"
+msgstr "گرافکس"
+
+msgid "GNOME Version"
+msgstr "جنوم ورژن"
+
+msgid "Windowing System"
+msgstr "ونڈوئنگ سسٹم"
+
+msgid "Software Updates"
+msgstr "سافٹ ویئر اپ ڈیٹس"

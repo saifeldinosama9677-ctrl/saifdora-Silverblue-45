@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Saifdora Welcome Autostart
+Comment=Launch welcome guide on first login
+Exec=/usr/bin/saifdora-welcome --autostart
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

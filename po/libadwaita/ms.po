@@ -1,0 +1,475 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libadwaita (ms)\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libadwaita/issues\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language-Team: ms Team\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "GNU General Public License, version 2 or later"
+msgstr "Lesen Awam Am GNU, versi 2 atau lebih baharu"
+
+msgid "GNU General Public License, version 3 or later"
+msgstr "Lesen Awam Am GNU, versi 3 atau lebih baharu"
+
+msgid "GNU Lesser General Public License, version 2.1 or later"
+msgstr "Lesen Awam Am Kurang GNU, versi 2.1 atau lebih baharu"
+
+msgid "GNU Lesser General Public License, version 3 or later"
+msgstr "Lesen Awam Am Kurang GNU, versi 3 atau lebih baharu"
+
+msgid "BSD 2-Clause License"
+msgstr "Lesen BSD 2-Klausa"
+
+msgid "The MIT License (MIT)"
+msgstr "Lesen MIT (MIT)"
+
+msgid "Artistic License 2.0"
+msgstr "Lesen Artistik 2.0"
+
+msgid "GNU General Public License, version 2 only"
+msgstr "Lesen Awam Am GNU, versi 2 sahaja"
+
+msgid "GNU General Public License, version 3 only"
+msgstr "Lesen Awam Am GNU, versi 3 sahaja"
+
+msgid "GNU Lesser General Public License, version 2.1 only"
+msgstr "Lesen Awam Am Kurang GNU, versi 2.1 sahaja"
+
+msgid "GNU Lesser General Public License, version 3 only"
+msgstr "Lesen Awam Am Kurang GNU, versi 3 sahaja"
+
+msgid "GNU Affero General Public License, version 3 or later"
+msgstr "Lesen Awam Am GNU Affero, versi 3 atau lebih baharu"
+
+msgid "GNU Affero General Public License, version 3 only"
+msgstr "Lesen Awam Am GNU Affero, versi 3 sahaja"
+
+msgid "BSD 3-Clause License"
+msgstr "Lesen BSD 3-Klausa"
+
+msgid "Apache License, Version 2.0"
+msgstr "Lesen Apache, Versi 2.0"
+
+msgid "Mozilla Public License 2.0"
+msgstr "Lesen Awam Mozilla 2.0"
+
+msgid "BSD Zero-Clause License"
+msgstr "BSD Zero-Clause License"
+
+msgid "Code by"
+msgstr "Kod oleh"
+
+msgid "Design by"
+msgstr "Reka bentuk oleh"
+
+msgid "Artwork by"
+msgstr "Karya seni oleh"
+
+msgid "Documentation by"
+msgstr "Dokumentasi oleh"
+
+msgid "Translated by"
+msgstr "Diterjemahkan oleh"
+
+msgid ""
+"This application comes with absolutely no warranty. See the <a "
+"href=\"%s\">%s</a> for details."
+msgstr ""
+"Aplikasi ini datang tanpa sebarang jaminan. Lihat <a href=\"%s\">%s</a> "
+"untuk butiran."
+
+msgid "This Application"
+msgstr "Aplikasi Ini"
+
+msgid "Version %s"
+msgstr "Versi %s"
+
+msgid "Unable to parse release notes: %s at line %d, char %d"
+msgstr "Tidak dapat menghuraikan nota keluaran: %s pada baris %d, aksara %d"
+
+msgid "Unable to parse release notes:"
+msgstr "Tidak dapat menghuraikan nota keluaran:"
+
+msgid "Line: %d, character: %d"
+msgstr "Baris: %d, aksara: %d"
+
+msgid "Other Apps by %s"
+msgstr "Aplikasi Lain oleh %s"
+
+msgid "Other Apps"
+msgstr "Aplikasi Lain"
+
+msgid "Copied to clipboard"
+msgstr "Disalin ke papan keratan"
+
+msgid "Unable to save debugging information"
+msgstr "Tidak dapat menyimpan maklumat penyahpepijatan"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Save debugging information"
+msgstr "Simpan maklumat penyahpepijatan"
+
+msgid "About"
+msgstr "Perihal"
+
+msgid "What’s _New"
+msgstr "Apa yang _Baharu"
+
+msgid "_Details"
+msgstr "_Butiran"
+
+msgid "_Website"
+msgstr "_Laman Web"
+
+msgid "_Support Questions"
+msgstr "_Soalan Sokongan"
+
+msgid "_Report an Issue"
+msgstr "_Laporkan Isu"
+
+msgid "_Troubleshooting"
+msgstr "_Penyelesaian Masalah"
+
+msgid "_Credits"
+msgstr "_Penghargaan"
+
+msgid "_Legal"
+msgstr "_Undang-undang"
+
+msgid "_Acknowledgements"
+msgstr "_Pengiktirafan"
+
+msgid "What’s New"
+msgstr "Apa yang Baharu"
+
+msgid "Details"
+msgstr "Butiran"
+
+msgid "Troubleshooting"
+msgstr "Penyelesaian Masalah"
+
+msgid ""
+"To assist in troubleshooting, you can view your debugging information. "
+"Providing this information to the application developers can help diagnose "
+"any problems you encounter when you report an issue."
+msgstr ""
+"Untuk membantu dalam penyelesaian masalah, anda boleh melihat maklumat "
+"penyahpepijatan anda. Memberikan maklumat ini kepada pembangun aplikasi "
+"boleh membantu mendiagnosis sebarang masalah yang anda hadapi semasa "
+"melaporkan isu."
+
+msgid "_Debugging Information"
+msgstr "Maklumat _Penyahpepijatan"
+
+msgid "Debugging Information"
+msgstr "Maklumat Penyahpepijatan"
+
+msgid "_Copy Text"
+msgstr "_Salin Teks"
+
+msgid "_Save As…"
+msgstr "_Simpan Sebagai…"
+
+msgid "Credits"
+msgstr "Penghargaan"
+
+msgid "Legal"
+msgstr "Undang-undang"
+
+msgid "Acknowledgements"
+msgstr "Pengiktirafan"
+
+msgid "Screenshot copied to clipboard"
+msgstr "Tangkapan skrin disalin ke papan keratan"
+
+msgid "Adaptive Preview"
+msgstr "Pratonton Adaptif"
+
+msgid "Display"
+msgstr "Paparan"
+
+msgid "Device"
+msgstr "Peranti"
+
+msgid "Width"
+msgstr "Lebar"
+
+msgid "Height"
+msgstr "Tinggi"
+
+msgid "Rotate"
+msgstr "Putar"
+
+msgid "Rotate Left"
+msgstr "Putar Kiri"
+
+msgid "Rotate Right"
+msgstr "Putar Kanan"
+
+msgid "Shell"
+msgstr "Shell"
+
+msgid "Preset"
+msgstr "Pratetap"
+
+msgid "Top Bar"
+msgstr "Bar Atas"
+
+msgid "Bottom Bar"
+msgstr "Bar Bawah"
+
+msgid "Window Controls"
+msgstr "Kawalan Tetingkap"
+
+msgid "View"
+msgstr "Lihat"
+
+msgid "Scale to Fit"
+msgstr "Skala Muat Skrin"
+
+msgid "Highlight Bezel"
+msgstr "Serlahkan Bezel"
+
+msgid "Toggle Sidebar"
+msgstr "Togol Bar Sisi"
+
+msgid "Exit"
+msgstr "Keluar"
+
+msgid "Take Screenshot"
+msgstr "Ambil Tangkapan Skrin"
+
+msgctxt "Shell preset"
+msgid "Desktop Shell"
+msgstr "Shell Desktop"
+
+msgctxt "Shell preset"
+msgid "Mobile Shell"
+msgstr "Shell Mudah Alih"
+
+msgctxt "Shell preset"
+msgid "Fullscreen"
+msgstr "Skrin Penuh"
+
+msgctxt "Shell preset"
+msgid "Custom"
+msgstr "Tersuai"
+
+msgctxt "Device preset"
+msgid "Generic Phone"
+msgstr "Telefon Generik"
+
+msgctxt "Device preset"
+msgid "Generic Tablet"
+msgstr "Tablet Generik"
+
+msgctxt "Device preset"
+msgid "Custom"
+msgstr "Tersuai"
+
+msgid "Avatar of %s"
+msgstr "Avatar %s"
+
+msgid "Back"
+msgstr "Kembali"
+
+msgid "Search"
+msgstr "Cari"
+
+msgid "Apply"
+msgstr "Gunakan"
+
+msgctxt "view switcher button badge"
+msgid "Attention requested."
+msgstr "Perhatian diminta."
+
+msgctxt "view switcher button badge"
+msgid "Has a badge: more than 999."
+msgstr "Mempunyai lencana: lebih daripada 999."
+
+msgctxt "view switcher button badge"
+msgid "Has a badge: %u."
+msgstr "Mempunyai lencana: %u."
+
+msgid "No Preference"
+msgstr "Tiada Keutamaan"
+
+msgid "Prefer Dark"
+msgstr "Lebih Suka Gelap"
+
+msgid "Prefer Light"
+msgstr "Lebih Suka Terang"
+
+msgid "Blue"
+msgstr "Biru"
+
+msgid "Teal"
+msgstr "Teal"
+
+msgid "Green"
+msgstr "Hijau"
+
+msgid "Yellow"
+msgstr "Kuning"
+
+msgid "Orange"
+msgstr "Oren"
+
+msgid "Red"
+msgstr "Merah"
+
+msgid "Pink"
+msgstr "Merah Jambu"
+
+msgid "Purple"
+msgstr "Ungu"
+
+msgid "Slate"
+msgstr "Kelabu Loh"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "System Appearance"
+msgstr "Penampilan Sistem"
+
+msgid ""
+"Override settings for this application. They will be reset upon closing the "
+"inspector."
+msgstr ""
+"Ganti tetapan untuk aplikasi ini. Ia akan ditetapkan semula apabila menutup "
+"pemeriksa."
+
+msgid "System Supports Color Schemes"
+msgstr "Sistem Menyokong Skim Warna"
+
+msgid "Preferred Color Scheme"
+msgstr "Skim Warna Pilihan"
+
+msgid "Accent Color"
+msgstr "Warna Aksen"
+
+msgid "System Supports Accent Colors"
+msgstr "Sistem Menyokong Warna Aksen"
+
+msgid "Preferred Accent Color"
+msgstr "Warna Aksen Pilihan"
+
+msgid "Accessibility"
+msgstr "Kebolehcapaian"
+
+msgid "High Contrast"
+msgstr "Kontras Tinggi"
+
+msgid ""
+"Test the app at specific screen sizes to simulate a mobile environment. Open"
+" the preview directly on any supported window using Shift+Ctrl+M"
+msgstr ""
+"Uji aplikasi pada saiz skrin tertentu untuk mensimulasikan persekitaran "
+"mudah alih. Buka pratonton terus pada mana-mana tetingkap yang disokong "
+"menggunakan Shift+Ctrl+M"
+
+msgid "_Open Link"
+msgstr "_Buka Pautan"
+
+msgid "Copy _Link Address"
+msgstr "Salin Alamat _Pautan"
+
+msgid "Hide Password"
+msgstr "Sembunyikan Kata Laluan"
+
+msgid "Show Password"
+msgstr "Tunjukkan Kata Laluan"
+
+msgid "Caps Lock is on"
+msgstr "Caps Lock aktif"
+
+msgid "_Show Password"
+msgstr "_Tunjukkan Kata Laluan"
+
+msgid "Untitled page"
+msgstr "Halaman tanpa tajuk"
+
+msgid "Preferences"
+msgstr "Keutamaan"
+
+msgid "Search preferences"
+msgstr "Cari keutamaan"
+
+msgid "No Results Found"
+msgstr "Tiada Hasil Ditemui"
+
+msgid "Try a different search"
+msgstr "Cuba carian yang berbeza"
+
+msgid "Close the window"
+msgstr "Tutup tetingkap"
+
+msgctxt "keyboard side marker"
+msgid "L"
+msgstr "L"
+
+msgctxt "keyboard side marker"
+msgid "R"
+msgstr "R"
+
+msgid "Keyboard Shortcuts"
+msgstr "Pintasan Papan Kekunci"
+
+msgid "Search shortcuts"
+msgstr "Cari pintasan"
+
+msgid "No Shortcut"
+msgstr "Tiada Pintasan"
+
+msgid "More Options"
+msgstr "Pilihan Lain"
+
+msgid "View Open Tabs"
+msgstr "Lihat Tab Terbuka"
+
+msgid "%u Tab"
+msgid_plural "%u Tabs"
+msgstr[0] "%u Tab"
+
+msgid "Search Tabs"
+msgstr "Cari Tab"
+
+msgid "Search tabs"
+msgstr "Cari tab"
+
+msgid "No Open Tabs"
+msgstr "Tiada Tab Terbuka"
+
+msgid "No Tabs Found"
+msgstr "Tiada Tab Ditemui"
+
+msgid "New _Tab"
+msgstr "_Tab Baharu"
+
+msgid "Close Tab"
+msgstr "Tutup Tab"
+
+msgid "A toast appeared: %s, has a button: %s"
+msgstr "Pemberitahuan muncul: %s, mempunyai butang: %s"
+
+msgid "A toast appeared: %s"
+msgstr "Pemberitahuan muncul: %s"
+
+msgid "A toast appeared, has a button: %s"
+msgstr "Pemberitahuan muncul, mempunyai butang: %s"
+
+msgid "A toast appeared"
+msgstr "Pemberitahuan muncul"
+
+msgid "Dismiss"
+msgstr "Tolak"

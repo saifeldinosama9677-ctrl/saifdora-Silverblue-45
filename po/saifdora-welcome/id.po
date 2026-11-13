@@ -1,0 +1,204 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saifdora-welcome 1.0 (id)\n"
+"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language-Team: id Translation Team\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Welcome to Saifdora"
+msgstr "Selamat Datang di Saifdora"
+
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgid "Next"
+msgstr "Selanjutnya"
+
+msgid "NVIDIA graphics card detected! Official drivers are not installed."
+msgstr "Kartu grafis NVIDIA terdeteksi! Driver resmi belum terpasang."
+
+msgid "Install NVIDIA & CUDA Driver"
+msgstr "Pasang Driver NVIDIA & CUDA"
+
+msgid "Show on startup"
+msgstr "Tampilkan saat memulai"
+
+msgid "Ready Out of the Box"
+msgstr "Siap Pakai"
+
+msgid ""
+"Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
+" and essential utilities pre-configured."
+msgstr ""
+"Saifdora Silverblue 45 menyertakan codec lengkap, akselerasi perangkat "
+"keras, dan utilitas penting."
+
+msgid "Multimedia & Hardware Acceleration"
+msgstr "Multimedia & Akselerasi Perangkat Keras"
+
+msgid ""
+"Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
+"and AMD."
+msgstr ""
+"Dukungan penuh codec (HEVC, AV1, HEIC) dan akselerasi untuk Intel dan AMD."
+
+msgid "Curated Repositories"
+msgstr "Repositori Terpilih"
+
+msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
+msgstr "Flathub dan RPM Fusion diaktifkan secara default."
+
+msgid "Global Localization"
+msgstr "Dukungan Bahasa Global"
+
+msgid ""
+"Full support for 12 languages with completed GNOME 51 translations and "
+"international fonts."
+msgstr "Dukungan 12 bahasa dengan terjemahan GNOME 51 dan font internasional."
+
+msgid "Archiving & Documents"
+msgstr "Pengarsipan & Dokumen"
+
+msgid ""
+"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+"image processing."
+msgstr "Dukungan terintegrasi untuk 7-Zip, RAR, ZIP, dan dokumen."
+
+msgid "Integrated Productivity Apps"
+msgstr "Aplikasi Produktivitas Terintegrasi"
+
+msgid ""
+"High-performance desktop applications installed natively in your system."
+msgstr "Aplikasi desktop berkinerja tinggi yang terpasang secara native."
+
+msgid "Rumman (File & Media Converter)"
+msgstr "Rumman (Konverter Berkas & Media)"
+
+msgid "High-performance media converter and file optimizer."
+msgstr "Konverter media cepat dan pengoptimal berkas."
+
+msgid "Launch Rumman"
+msgstr "Buka Rumman"
+
+msgid "Mister Download Manager"
+msgstr "Mister Download Manager"
+
+msgid "Fast download manager automatically integrated with Firefox."
+msgstr "Pengelola unduhan cepat yang terintegrasi dengan Firefox."
+
+msgid "Launch MDM"
+msgstr "Buka MDM"
+
+msgid "ZapFast"
+msgstr "ZapFast"
+
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr "Klien desktop WhatsApp yang cepat dan native dibuat dengan Rust."
+
+msgid "Launch ZapFast"
+msgstr "Buka ZapFast"
+
+msgid "Interface Customization & Extensions"
+msgstr "Kustomisasi Antarmuka & Ekstensi"
+
+msgid ""
+"Enhance and personalize your GNOME desktop with pre-configured extensions "
+"and utilities."
+msgstr ""
+"Personalisasi desktop GNOME Anda dengan ekstensi yang telah disiapkan."
+
+msgid "Pre-Activated Extensions"
+msgstr "Ekstensi Pra-Aktif"
+
+msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
+msgstr "ArcMenu, Dash to Dock, Clipboard Indicator, dan Adwaita Lock Clock."
+
+msgid "Extension Manager"
+msgstr "Pengelola Ekstensi"
+
+msgid "Search, install, and update GNOME Shell extensions seamlessly."
+msgstr "Cari, pasang, dan perbarui ekstensi GNOME Shell dengan mudah."
+
+msgid "Manage Extensions"
+msgstr "Kelola Ekstensi"
+
+msgid "Refine"
+msgstr "Refine"
+
+msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+msgstr "Sesuaikan pengaturan tersembunyi GNOME, font, dan perilaku sistem."
+
+msgid "Customize Desktop"
+msgstr "Kustomisasi Desktop"
+
+msgid "Hardware & Graphics Drivers"
+msgstr "Perangkat Keras & Driver Grafis"
+
+msgid ""
+"Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
+msgstr "Kinerja mulus untuk perangkat keras Intel, AMD, dan NVIDIA."
+
+msgid "Intel & AMD Acceleration"
+msgstr "Akselerasi Intel & AMD"
+
+msgid ""
+"Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
+"configured and active."
+msgstr "Akselerasi video perangkat keras telah dikonfigurasi dan aktif."
+
+msgid "NVIDIA & CUDA Drivers"
+msgstr "Driver NVIDIA & CUDA"
+
+msgid ""
+"Detect your GPU model, install official drivers, configure CUDA, and manage "
+"Secure Boot."
+msgstr "Deteksi model GPU Anda, pasang driver resmi, dan atur CUDA."
+
+msgid "Open NVIDIA Manager"
+msgstr "Buka Pengelola NVIDIA"
+
+msgid "GNOME 51 Navigation Basics"
+msgstr "Dasar Navigasi GNOME 51"
+
+msgid ""
+"Master simple gestures and shortcuts to move swiftly through your workspace."
+msgstr "Kuasai gerakan dan pintasan mudah untuk bernavigasi dengan cepat."
+
+msgid "Super Key & Search"
+msgstr "Tombol Super & Pencarian"
+
+msgid ""
+"Press the Super (Windows) key to open the Activities Overview, search apps, "
+"files, or do quick math."
+msgstr ""
+"Tekan tombol Super untuk membuka Ikhtisar Aktivitas dan mencari aplikasi "
+"atau berkas."
+
+msgid "Touchpad Gestures"
+msgstr "Gestur Panel Sentuh"
+
+msgid ""
+"Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
+"to switch workspaces."
+msgstr ""
+"Usap 3 jari ke atas/bawah untuk Ikhtisar; kiri/kanan untuk berpindah ruang "
+"kerja."
+
+msgid "Dynamic Workspaces"
+msgstr "Ruang Kerja Dinamis"
+
+msgid ""
+"Workspaces are created automatically as you open windows to keep your "
+"desktop organized."
+msgstr ""
+"Ruang kerja dibuat otomatis saat membuka jendela agar desktop tetap rapi."
+
+msgid "Get Started"
+msgstr "Mulai"

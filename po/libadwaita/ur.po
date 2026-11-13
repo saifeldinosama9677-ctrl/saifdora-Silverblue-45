@@ -1,0 +1,473 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libadwaita (ur)\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libadwaita/issues\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language-Team: ur Team\n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "GNU General Public License, version 2 or later"
+msgstr "جی این یو جنرل پبلک لائسنس، ورژن 2 یا بعد کا"
+
+msgid "GNU General Public License, version 3 or later"
+msgstr "جی این یو جنرل پبلک لائسنس، ورژن 3 یا بعد کا"
+
+msgid "GNU Lesser General Public License, version 2.1 or later"
+msgstr "جی این یو لیسر جنرل پبلک لائسنس، ورژن 2.1 یا بعد کا"
+
+msgid "GNU Lesser General Public License, version 3 or later"
+msgstr "جی این یو لیسر جنرل پبلک لائسنس، ورژن 3 یا بعد کا"
+
+msgid "BSD 2-Clause License"
+msgstr "بی ایس ڈی 2-شق لائسنس"
+
+msgid "The MIT License (MIT)"
+msgstr "ایم آئی ٹی لائسنس (MIT)"
+
+msgid "Artistic License 2.0"
+msgstr "آرٹسٹک لائسنس 2.0"
+
+msgid "GNU General Public License, version 2 only"
+msgstr "جی این یو جنرل پبلک لائسنس، صرف ورژن 2"
+
+msgid "GNU General Public License, version 3 only"
+msgstr "جی این یو جنرل پبلک لائسنس، صرف ورژن 3"
+
+msgid "GNU Lesser General Public License, version 2.1 only"
+msgstr "جی این یو لیسر جنرل پبلک لائسنس، صرف ورژن 2.1"
+
+msgid "GNU Lesser General Public License, version 3 only"
+msgstr "جی این یو لیسر جنرل پبلک لائسنس، صرف ورژن 3"
+
+msgid "GNU Affero General Public License, version 3 or later"
+msgstr "جی این یو افیرو جنرل پبلک لائسنس، ورژن 3 یا بعد کا"
+
+msgid "GNU Affero General Public License, version 3 only"
+msgstr "جی این یو افیرو جنرل پبلک لائسنس، صرف ورژن 3"
+
+msgid "BSD 3-Clause License"
+msgstr "بی ایس ڈی 3-شق لائسنس"
+
+msgid "Apache License, Version 2.0"
+msgstr "اپاچی لائسنس، ورژن 2.0"
+
+msgid "Mozilla Public License 2.0"
+msgstr "موزیلا پبلک لائسنس 2.0"
+
+msgid "BSD Zero-Clause License"
+msgstr "BSD Zero-Clause License"
+
+msgid "Code by"
+msgstr "کوڈ نگار"
+
+msgid "Design by"
+msgstr "ڈیزائن کار"
+
+msgid "Artwork by"
+msgstr "آرٹ ورک"
+
+msgid "Documentation by"
+msgstr "دستاویزات"
+
+msgid "Translated by"
+msgstr "مترجمین"
+
+msgid ""
+"This application comes with absolutely no warranty. See the <a "
+"href=\"%s\">%s</a> for details."
+msgstr ""
+"یہ ایپلیکیشن بغیر کسی وارنٹی کے فراہم کی جاتی ہے۔ تفصیلات کے لیے <a "
+"href=\"%s\">%s</a> دیکھیں۔"
+
+msgid "This Application"
+msgstr "یہ ایپلیکیشن"
+
+msgid "Version %s"
+msgstr "ورژن %s"
+
+msgid "Unable to parse release notes: %s at line %d, char %d"
+msgstr "ریلیز نوٹس پڑھنے میں ناکامی: %s سطر %d، حرف %d پر"
+
+msgid "Unable to parse release notes:"
+msgstr "ریلیز نوٹس پڑھنے میں ناکامی:"
+
+msgid "Line: %d, character: %d"
+msgstr "سطر: %d، حرف: %d"
+
+msgid "Other Apps by %s"
+msgstr "%s کی دیگر ایپس"
+
+msgid "Other Apps"
+msgstr "دیگر ایپس"
+
+msgid "Copied to clipboard"
+msgstr "کلپ بورڈ پر کاپی ہو گیا"
+
+msgid "Unable to save debugging information"
+msgstr "ڈیبگنگ معلومات محفوظ کرنے میں ناکامی"
+
+msgid "Close"
+msgstr "بند کریں"
+
+msgid "Save debugging information"
+msgstr "ڈیبگنگ معلومات محفوظ کریں"
+
+msgid "About"
+msgstr "کے بارے میں"
+
+msgid "What’s _New"
+msgstr "_نیا کیا ہے"
+
+msgid "_Details"
+msgstr "تفصی_لات"
+
+msgid "_Website"
+msgstr "_ویب سائٹ"
+
+msgid "_Support Questions"
+msgstr "_امدادی سوالات"
+
+msgid "_Report an Issue"
+msgstr "مسئلے کی _اطلاع دیں"
+
+msgid "_Troubleshooting"
+msgstr "خرابی کا سرا_غ لگائیں"
+
+msgid "_Credits"
+msgstr "_اعتراف خدمات"
+
+msgid "_Legal"
+msgstr "_قانونی"
+
+msgid "_Acknowledgements"
+msgstr "_شکریہ"
+
+msgid "What’s New"
+msgstr "نیا کیا ہے"
+
+msgid "Details"
+msgstr "تفصیلات"
+
+msgid "Troubleshooting"
+msgstr "خرابیوں کا حل"
+
+msgid ""
+"To assist in troubleshooting, you can view your debugging information. "
+"Providing this information to the application developers can help diagnose "
+"any problems you encounter when you report an issue."
+msgstr ""
+"مسائل کے حل میں مدد کے لیے آپ ڈیبگنگ کی معلومات دیکھ سکتے ہیں۔ یہ معلومات "
+"ڈویلپرز کو بھیجنے سے آپ کے مسئلے کی تشخیص میں مدد ملتی ہے۔"
+
+msgid "_Debugging Information"
+msgstr "_ڈیبگنگ معلومات"
+
+msgid "Debugging Information"
+msgstr "ڈیبگنگ معلومات"
+
+msgid "_Copy Text"
+msgstr "متن _کاپی کریں"
+
+msgid "_Save As…"
+msgstr "_محفوظ کریں بطور…"
+
+msgid "Credits"
+msgstr "اعتراف خدمات"
+
+msgid "Legal"
+msgstr "قانونی"
+
+msgid "Acknowledgements"
+msgstr "شکریہ"
+
+msgid "Screenshot copied to clipboard"
+msgstr "اسکرین شاٹ کلپ بورڈ پر کاپی ہو گیا"
+
+msgid "Adaptive Preview"
+msgstr "موافقت پذیر پیش منظر"
+
+msgid "Display"
+msgstr "ڈسپلے"
+
+msgid "Device"
+msgstr "ڈیوائس"
+
+msgid "Width"
+msgstr "چوڑائی"
+
+msgid "Height"
+msgstr "اونچائی"
+
+msgid "Rotate"
+msgstr "گھمائیں"
+
+msgid "Rotate Left"
+msgstr "بائیں گھمائیں"
+
+msgid "Rotate Right"
+msgstr "دائیں گھمائیں"
+
+msgid "Shell"
+msgstr "شیل"
+
+msgid "Preset"
+msgstr "پری سیٹ"
+
+msgid "Top Bar"
+msgstr "اوپری پٹی"
+
+msgid "Bottom Bar"
+msgstr "نچلی پٹی"
+
+msgid "Window Controls"
+msgstr "ونڈو کنٹرولز"
+
+msgid "View"
+msgstr "دیکھیں"
+
+msgid "Scale to Fit"
+msgstr "اسکرین کے مطابق ناپیں"
+
+msgid "Highlight Bezel"
+msgstr "کنارے نمایاں کریں"
+
+msgid "Toggle Sidebar"
+msgstr "سائیڈ بار کھولیں/بند کریں"
+
+msgid "Exit"
+msgstr "باہر نکلیں"
+
+msgid "Take Screenshot"
+msgstr "اسکرین شاٹ لیں"
+
+msgctxt "Shell preset"
+msgid "Desktop Shell"
+msgstr "ڈیسک ٹاپ شیل"
+
+msgctxt "Shell preset"
+msgid "Mobile Shell"
+msgstr "موبائل شیل"
+
+msgctxt "Shell preset"
+msgid "Fullscreen"
+msgstr "فل اسکرین"
+
+msgctxt "Shell preset"
+msgid "Custom"
+msgstr "اپنی مرضی کا"
+
+msgctxt "Device preset"
+msgid "Generic Phone"
+msgstr "عام فون"
+
+msgctxt "Device preset"
+msgid "Generic Tablet"
+msgstr "عام ٹیبلٹ"
+
+msgctxt "Device preset"
+msgid "Custom"
+msgstr "اپنی مرضی کا"
+
+msgid "Avatar of %s"
+msgstr "%s کا اوتار"
+
+msgid "Back"
+msgstr "واپس"
+
+msgid "Search"
+msgstr "تلاش"
+
+msgid "Apply"
+msgstr "لاگو کریں"
+
+msgctxt "view switcher button badge"
+msgid "Attention requested."
+msgstr "توجہ درکار ہے۔"
+
+msgctxt "view switcher button badge"
+msgid "Has a badge: more than 999."
+msgstr "بیج موجود ہے: 999 سے زیادہ۔"
+
+msgctxt "view switcher button badge"
+msgid "Has a badge: %u."
+msgstr "بیج موجود ہے: %u۔"
+
+msgid "No Preference"
+msgstr "کوئی ترجیح نہیں"
+
+msgid "Prefer Dark"
+msgstr "ڈارک موڈ ترجیح دیں"
+
+msgid "Prefer Light"
+msgstr "لائٹ موڈ ترجیح دیں"
+
+msgid "Blue"
+msgstr "نیلا"
+
+msgid "Teal"
+msgstr "سبز مائل نیلا"
+
+msgid "Green"
+msgstr "سبز"
+
+msgid "Yellow"
+msgstr "پیلا"
+
+msgid "Orange"
+msgstr "نارنجی"
+
+msgid "Red"
+msgstr "سرخ"
+
+msgid "Pink"
+msgstr "گلابی"
+
+msgid "Purple"
+msgstr "جامنی"
+
+msgid "Slate"
+msgstr "سلیٹی"
+
+msgid "Adwaita"
+msgstr "ایڈویٹا"
+
+msgid "System Appearance"
+msgstr "نظام کی ظاہری شکل"
+
+msgid ""
+"Override settings for this application. They will be reset upon closing the "
+"inspector."
+msgstr ""
+"اس ایپلیکیشن کی ترتیبات تبدیل کریں۔ معائنہ کار بند ہونے پر وہ پہلے جیسی ہو "
+"جائیں گی۔"
+
+msgid "System Supports Color Schemes"
+msgstr "سسٹم رنگوں کی اسکیم کی حمایت کرتا ہے"
+
+msgid "Preferred Color Scheme"
+msgstr "پسندیدہ رنگوں کی اسکیم"
+
+msgid "Accent Color"
+msgstr "نمایاں رنگ"
+
+msgid "System Supports Accent Colors"
+msgstr "سسٹم نمایاں رنگوں کی حمایت کرتا ہے"
+
+msgid "Preferred Accent Color"
+msgstr "پسندیدہ نمایاں رنگ"
+
+msgid "Accessibility"
+msgstr "رسائی"
+
+msgid "High Contrast"
+msgstr "ہائی کنٹراسٹ"
+
+msgid ""
+"Test the app at specific screen sizes to simulate a mobile environment. Open"
+" the preview directly on any supported window using Shift+Ctrl+M"
+msgstr ""
+"موبائل ماحول کی جانچ کے لیے مخصوص اسکرین سائز پر ایپ کا ٹیسٹ کریں۔ "
+"Shift+Ctrl+M کے ذریعے پیش منظر دیکھیں۔"
+
+msgid "_Open Link"
+msgstr "لنک _کھولیں"
+
+msgid "Copy _Link Address"
+msgstr "لنک ایڈریس _کاپی کریں"
+
+msgid "Hide Password"
+msgstr "پاس ورڈ چھپائیں"
+
+msgid "Show Password"
+msgstr "پاس ورڈ دکھائیں"
+
+msgid "Caps Lock is on"
+msgstr "Caps Lock آن ہے"
+
+msgid "_Show Password"
+msgstr "پاس ورڈ _دکھائیں"
+
+msgid "Untitled page"
+msgstr "بغیر عنوان صفحہ"
+
+msgid "Preferences"
+msgstr "ترجیحات"
+
+msgid "Search preferences"
+msgstr "ترجیحات میں تلاش کریں"
+
+msgid "No Results Found"
+msgstr "کوئی نتیجہ نہیں ملا"
+
+msgid "Try a different search"
+msgstr "کچھ اور تلاش کریں"
+
+msgid "Close the window"
+msgstr "ونڈو بند کریں"
+
+msgctxt "keyboard side marker"
+msgid "L"
+msgstr "L"
+
+msgctxt "keyboard side marker"
+msgid "R"
+msgstr "R"
+
+msgid "Keyboard Shortcuts"
+msgstr "کی بورڈ شارٹ کٹس"
+
+msgid "Search shortcuts"
+msgstr "شارٹ کٹس تلاش کریں"
+
+msgid "No Shortcut"
+msgstr "کوئی شارٹ کٹ نہیں"
+
+msgid "More Options"
+msgstr "مزید اختیارات"
+
+msgid "View Open Tabs"
+msgstr "کھلی ہوئی ٹیبز دیکھیں"
+
+msgid "%u Tab"
+msgid_plural "%u Tabs"
+msgstr[0] "%u Tab"
+msgstr[1] "%u Tab"
+
+msgid "Search Tabs"
+msgstr "ٹیبز تلاش کریں"
+
+msgid "Search tabs"
+msgstr "ٹیبز تلاش کریں"
+
+msgid "No Open Tabs"
+msgstr "کوئی کھلی ٹیب نہیں"
+
+msgid "No Tabs Found"
+msgstr "کوئی ٹیب نہیں ملی"
+
+msgid "New _Tab"
+msgstr "_نئی ٹیب"
+
+msgid "Close Tab"
+msgstr "ٹیب بند کریں"
+
+msgid "A toast appeared: %s, has a button: %s"
+msgstr "نوٹیفکیشن ظاہر ہوا: %s، بٹن موجود ہے: %s"
+
+msgid "A toast appeared: %s"
+msgstr "نوٹیفکیشن ظاہر ہوا: %s"
+
+msgid "A toast appeared, has a button: %s"
+msgstr "نوٹیفکیشن ظاہر ہوا، بٹن موجود ہے: %s"
+
+msgid "A toast appeared"
+msgstr "نوٹیفکیشن ظاہر ہوا"
+
+msgid "Dismiss"
+msgstr "رد کریں"

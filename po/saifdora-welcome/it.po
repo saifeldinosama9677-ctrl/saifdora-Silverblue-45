@@ -1,0 +1,204 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saifdora-welcome 1.0 (it)\n"
+"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language-Team: it Translation Team\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Welcome to Saifdora"
+msgstr "Benvenuto in Saifdora"
+
+msgid "Previous"
+msgstr "Precedente"
+
+msgid "Next"
+msgstr "Successivo"
+
+msgid "NVIDIA graphics card detected! Official drivers are not installed."
+msgstr ""
+"Scheda grafica NVIDIA rilevata! I driver ufficiali non sono installati."
+
+msgid "Install NVIDIA & CUDA Driver"
+msgstr "Installa driver NVIDIA e CUDA"
+
+msgid "Show on startup"
+msgstr "Mostra all'avvio"
+
+msgid "Ready Out of the Box"
+msgstr "Pronto all'uso"
+
+msgid ""
+"Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
+" and essential utilities pre-configured."
+msgstr ""
+"Saifdora Silverblue 45 include codec completi, accelerazione hardware e "
+"strumenti essenziali."
+
+msgid "Multimedia & Hardware Acceleration"
+msgstr "Multimedia e accelerazione hardware"
+
+msgid ""
+"Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
+"and AMD."
+msgstr ""
+"Supporto completo a tutti i codec (HEVC, AV1, HEIC) e accelerazione video."
+
+msgid "Curated Repositories"
+msgstr "Repository configurati"
+
+msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
+msgstr "Flathub e RPM Fusion attivati per impostazione predefinita."
+
+msgid "Global Localization"
+msgstr "Localizzazione globale"
+
+msgid ""
+"Full support for 12 languages with completed GNOME 51 translations and "
+"international fonts."
+msgstr ""
+"Supporto per 12 lingue con traduzioni di GNOME 51 e caratteri "
+"internazionali."
+
+msgid "Archiving & Documents"
+msgstr "Archiviazione e documenti"
+
+msgid ""
+"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+"image processing."
+msgstr "Supporto integrato a 7-Zip, RAR, ZIP e gestione documenti."
+
+msgid "Integrated Productivity Apps"
+msgstr "Applicazioni di produttività integrate"
+
+msgid ""
+"High-performance desktop applications installed natively in your system."
+msgstr "Applicazioni desktop native ad alte prestazioni."
+
+msgid "Rumman (File & Media Converter)"
+msgstr "Rumman (Convertitore file e media)"
+
+msgid "High-performance media converter and file optimizer."
+msgstr "Convertitore multimediale e ottimizzatore di file veloce."
+
+msgid "Launch Rumman"
+msgstr "Avvia Rumman"
+
+msgid "Mister Download Manager"
+msgstr "Mister Download Manager"
+
+msgid "Fast download manager automatically integrated with Firefox."
+msgstr "Gestore di download veloce integrato automaticamente con Firefox."
+
+msgid "Launch MDM"
+msgstr "Avvia MDM"
+
+msgid "ZapFast"
+msgstr "ZapFast"
+
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr "Client desktop WhatsApp nativo e veloce scritto in Rust."
+
+msgid "Launch ZapFast"
+msgstr "Avvia ZapFast"
+
+msgid "Interface Customization & Extensions"
+msgstr "Personalizzazione e estensioni"
+
+msgid ""
+"Enhance and personalize your GNOME desktop with pre-configured extensions "
+"and utilities."
+msgstr "Personalizza il desktop GNOME con estensioni pronte all'uso."
+
+msgid "Pre-Activated Extensions"
+msgstr "Estensioni preattivate"
+
+msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
+msgstr "ArcMenu, Dash to Dock, Clipboard Indicator e Adwaita Lock Clock."
+
+msgid "Extension Manager"
+msgstr "Gestore estensioni"
+
+msgid "Search, install, and update GNOME Shell extensions seamlessly."
+msgstr "Cerca, installa e aggiorna le estensioni di GNOME Shell con facilità."
+
+msgid "Manage Extensions"
+msgstr "Gestisci estensioni"
+
+msgid "Refine"
+msgstr "Refine"
+
+msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+msgstr "Modifica impostazioni nascoste di GNOME, caratteri e comportamento."
+
+msgid "Customize Desktop"
+msgstr "Personalizza desktop"
+
+msgid "Hardware & Graphics Drivers"
+msgstr "Hardware e driver grafici"
+
+msgid ""
+"Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
+msgstr "Prestazioni fluide e ottimizzate per Intel, AMD e NVIDIA."
+
+msgid "Intel & AMD Acceleration"
+msgstr "Accelerazione Intel e AMD"
+
+msgid ""
+"Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
+"configured and active."
+msgstr "Accelerazione video hardware preconfigurata e attiva."
+
+msgid "NVIDIA & CUDA Drivers"
+msgstr "Driver NVIDIA e CUDA"
+
+msgid ""
+"Detect your GPU model, install official drivers, configure CUDA, and manage "
+"Secure Boot."
+msgstr "Rileva la tua GPU, installa i driver ufficiali e gestisci CUDA."
+
+msgid "Open NVIDIA Manager"
+msgstr "Apri gestore NVIDIA"
+
+msgid "GNOME 51 Navigation Basics"
+msgstr "Navigazione di base in GNOME 51"
+
+msgid ""
+"Master simple gestures and shortcuts to move swiftly through your workspace."
+msgstr "Gesti e scorciatoie per muoverti rapidamente nello spazio di lavoro."
+
+msgid "Super Key & Search"
+msgstr "Tasto Super e ricerca"
+
+msgid ""
+"Press the Super (Windows) key to open the Activities Overview, search apps, "
+"files, or do quick math."
+msgstr "Premi il tasto Super per aprire le Attività e cercare app o file."
+
+msgid "Touchpad Gestures"
+msgstr "Gesti sul touchpad"
+
+msgid ""
+"Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
+"to switch workspaces."
+msgstr ""
+"Scorri con 3 dita su/giù per le Attività; sinistra/destra per cambiare "
+"spazio."
+
+msgid "Dynamic Workspaces"
+msgstr "Spazi di lavoro dinamici"
+
+msgid ""
+"Workspaces are created automatically as you open windows to keep your "
+"desktop organized."
+msgstr ""
+"Gli spazi si creano automaticamente per mantenere in ordine il desktop."
+
+msgid "Get Started"
+msgstr "Inizia"

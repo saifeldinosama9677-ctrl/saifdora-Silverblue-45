@@ -1,0 +1,191 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saifdora-welcome 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Welcome to Saifdora"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "NVIDIA graphics card detected! Official drivers are not installed."
+msgstr ""
+
+msgid "Install NVIDIA & CUDA Driver"
+msgstr ""
+
+msgid "Show on startup"
+msgstr ""
+
+msgid "Ready Out of the Box"
+msgstr ""
+
+msgid ""
+"Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
+" and essential utilities pre-configured."
+msgstr ""
+
+msgid "Multimedia & Hardware Acceleration"
+msgstr ""
+
+msgid ""
+"Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
+"and AMD."
+msgstr ""
+
+msgid "Curated Repositories"
+msgstr ""
+
+msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
+msgstr ""
+
+msgid "Global Localization"
+msgstr ""
+
+msgid ""
+"Full support for 12 languages with completed GNOME 51 translations and "
+"international fonts."
+msgstr ""
+
+msgid "Archiving & Documents"
+msgstr ""
+
+msgid ""
+"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+"image processing."
+msgstr ""
+
+msgid "Integrated Productivity Apps"
+msgstr ""
+
+msgid ""
+"High-performance desktop applications installed natively in your system."
+msgstr ""
+
+msgid "Rumman (File & Media Converter)"
+msgstr ""
+
+msgid "High-performance media converter and file optimizer."
+msgstr ""
+
+msgid "Launch Rumman"
+msgstr ""
+
+msgid "Mister Download Manager"
+msgstr ""
+
+msgid "Fast download manager automatically integrated with Firefox."
+msgstr ""
+
+msgid "Launch MDM"
+msgstr ""
+
+msgid "ZapFast"
+msgstr ""
+
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr ""
+
+msgid "Launch ZapFast"
+msgstr ""
+
+msgid "Interface Customization & Extensions"
+msgstr ""
+
+msgid ""
+"Enhance and personalize your GNOME desktop with pre-configured extensions "
+"and utilities."
+msgstr ""
+
+msgid "Pre-Activated Extensions"
+msgstr ""
+
+msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
+msgstr ""
+
+msgid "Extension Manager"
+msgstr ""
+
+msgid "Search, install, and update GNOME Shell extensions seamlessly."
+msgstr ""
+
+msgid "Manage Extensions"
+msgstr ""
+
+msgid "Refine"
+msgstr ""
+
+msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+msgstr ""
+
+msgid "Customize Desktop"
+msgstr ""
+
+msgid "Hardware & Graphics Drivers"
+msgstr ""
+
+msgid ""
+"Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
+msgstr ""
+
+msgid "Intel & AMD Acceleration"
+msgstr ""
+
+msgid ""
+"Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
+"configured and active."
+msgstr ""
+
+msgid "NVIDIA & CUDA Drivers"
+msgstr ""
+
+msgid ""
+"Detect your GPU model, install official drivers, configure CUDA, and manage "
+"Secure Boot."
+msgstr ""
+
+msgid "Open NVIDIA Manager"
+msgstr ""
+
+msgid "GNOME 51 Navigation Basics"
+msgstr ""
+
+msgid ""
+"Master simple gestures and shortcuts to move swiftly through your workspace."
+msgstr ""
+
+msgid "Super Key & Search"
+msgstr ""
+
+msgid ""
+"Press the Super (Windows) key to open the Activities Overview, search apps, "
+"files, or do quick math."
+msgstr ""
+
+msgid "Touchpad Gestures"
+msgstr ""
+
+msgid ""
+"Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
+"to switch workspaces."
+msgstr ""
+
+msgid "Dynamic Workspaces"
+msgstr ""
+
+msgid ""
+"Workspaces are created automatically as you open windows to keep your "
+"desktop organized."
+msgstr ""
+
+msgid "Get Started"
+msgstr ""

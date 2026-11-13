@@ -24,6 +24,9 @@ modules:
     repos:
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+    remove:
+      - gnome-extensions-app
+      - gnome-tour
     install:
       # RPM Fusion release packages
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
@@ -48,16 +51,30 @@ modules:
       - p7zip
       - p7zip-plugins
 
-      # Arabic & office fonts
+      # Arabic, office & global fonts
       - google-noto-sans-arabic-fonts
       - vazirmatn-fonts
       - amiri-fonts
       - google-carlito-fonts
       - google-crosextra-caladea-fonts
       - liberation-fonts
+      - google-noto-nastaliq-urdu-fonts
+      - google-noto-sans-devanagari-fonts
+      - google-noto-sans-cjk-fonts
 
-      # Localization & GNOME tools
+      # Localization & 12 language packs
+      - langpacks-en
       - langpacks-ar
+      - langpacks-ru
+      - langpacks-es
+      - langpacks-tr
+      - langpacks-fr
+      - langpacks-it
+      - langpacks-hi
+      - langpacks-zh_CN
+      - langpacks-ur
+      - langpacks-ms
+      - langpacks-id
       - glibc-langpack-ar
       - gnome-tweaks
       - gnome-menus
@@ -86,6 +103,7 @@ modules:
           - com.mattjakeman.ExtensionManager
           - com.github.tchx84.Flatseal
           - org.videolan.VLC
+          - page.tesk.Refine
 
   # Compile dconf database defaults and glib schemas
   - type: script

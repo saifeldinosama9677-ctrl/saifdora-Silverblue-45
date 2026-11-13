@@ -1,0 +1,203 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saifdora-welcome 1.0 (hi)\n"
+"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"PO-Revision-Date: 2024-11-13 12:00+0000\n"
+"Last-Translator: Saifdora Translation Team\n"
+"Language-Team: hi Translation Team\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Welcome to Saifdora"
+msgstr "Saifdora में आपका स्वागत है"
+
+msgid "Previous"
+msgstr "पिछला"
+
+msgid "Next"
+msgstr "अगला"
+
+msgid "NVIDIA graphics card detected! Official drivers are not installed."
+msgstr "NVIDIA ग्राफिक्स कार्ड मिला! आधिकारिक ड्राइवर स्थापित नहीं हैं।"
+
+msgid "Install NVIDIA & CUDA Driver"
+msgstr "NVIDIA और CUDA ड्राइवर इंस्टॉल करें"
+
+msgid "Show on startup"
+msgstr "शुरुआत में दिखाएं"
+
+msgid "Ready Out of the Box"
+msgstr "तुरंत उपयोग के लिए तैयार"
+
+msgid ""
+"Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
+" and essential utilities pre-configured."
+msgstr ""
+"Saifdora Silverblue 45 में सभी आवश्यक कोडेक, हार्डवेयर त्वरण और उपयोगी ऐप्स "
+"शामिल हैं।"
+
+msgid "Multimedia & Hardware Acceleration"
+msgstr "मल्टीमीडिया और हार्डवेयर त्वरण"
+
+msgid ""
+"Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
+"and AMD."
+msgstr ""
+"Intel और AMD के लिए पूर्ण कोडेक समर्थन (HEVC, AV1, HEIC) और वीडियो त्वरण।"
+
+msgid "Curated Repositories"
+msgstr "पूर्व-कॉन्फ़िगर रिपॉजिटरी"
+
+msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
+msgstr "Flathub और RPM Fusion रिपॉजिटरी पहले से सक्षम हैं।"
+
+msgid "Global Localization"
+msgstr "वैश्विक भाषा समर्थन"
+
+msgid ""
+"Full support for 12 languages with completed GNOME 51 translations and "
+"international fonts."
+msgstr "पूर्ण GNOME 51 अनुवादों और फ़ॉन्ट्स के साथ 12 भाषाओं का समर्थन।"
+
+msgid "Archiving & Documents"
+msgstr "संग्रहण और दस्तावेज़"
+
+msgid ""
+"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+"image processing."
+msgstr ""
+"7-Zip, RAR, ZIP और उन्नत दस्तावेज़ प्रसंस्करण के लिए अंतर्निहित समर्थन।"
+
+msgid "Integrated Productivity Apps"
+msgstr "एकीकृत उत्पादकता ऐप्स"
+
+msgid ""
+"High-performance desktop applications installed natively in your system."
+msgstr "आपके सिस्टम में पहले से स्थापित तेज़ डेस्कटॉप ऐप्स।"
+
+msgid "Rumman (File & Media Converter)"
+msgstr "Rumman (फ़ाइल और मीडिया कनवर्टर)"
+
+msgid "High-performance media converter and file optimizer."
+msgstr "तेज़ मीडिया कनवर्टर और फ़ाइल ऑप्टिमाइज़र।"
+
+msgid "Launch Rumman"
+msgstr "Rumman खोलें"
+
+msgid "Mister Download Manager"
+msgstr "Mister Download Manager"
+
+msgid "Fast download manager automatically integrated with Firefox."
+msgstr "Firefox के साथ एकीकृत तेज़ डाउनलोड प्रबंधक।"
+
+msgid "Launch MDM"
+msgstr "MDM खोलें"
+
+msgid "ZapFast"
+msgstr "ZapFast"
+
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr "Rust में निर्मित तेज़ मूल व्हाट्सएप डेस्कटॉप क्लाइंट।"
+
+msgid "Launch ZapFast"
+msgstr "ZapFast खोलें"
+
+msgid "Interface Customization & Extensions"
+msgstr "इंटरफ़ेस अनुकूलन और एक्सटेंशन"
+
+msgid ""
+"Enhance and personalize your GNOME desktop with pre-configured extensions "
+"and utilities."
+msgstr "तैयार एक्सटेंशन के साथ अपने GNOME डेस्कटॉप को अनुकूलित करें।"
+
+msgid "Pre-Activated Extensions"
+msgstr "पहले से सक्रिय एक्सटेंशन"
+
+msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
+msgstr "ArcMenu, Dash to Dock, Clipboard Indicator और Adwaita Lock Clock।"
+
+msgid "Extension Manager"
+msgstr "एक्सटेंशन प्रबंधक"
+
+msgid "Search, install, and update GNOME Shell extensions seamlessly."
+msgstr "GNOME Shell एक्सटेंशन आसानी से खोजें, इंस्टॉल करें और अपडेट करें।"
+
+msgid "Manage Extensions"
+msgstr "एक्सटेंशन प्रबंधित करें"
+
+msgid "Refine"
+msgstr "Refine"
+
+msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+msgstr "GNOME की छिपी सेटिंग्स, फ़ॉन्ट्स और व्यवहार को समायोजित करें।"
+
+msgid "Customize Desktop"
+msgstr "डेस्कटॉप अनुकूलित करें"
+
+msgid "Hardware & Graphics Drivers"
+msgstr "हार्डवेयर और ग्राफिक्स ड्राइवर"
+
+msgid ""
+"Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
+msgstr "Intel, AMD और NVIDIA पर सहज प्रदर्शन के लिए अनुकूलित।"
+
+msgid "Intel & AMD Acceleration"
+msgstr "Intel और AMD त्वरण"
+
+msgid ""
+"Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
+"configured and active."
+msgstr "हार्डवेयर वीडियो त्वरण पहले से कॉन्फ़िगर और सक्रिय है।"
+
+msgid "NVIDIA & CUDA Drivers"
+msgstr "NVIDIA और CUDA ड्राइवर"
+
+msgid ""
+"Detect your GPU model, install official drivers, configure CUDA, and manage "
+"Secure Boot."
+msgstr "अपने GPU की पहचान करें, ड्राइवर इंस्टॉल करें और CUDA सेट करें।"
+
+msgid "Open NVIDIA Manager"
+msgstr "NVIDIA प्रबंधक खोलें"
+
+msgid "GNOME 51 Navigation Basics"
+msgstr "GNOME 51 नेविगेशन मूल बातें"
+
+msgid ""
+"Master simple gestures and shortcuts to move swiftly through your workspace."
+msgstr ""
+"अपने वर्कस्पेस में तेज़ी से नेविगेट करने के लिए आसान इशारे और शॉर्टकट।"
+
+msgid "Super Key & Search"
+msgstr "Super कुंजी और खोज"
+
+msgid ""
+"Press the Super (Windows) key to open the Activities Overview, search apps, "
+"files, or do quick math."
+msgstr ""
+"गतिविधियों का अवलोकन खोलने और ऐप्स या फ़ाइलों को खोजने के लिए Super दबाएं।"
+
+msgid "Touchpad Gestures"
+msgstr "टचपैड जेस्चर"
+
+msgid ""
+"Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
+"to switch workspaces."
+msgstr ""
+"अवलोकन के लिए 3 उंगलियों से ऊपर/नीचे स्वाइप करें; वर्कस्पेस बदलने के लिए "
+"दाएं/बाएं स्वाइप करें।"
+
+msgid "Dynamic Workspaces"
+msgstr "गतिशील वर्कस्पेस"
+
+msgid ""
+"Workspaces are created automatically as you open windows to keep your "
+"desktop organized."
+msgstr "विंडोज़ खोलने पर वर्कस्पेस अपने आप बनते हैं ताकि व्यवस्था बनी रहे।"
+
+msgid "Get Started"
+msgstr "शुरू करें"
