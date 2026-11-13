@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=مساعد تعريفات نفيديا
+Name[ar]=مساعد تعريفات نفيديا
+GenericName=Saifdora NVIDIA Driver Assistant
+Comment=فحص كرت الشاشة وتنبيه المستخدم لتثبيت التعريف إذا لم يكن مثبتاً
+Comment[ar]=فحص كرت الشاشة وتنبيه المستخدم لتثبيت التعريف إذا لم يكن مثبتاً
+Exec=/usr/bin/saifdora-nvidia-manager --autostart
+Terminal=false
+Type=Application
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=5

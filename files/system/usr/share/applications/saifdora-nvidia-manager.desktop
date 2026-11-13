@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=مدير تعريفات نفيديا
+Name[ar]=مدير تعريفات نفيديا
+GenericName=NVIDIA Driver Manager
+GenericName[ar]=مدير تعريفات نفيديا
+Comment=إدارة وتثبيت تعريفات NVIDIA و CUDA المخصصة لنظام Saifdora
+Comment[ar]=إدارة وتثبيت تعريفات NVIDIA و CUDA المخصصة لنظام Saifdora
+Exec=/usr/bin/saifdora-nvidia-manager
+Icon=video-display
+Terminal=false
+Type=Application
+Categories=Settings;System;HardwareSettings;
+Keywords=nvidia;gpu;graphics;cuda;driver;كرت;شاشة;تعريف;نفيديا;
+StartupNotify=true
+X-Purism-FormFactor=Workstation;Mobile;

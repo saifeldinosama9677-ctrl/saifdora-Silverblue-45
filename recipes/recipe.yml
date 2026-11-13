@@ -62,6 +62,10 @@ modules:
       - gnome-tweaks
       - adw-gtk3-theme
 
+      # Hardware detection & Secure Boot management
+      - pciutils
+      - mokutil
+
   # System-wide Flatpaks configuration (disables Fedora remote and enables Flathub)
   - type: default-flatpaks
     configurations:

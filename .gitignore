@@ -10,3 +10,5 @@ cosign.private
 .tmp/
 build-output/
 iso-output/
+__pycache__/
+*.pyc
