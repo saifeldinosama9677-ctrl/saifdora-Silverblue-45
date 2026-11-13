@@ -1,0 +1,88 @@
+name: bluebuild
+on:
+  schedule:
+    - cron:
+        "00 06 * * *" # Build at 06:00 UTC every day
+  push:
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  bluebuild:
+    name: Build Custom Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    strategy:
+      fail-fast: false
+      matrix:
+        recipe:
+          - recipe.yml
+    steps:
+      - name: Build Custom Image
+        uses: blue-build/github-action@v1.14
+        with:
+          recipe: ${{ matrix.recipe }}
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          pr_event_number: ${{ github.event.number }}
+          maximize_build_space: true
+          generate-iso: true
+
+      - name: Tag and push repository image alias
+        if: github.event_name != 'pull_request'
+        run: |
+          docker tag ghcr.io/${{ github.repository_owner }}/saifdora-silverblue:45 ghcr.io/${{ github.repository_owner }}/saifdora-silverblue-45:45 || true
+          docker tag ghcr.io/${{ github.repository_owner }}/saifdora-silverblue:latest ghcr.io/${{ github.repository_owner }}/saifdora-silverblue-45:latest || true
+          docker push ghcr.io/${{ github.repository_owner }}/saifdora-silverblue-45:45 || true
+          docker push ghcr.io/${{ github.repository_owner }}/saifdora-silverblue-45:latest || true
+
+  iso:
+    name: Build ISO
+    runs-on: ubuntu-latest
+    needs: bluebuild
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v9
+
+      - name: Install BlueBuild CLI
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/blue-build/cli/main/install.sh | sudo bash
+
+      - name: Log in to GHCR
+        run: echo "${{ github.token }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      - name: Generate ISO
+        run: |
+          mkdir -p build-output
+          sudo bluebuild generate-iso \
+            --output-dir build-output \
+            --iso-name saifdora-silverblue-45.iso \
+            image "ghcr.io/${{ github.repository_owner }}/saifdora-silverblue:45"
+
+      - name: Upload ISO Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: saifdora-silverblue-45-iso
+          path: |
+            build-output/*.iso
+            build-output/*-CHECKSUM
+          retention-days: 7
+          if-no-files-found: error

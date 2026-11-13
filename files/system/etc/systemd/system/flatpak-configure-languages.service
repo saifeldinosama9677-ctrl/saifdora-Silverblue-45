@@ -1,0 +1,12 @@
+[Unit]
+Description=Configure Flatpak system languages to Arabic and English
+After=network.target
+ConditionPathExists=/usr/bin/flatpak
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flatpak config --system --set languages "ar;en"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

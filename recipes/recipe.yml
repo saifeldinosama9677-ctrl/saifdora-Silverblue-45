@@ -1,0 +1,86 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: saifdora-silverblue
+description: Saifdora Silverblue 45 - Custom Fedora Atomic Silverblue Image
+base-image: quay.io/fedora-ostree-desktops/silverblue
+image-version: 45
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  # Pre-install RPM Fusion release packages so repositories and GPG keys are present
+  - type: rpm-ostree
+    install:
+      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
+      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+
+  # Install required multimedia codecs, drivers, fonts, and utilities from Fedora & RPM Fusion
+  - type: rpm-ostree
+    repos:
+      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
+      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+    install:
+      # Hardware acceleration & codecs
+      - libavcodec-freeworld
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-ugly
+      - gstreamer1-plugin-libav
+      - mesa-va-drivers-freeworld
+      - mesa-vdpau-drivers-freeworld
+      - intel-media-driver
+
+      # Image formats & thumbnails
+      - libheif-freeworld
+      - heif-pixbuf-loader
+      - webp-pixbuf-loader
+      - ffmpegthumbnailer
+
+      # Compression & archiving
+      - unrar
+      - p7zip
+      - p7zip-plugins
+
+      # Arabic & office fonts
+      - google-noto-sans-arabic-fonts
+      - vazirmatn-fonts
+      - amiri-fonts
+      - google-carlito-fonts
+      - google-caladea-fonts
+      - liberation-fonts
+
+      # Localization & GNOME tools
+      - langpacks-ar
+      - glibc-langpack-ar
+      - gnome-tweaks
+      - adw-gtk3-theme
+
+  # System-wide Flatpaks configuration (disables Fedora remote and enables Flathub)
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        notify: true
+        repo:
+          name: flathub
+          title: Flathub
+          url: https://dl.flathub.org/repo/flathub.flatpakrepo
+        install:
+          - com.mattjakeman.ExtensionManager
+          - com.github.tchx84.Flatseal
+          - org.videolan.VLC
+
+  # Compile dconf database defaults
+  - type: script
+    snippets:
+      - "dconf update"
+
+  # Enable flatpak system language configuration service on boot
+  - type: systemd
+    system:
+      enabled:
+        - flatpak-configure-languages.service
+
+  # Container signing policy configuration
+  - type: signing

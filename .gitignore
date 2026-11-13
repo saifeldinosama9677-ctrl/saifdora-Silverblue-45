@@ -1,0 +1,12 @@
+# Sigstore / Cosign private keys
+cosign.key
+cosign.private
+*.key
+
+# Generated build artifacts & temporary files
+/Containerfile
+*.iso
+*.iso-CHECKSUM
+.tmp/
+build-output/
+iso-output/
