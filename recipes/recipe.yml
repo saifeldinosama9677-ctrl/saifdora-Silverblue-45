@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: saifdora-silverblue
+name: saifdora-silverblue-45
 description: Saifdora Silverblue 45 - Custom Fedora Atomic Silverblue Image
 base-image: quay.io/fedora-ostree-desktops/silverblue
 image-version: 45
