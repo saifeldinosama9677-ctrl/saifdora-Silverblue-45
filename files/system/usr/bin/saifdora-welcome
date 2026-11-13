@@ -20,13 +20,15 @@ from gi.repository import Gtk, Adw, GLib, Gio
 APP_ID = "org.saifdora.welcome"
 CONFIG_DIR = os.path.expanduser("~/.config/saifdora")
 SEEN_FILE = os.path.join(CONFIG_DIR, "welcome-seen")
-LOCALE_DIR = "/usr/share/locale"
 
-# Development locale fallback
-if not os.path.exists(os.path.join(LOCALE_DIR, "ar/LC_MESSAGES/saifdora-welcome.mo")):
-    dev_locale = os.path.abspath(os.path.join(os.path.dirname(__file__), "../share/locale"))
-    if os.path.exists(dev_locale):
-        LOCALE_DIR = dev_locale
+# Check relative project locale directory first, then fallback to system locale
+script_dir = os.path.dirname(os.path.abspath(__file__))
+relative_locale = os.path.abspath(os.path.join(script_dir, "../share/locale"))
+
+if os.path.isdir(relative_locale):
+    LOCALE_DIR = relative_locale
+else:
+    LOCALE_DIR = "/usr/share/locale"
 
 # --- Internationalization (gettext) ---
 try:
@@ -36,12 +38,16 @@ except Exception:
 
 gettext.bindtextdomain("saifdora-welcome", LOCALE_DIR)
 gettext.textdomain("saifdora-welcome")
-t = gettext.translation("saifdora-welcome", LOCALE_DIR, fallback=True)
+
+# Determine active language (respecting LANGUAGE and LC_ALL / LANG)
+current_lang = os.environ.get("LANGUAGE", "").split(":")[0] or os.environ.get("LC_ALL", "") or locale.getlocale()[0] or os.environ.get("LANG", "")
+
+languages = [current_lang] if current_lang else None
+t = gettext.translation("saifdora-welcome", LOCALE_DIR, languages=languages, fallback=True)
 _ = t.gettext
 
 # Check text direction for RTL languages (Arabic, Urdu)
-current_locale = locale.getlocale()[0] or os.environ.get("LANG", "")
-if current_locale.startswith(("ar", "ur")):
+if current_lang.startswith(("ar", "ur")):
     Gtk.Widget.set_default_direction(Gtk.TextDirection.RTL)
 else:
     Gtk.Widget.set_default_direction(Gtk.TextDirection.LTR)

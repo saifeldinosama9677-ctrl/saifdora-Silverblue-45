@@ -201,7 +201,7 @@ msgstr ""
 "تُنشأ مساحات العمل تلقائياً مع فتح النوافذ للحفاظ على تنظيم سطح المكتب."
 
 msgid "Get Started"
-msgstr "ابدأ الآن"
+msgstr "ابدأ الاستخدام"
 
 msgid ""
 "Application installation is completing in the background, it will appear in "
