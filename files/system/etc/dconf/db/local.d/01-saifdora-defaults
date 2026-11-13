@@ -1,3 +1,7 @@
 [org/gnome/desktop/interface]
 font-name='Vazirmatn 11'
 document-font-name='Noto Sans Arabic 11'
+
+[org/gnome/shell]
+disable-user-extensions=false
+enabled-extensions=['adwaita-lock-clock@saifeldin.osama', 'rumman-helper@rumman.app']

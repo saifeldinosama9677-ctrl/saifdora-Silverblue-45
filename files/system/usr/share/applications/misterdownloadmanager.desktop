@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=Mister Download Manager
+Name[ar]=مدير التنزيلات Mister
+GenericName=Download Manager
+GenericName[ar]=مدير تنزيل الملفات
+Comment=Fast multi-connection download manager with torrent and browser integration
+Comment[ar]=مدير تنزيل ملفات سريع ومتعدد المسارات مع دعم التورنت والتكامل التلقائي مع المتصفح
+Exec=/usr/bin/misterdownloadmanager %U
+Icon=misterdownloadmanager
+Terminal=false
+Categories=Network;FileTransfer;
+MimeType=x-scheme-handler/magnet;application/x-bittorrent;
+Keywords=download;manager;torrent;magnet;files;تنزيل;تحميل;ملفات;تورنت;
+StartupNotify=true

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.Rumman</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <name>Rumman</name>
+  <name xml:lang="ar">رُمّان</name>
+  <name xml:lang="tr">Rumman</name>
+  <name xml:lang="es">Rumman</name>
+  <name xml:lang="ru">Rumman</name>
+  <summary>Convert and compress files by dropping them</summary>
+  <summary xml:lang="ar">حوّل الملفات واضغطها بمجرد إسقاطها</summary>
+  <summary xml:lang="tr">Dosyaları bırakarak dönüştür ve sıkıştır</summary>
+  <summary xml:lang="es">Convierte y comprime archivos soltándolos</summary>
+  <summary xml:lang="ru">Конвертируйте и сжимайте файлы перетаскиванием</summary>
+  <description>
+    <p>Rumman is a small file converter and compressor for the Linux desktop. Take any file, start dragging it, and a wheel opens right under the pointer: drop the file on the action you want and it is done. Nothing to open, no menus to search.</p>
+    <p>It works with images, audio, video, archives and PDF files, shows the progress of every file, lets you stop one file on its own, tells you how much space you saved and can take a result back with one click.</p>
+    <ul>
+      <li>Images: convert between JPG, PNG, WebP, AVIF and more; shrink, resize and clean metadata</li>
+      <li>Audio and video: convert, extract the sound, merge audio files, trim silence, take a still frame</li>
+      <li>Archives and PDF: pack, unpack, merge, split, rotate and compress</li>
+      <li>A settings page: where results go, what happens when a name exists, default quality, original to the trash</li>
+      <li>Five languages: Arabic, Turkish, Spanish, Russian and English</li>
+    </ul>
+    <p xml:lang="ar">رُمّان محوّل ومضغّط ملفات صغير لسطح مكتب لينكس. أمسك أي ملف وابدأ بسحبه فتنفتح عجلة تحت المؤشر مباشرة: أسقط الملف على ما تريد فيتم الأمر. لا برنامج تفتحه ولا قوائم تبحث فيها.</p>
+    <p xml:lang="ar">يعمل مع الصور والصوت والفيديو والأرشيف وملفات PDF، ويُظهر تقدّم كل ملف، ويتيح إيقاف ملف واحد وحده، ويخبرك بالمساحة التي وفّرتها، ويمكنك التراجع عن النتيجة بنقرة واحدة.</p>
+    <ul xml:lang="ar">
+      <li xml:lang="ar">الصور: تحويل بين JPG وPNG وWebP وAVIF وغيرها، وتصغير وتغيير المقاس وإزالة البيانات الوصفية</li>
+      <li xml:lang="ar">الصوت والفيديو: تحويل واستخراج الصوت ودمج ملفات صوتية وقص الصمت والتقاط لقطة ثابتة</li>
+      <li xml:lang="ar">الأرشيف وPDF: ضغط وفكّ ودمج وتقسيم وتدوير وتصغير</li>
+      <li xml:lang="ar">صفحة إعدادات: مكان الحفظ، وما يحدث إن وُجد الاسم، والجودة الافتراضية، ونقل الأصل إلى سلة المحذوفات</li>
+      <li xml:lang="ar">خمس لغات: العربية والتركية والإسبانية والروسية والإنجليزية</li>
+    </ul>
+    <p xml:lang="tr">Rumman, Linux masaüstü için küçük bir dosya dönüştürücü ve sıkıştırıcıdır. Bir dosyayı sürüklemeye başlayın, işaretçinin hemen altında bir çark açılır: dosyayı istediğiniz işlemin üzerine bırakın, iş biter. Açılacak bir program, aranacak bir menü yok.</p>
+    <p xml:lang="tr">Görüntü, ses, video, arşiv ve PDF dosyalarıyla çalışır, her dosyanın ilerlemesini gösterir, tek bir dosyayı ayrıca durdurmanıza izin verir, ne kadar yer kazandığınızı söyler ve sonucu tek tıkla geri alabilirsiniz.</p>
+    <ul xml:lang="tr">
+      <li xml:lang="tr">Görüntüler: JPG, PNG, WebP, AVIF ve diğerleri arasında dönüştürme; küçültme, yeniden boyutlandırma, üstveri temizleme</li>
+      <li xml:lang="tr">Ses ve video: dönüştürme, sesi ayırma, ses dosyalarını birleştirme, sessizliği kırpma, sabit kare alma</li>
+      <li xml:lang="tr">Arşiv ve PDF: paketleme, açma, birleştirme, bölme, döndürme ve sıkıştırma</li>
+      <li xml:lang="tr">Ayar sayfası: sonuçların yeri, aynı ad varsa ne olacağı, varsayılan kalite, orijinali çöpe taşıma</li>
+      <li xml:lang="tr">Beş dil: Arapça, Türkçe, İspanyolca, Rusça ve İngilizce</li>
+    </ul>
+    <p xml:lang="es">Rumman es un pequeño conversor y compresor de archivos para el escritorio Linux. Empieza a arrastrar un archivo y se abre una rueda justo bajo el puntero: suéltalo sobre la acción que quieras y listo. Sin abrir programas ni buscar en menús.</p>
+    <p xml:lang="es">Funciona con imágenes, audio, vídeo, archivos comprimidos y PDF, muestra el progreso de cada archivo, permite detener uno solo, te dice cuánto espacio has ahorrado y puedes deshacer el resultado con un clic.</p>
+    <ul xml:lang="es">
+      <li xml:lang="es">Imágenes: conversión entre JPG, PNG, WebP, AVIF y más; reducir, cambiar tamaño y limpiar metadatos</li>
+      <li xml:lang="es">Audio y vídeo: convertir, extraer el sonido, unir audios, recortar silencios, sacar un fotograma</li>
+      <li xml:lang="es">Archivos y PDF: empaquetar, extraer, unir, dividir, girar y comprimir</li>
+      <li xml:lang="es">Página de ajustes: dónde van los resultados, qué pasa si el nombre ya existe, calidad por defecto, original a la papelera</li>
+      <li xml:lang="es">Cinco idiomas: árabe, turco, español, ruso e inglés</li>
+    </ul>
+    <p xml:lang="ru">Rumman — небольшой конвертер и архиватор файлов для рабочего стола Linux. Начните перетаскивать файл, и прямо под указателем откроется колесо: бросьте файл на нужное действие — и всё готово. Не нужно открывать программу и искать в меню.</p>
+    <p xml:lang="ru">Работает с изображениями, звуком, видео, архивами и PDF, показывает ход обработки каждого файла, позволяет остановить один файл отдельно, сообщает, сколько места вы сэкономили, а результат можно вернуть одним щелчком.</p>
+    <ul xml:lang="ru">
+      <li xml:lang="ru">Изображения: преобразование между JPG, PNG, WebP, AVIF и другими; уменьшение, изменение размера, очистка метаданных</li>
+      <li xml:lang="ru">Звук и видео: конвертация, извлечение звука, объединение аудио, обрезка тишины, снимок кадра</li>
+      <li xml:lang="ru">Архивы и PDF: упаковка, распаковка, объединение, разделение, поворот и сжатие</li>
+      <li xml:lang="ru">Страница настроек: куда сохранять, что делать при совпадении имени, качество по умолчанию, оригинал в корзину</li>
+      <li xml:lang="ru">Пять языков: арабский, турецкий, испанский, русский и английский</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">io.github.Rumman.desktop</launchable>
+  <icon type="stock">io.github.Rumman</icon>
+  <categories>
+    <category>Utility</category>
+    <category>AudioVideo</category>
+    <category>Graphics</category>
+  </categories>
+  <keywords>
+    <keyword>convert</keyword>
+    <keyword>compress</keyword>
+    <keyword>image</keyword>
+    <keyword>video</keyword>
+    <keyword>audio</keyword>
+    <keyword>pdf</keyword>
+    <keyword>zip</keyword>
+    <keyword xml:lang="ar">تحويل</keyword>
+    <keyword xml:lang="ar">ضغط</keyword>
+    <keyword xml:lang="ar">صور</keyword>
+    <keyword xml:lang="ar">فيديو</keyword>
+    <keyword xml:lang="ar">صوت</keyword>
+    <keyword xml:lang="ar">pdf</keyword>
+    <keyword xml:lang="tr">dönüştür</keyword>
+    <keyword xml:lang="tr">sıkıştır</keyword>
+    <keyword xml:lang="tr">görüntü</keyword>
+    <keyword xml:lang="tr">video</keyword>
+    <keyword xml:lang="tr">ses</keyword>
+    <keyword xml:lang="tr">pdf</keyword>
+    <keyword xml:lang="es">convertir</keyword>
+    <keyword xml:lang="es">comprimir</keyword>
+    <keyword xml:lang="es">imagen</keyword>
+    <keyword xml:lang="es">vídeo</keyword>
+    <keyword xml:lang="es">audio</keyword>
+    <keyword xml:lang="es">pdf</keyword>
+    <keyword xml:lang="ru">конвертер</keyword>
+    <keyword xml:lang="ru">сжатие</keyword>
+    <keyword xml:lang="ru">изображение</keyword>
+    <keyword xml:lang="ru">видео</keyword>
+    <keyword xml:lang="ru">звук</keyword>
+    <keyword xml:lang="ru">pdf</keyword>
+  </keywords>
+  <branding>
+    <color type="primary" scheme_preference="light">#E3C6CF</color>
+    <color type="primary" scheme_preference="dark">#7A1F3F</color>
+  </branding>
+  <provides>
+    <binary>rumman</binary>
+  </provides>
+  <supports>
+    <control>pointing</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.5.0" date="2026-11-08"/>
+  </releases>
+</component>

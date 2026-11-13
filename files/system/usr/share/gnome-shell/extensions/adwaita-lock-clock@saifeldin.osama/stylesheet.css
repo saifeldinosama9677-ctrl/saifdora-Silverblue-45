@@ -1,0 +1,193 @@
+.adw-lock-vertical-shell {
+    spacing: 24px;
+}
+
+.adw-clock-frame {
+    border-radius: 999px;
+}
+
+.adw-info-rectangle {
+    width: 456px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 26px;
+    padding: 0px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.20);
+}
+
+.adw-weather-section {
+    padding: 16px 22px 14px 22px;
+    spacing: 12px;
+}
+
+.adw-weather-hero-row {
+    spacing: 14px;
+    padding: 0px 2px;
+}
+
+.adw-hero-temp-row {
+    spacing: 10px;
+}
+
+.adw-current-temp {
+    font-size: 28pt;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.adw-weather-main-icon {
+    color: #ffffff;
+    icon-size: 32px;
+}
+
+.adw-city-status-sub {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.86);
+    margin-top: 2px;
+}
+
+.adw-hilo-pill {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 99px;
+    padding: 3px 12px;
+    font-size: 9.5pt;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.adw-yesterday-row {
+    spacing: 4px;
+    margin-top: 5px;
+}
+
+.adw-yesterday-label {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #b8dcff;
+}
+
+.adw-metrics-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.11);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    padding: 10px 2px;
+}
+
+.adw-metric-cluster {
+    spacing: 4px;
+}
+
+.adw-metric-val-row {
+    height: 22px;
+    spacing: 4px;
+}
+
+.adw-metric-mini-icon {
+    color: rgba(255, 255, 255, 0.86);
+    icon-size: 14px;
+}
+
+.adw-metric-val {
+    font-size: 9.5pt;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.adw-metric-unit {
+    font-size: 8pt;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.adw-metric-lbl {
+    height: 20px;
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.adw-forecast-cards-row {
+    spacing: 8px;
+}
+
+.adw-forecast-pill {
+    background-color: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    padding: 8px 10px;
+    spacing: 4px;
+}
+
+.adw-fc-header {
+    spacing: 6px;
+}
+
+.adw-fc-day {
+    font-size: 9.5pt;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.adw-fc-icon {
+    color: #ffffff;
+    icon-size: 15px;
+}
+
+.adw-fc-temps {
+    font-size: 9.5pt;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.adw-section-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.16);
+    margin: 0px 22px;
+}
+
+.adw-date-section {
+    padding: 13px 22px 16px 22px;
+    spacing: 6px;
+}
+
+.adw-date-weekday {
+    font-size: 12.5pt;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+}
+
+.adw-weekday-strip {
+    spacing: 4px;
+    margin-bottom: 2px;
+}
+
+.adw-weekday-chip {
+    padding: 3px 8px;
+    border-radius: 99px;
+    font-size: 8.5pt;
+    font-weight: 700;
+}
+
+.adw-date-calendars-row {
+    spacing: 12px;
+}
+
+.adw-date-gregorian {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.adw-date-sep {
+    font-size: 9.5pt;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.adw-date-secondary {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #b8dcff;
+}

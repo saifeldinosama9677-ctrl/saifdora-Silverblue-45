@@ -66,6 +66,13 @@ modules:
       - pciutils
       - mokutil
 
+      # Rumman media converters & processors
+      - ffmpeg
+      - ImageMagick
+      - ghostscript
+      - poppler-utils
+      - python3-cairo
+
   # System-wide Flatpaks configuration (disables Fedora remote and enables Flathub)
   - type: default-flatpaks
     configurations:
@@ -80,9 +87,10 @@ modules:
           - com.github.tchx84.Flatseal
           - org.videolan.VLC
 
-  # Compile dconf database defaults
+  # Compile dconf database defaults and glib schemas
   - type: script
     snippets:
+      - "glib-compile-schemas /usr/share/glib-2.0/schemas || true"
       - "dconf update"
 
   # Enable flatpak system language configuration service on boot

@@ -1,0 +1,10 @@
+{
+  "allowed_origins": [
+    "chrome-extension://oogbclbbninliongijffeeggalppliok/",
+    "chrome-extension://ejoleppdfgjdndddcjoehopknmlglojp/"
+  ],
+  "description": "Mister Download Manager",
+  "name": "com.misterdownloadmanager.host",
+  "path": "/usr/bin/misterdownloadmanager-nmhost",
+  "type": "stdio"
+}

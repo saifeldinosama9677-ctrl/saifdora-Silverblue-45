@@ -1,0 +1,10 @@
+{
+  "policies": {
+    "ExtensionSettings": {
+      "integration@misterdownloadmanager.com": {
+        "installation_mode": "normal_installed",
+        "install_url": "file:///usr/share/misterdownloadmanager/mdm-firefox.xpi"
+      }
+    }
+  }
+}

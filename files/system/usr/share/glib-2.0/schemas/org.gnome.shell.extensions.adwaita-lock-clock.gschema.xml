@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.adwaita-lock-clock" path="/org/gnome/shell/extensions/adwaita-lock-clock/">
+    <key name="show-clock" type="b">
+      <default>true</default>
+      <summary>Show Analog-Digital Clock</summary>
+    </key>
+    <key name="clock-format-24h" type="b">
+      <default>true</default>
+      <summary>Use 24-Hour Dial Format (false = 12-Hour Dial)</summary>
+    </key>
+    <key name="show-seconds" type="b">
+      <default>true</default>
+      <summary>Show Seconds Hand and Orbiting Digit</summary>
+    </key>
+    <key name="show-rectangle" type="b">
+      <default>true</default>
+      <summary>Show Bottom Info Rectangle (Weather and Date)</summary>
+    </key>
+    <key name="show-weather" type="b">
+      <default>true</default>
+      <summary>Show Weather Section</summary>
+    </key>
+    <key name="show-yesterday" type="b">
+      <default>true</default>
+      <summary>Show Comparison with Yesterday Temperature</summary>
+    </key>
+    <key name="show-humidity" type="b">
+      <default>true</default>
+      <summary>Show Humidity Metric</summary>
+    </key>
+    <key name="show-wind" type="b">
+      <default>true</default>
+      <summary>Show Wind Speed Metric</summary>
+    </key>
+    <key name="show-feels-like" type="b">
+      <default>true</default>
+      <summary>Show Feels Like Metric</summary>
+    </key>
+    <key name="show-uv" type="b">
+      <default>true</default>
+      <summary>Show UV Index Metric</summary>
+    </key>
+    <key name="show-forecast" type="b">
+      <default>true</default>
+      <summary>Show 3-Day Forecast Row</summary>
+    </key>
+    <key name="show-date-section" type="b">
+      <default>true</default>
+      <summary>Show Date Section</summary>
+    </key>
+    <key name="show-weekday" type="b">
+      <default>true</default>
+      <summary>Show Weekday</summary>
+    </key>
+    <key name="weekday-style" type="s">
+      <default>'single'</default>
+      <summary>Weekday display style: single or strip</summary>
+    </key>
+    <key name="show-gregorian" type="b">
+      <default>true</default>
+      <summary>Show Gregorian Date</summary>
+    </key>
+    <key name="show-secondary-date" type="b">
+      <default>true</default>
+      <summary>Show Hijri or Local Secondary Date</summary>
+    </key>
+    <key name="theme-mode" type="s">
+      <default>'system'</default>
+      <summary>Theme mode: system, dark, or light</summary>
+    </key>
+    <key name="use-system-accent" type="b">
+      <default>true</default>
+      <summary>Follow System Accent Color</summary>
+    </key>
+    <key name="custom-accent" type="s">
+      <default>'blue'</default>
+      <summary>Custom Accent Color Name</summary>
+    </key>
+    <key name="numeral-system" type="s">
+      <default>'latn'</default>
+      <summary>Numeral System Script Code</summary>
+    </key>
+    <key name="temp-unit" type="s">
+      <default>'auto'</default>
+      <summary>Temperature unit: celsius or fahrenheit</summary>
+    </key>
+    <key name="wind-unit" type="s">
+      <default>'auto'</default>
+      <summary>Wind speed unit: kmh, ms, or mph</summary>
+    </key>
+    <key name="ui-scale" type="i">
+      <range min="75" max="135"/>
+      <default>100</default>
+      <summary>UI Scale Percentage</summary>
+    </key>
+    <key name="card-opacity" type="i">
+      <range min="0" max="100"/>
+      <default>100</default>
+      <summary>Card Opacity Percentage</summary>
+    </key>
+    <key name="vertical-position" type="i">
+      <range min="30" max="70"/>
+      <default>50</default>
+      <summary>Vertical Screen Position Percentage</summary>
+    </key>
+    <key name="location-mode" type="s">
+      <default>'auto'</default>
+      <summary>Location mode: auto or manual</summary>
+    </key>
+    <key name="manual-city" type="s">
+      <default>'القاهرة'</default>
+      <summary>Manual City Name</summary>
+    </key>
+    <key name="manual-country" type="s">
+      <default>'EG'</default>
+      <summary>Manual ISO Country Code</summary>
+    </key>
+    <key name="manual-timezone" type="s">
+      <default>'Africa/Cairo'</default>
+      <summary>Manual IANA Timezone</summary>
+    </key>
+    <key name="manual-lat" type="d">
+      <default>30.0444</default>
+      <summary>Manual Latitude</summary>
+    </key>
+    <key name="manual-lon" type="d">
+      <default>31.2357</default>
+      <summary>Manual Longitude</summary>
+    </key>
+    <key name="week-start" type="s">
+      <default>'auto'</default>
+      <summary>First day of week: auto, sat, sun, or mon</summary>
+    </key>
+    <key name="secondary-calendar-type" type="s">
+      <default>'auto'</default>
+      <summary>Secondary calendar type: auto, islamic-umalqura, persian, chinese, japanese, buddhist, indian, ethiopic, or isoweek</summary>
+    </key>
+  </schema>
+</schemalist>

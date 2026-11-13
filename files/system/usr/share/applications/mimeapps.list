@@ -1,0 +1,7 @@
+[Default Applications]
+x-scheme-handler/magnet=misterdownloadmanager.desktop
+application/x-bittorrent=misterdownloadmanager.desktop
+
+[Added Associations]
+x-scheme-handler/magnet=misterdownloadmanager.desktop;
+application/x-bittorrent=misterdownloadmanager.desktop;

@@ -1,0 +1,7 @@
+{
+  "uuid": "rumman-helper@rumman.app",
+  "name": "Rumman helper",
+  "description": "Helper for Rumman (رُمّان): while you drag a file, pressing Shift opens Rumman's wheel under the pointer, and the options page that follows. It only watches drags and places Rumman's own windows; it does not read or touch your files.",
+  "shell-version": ["45", "46", "47", "48", "49", "50", "51"],
+  "version": 2
+}

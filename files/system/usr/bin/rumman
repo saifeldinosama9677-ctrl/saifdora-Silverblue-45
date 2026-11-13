@@ -1,0 +1,3 @@
+#!/bin/sh
+# Rumman - File converter and compressor
+exec /usr/bin/python3 /usr/share/rumman/rumman.py "$@"

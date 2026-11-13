@@ -1,0 +1,9 @@
+{
+  "allowed_extensions": [
+    "integration@misterdownloadmanager.com"
+  ],
+  "description": "Mister Download Manager",
+  "name": "com.misterdownloadmanager.host",
+  "path": "/usr/bin/misterdownloadmanager-nmhost",
+  "type": "stdio"
+}
