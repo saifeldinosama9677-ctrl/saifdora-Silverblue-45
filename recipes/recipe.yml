@@ -60,6 +60,7 @@ modules:
       - langpacks-ar
       - glibc-langpack-ar
       - gnome-tweaks
+      - gnome-menus
       - adw-gtk3-theme
 
       # Hardware detection & Secure Boot management

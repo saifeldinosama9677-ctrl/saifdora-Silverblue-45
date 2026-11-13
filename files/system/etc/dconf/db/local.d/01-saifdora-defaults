@@ -4,4 +4,4 @@ document-font-name='Noto Sans Arabic 11'
 
 [org/gnome/shell]
 disable-user-extensions=false
-enabled-extensions=['adwaita-lock-clock@saifeldin.osama', 'rumman-helper@rumman.app']
+enabled-extensions=['adwaita-lock-clock@saifeldin.osama', 'rumman-helper@rumman.app', 'arcmenu@arcmenu.com', 'clipboard-indicator@tudmotu.com', 'dash-to-dock@micxgx.gmail.com']
