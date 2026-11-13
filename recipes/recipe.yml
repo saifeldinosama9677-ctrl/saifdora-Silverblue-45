@@ -35,7 +35,6 @@ modules:
       - gstreamer1-plugins-ugly
       - gstreamer1-plugin-libav
       - mesa-va-drivers-freeworld
-      - mesa-vdpau-drivers-freeworld
       - intel-media-driver
 
       # Image formats & thumbnails
@@ -54,7 +53,7 @@ modules:
       - vazirmatn-fonts
       - amiri-fonts
       - google-carlito-fonts
-      - google-caladea-fonts
+      - google-crosextra-caladea-fonts
       - liberation-fonts
 
       # Localization & GNOME tools
