@@ -25,7 +25,6 @@ modules:
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
     remove:
-      - gnome-extensions-app
       - gnome-tour
     install:
       # RPM Fusion release packages
@@ -60,7 +59,7 @@ modules:
       - liberation-fonts
       - google-noto-nastaliq-urdu-fonts
       - google-noto-sans-devanagari-fonts
-      - google-noto-sans-cjk-fonts
+      - google-noto-sans-cjk-vf-fonts
 
       # Localization & 12 language packs
       - langpacks-en
