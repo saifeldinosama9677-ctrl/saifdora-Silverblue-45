@@ -37,7 +37,6 @@ jobs:
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
           maximize_build_space: true
-          generate-iso: true
 
       - name: Tag and push repository image alias
         if: github.event_name != 'pull_request'

@@ -11,18 +11,24 @@ modules:
       - source: system
         destination: /
 
-  # Pre-install RPM Fusion release packages so repositories and GPG keys are present
-  - type: rpm-ostree
-    install:
-      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
-      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+  # Import RPM Fusion GPG signing keys into RPM database
+  - type: script
+    snippets:
+      - "rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion*"
 
   # Install required multimedia codecs, drivers, fonts, and utilities from Fedora & RPM Fusion
   - type: rpm-ostree
+    keys:
+      - /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-2020
+      - /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
     repos:
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
     install:
+      # RPM Fusion release packages
+      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
+      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+
       # Hardware acceleration & codecs
       - libavcodec-freeworld
       - gstreamer1-plugins-bad-freeworld
