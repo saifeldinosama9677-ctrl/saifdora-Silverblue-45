@@ -193,3 +193,8 @@ msgstr "打开新窗口时自动创建动态工作区，保持桌面整洁有序
 
 msgid "Get Started"
 msgstr "开始探索"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr "应用程序正在后台完成安装，几分钟后将显示在菜单中"

@@ -1,10 +1,12 @@
 [Unit]
-Description=Configure Flatpak system languages to 12 supported languages
-After=network.target
+Description=Configure Flatpak System Languages and Ensure Flathub Remote
+Wants=network-online.target
+After=network-online.target
 ConditionPathExists=/usr/bin/flatpak
 
 [Service]
 Type=oneshot
+ExecStartPre=-/usr/bin/flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ExecStart=/usr/bin/flatpak config --system --set languages "en;ar;ru;es;tr;fr;it;hi;zh_CN;ur;ms;id"
 RemainAfterExit=yes
 

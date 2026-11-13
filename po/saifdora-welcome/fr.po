@@ -207,3 +207,10 @@ msgstr "Les espaces se créent automatiquement pour organiser vos fenêtres."
 
 msgid "Get Started"
 msgstr "Démarrer"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr ""
+"L'installation de l'application se termine en arrière-plan, elle apparaîtra "
+"dans le menu d'ici quelques minutes"

@@ -200,3 +200,10 @@ msgstr "Рабочие столы создаются автоматически 
 
 msgid "Get Started"
 msgstr "Начать работу"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr ""
+"Установка приложения завершается в фоновом режиме, оно появится в меню через"
+" несколько минут"

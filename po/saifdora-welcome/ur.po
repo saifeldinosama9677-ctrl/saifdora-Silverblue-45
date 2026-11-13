@@ -198,3 +198,10 @@ msgstr "کام کو منظم رکھنے کے لیے نئی ورک اسپیسز �
 
 msgid "Get Started"
 msgstr "شروع کریں"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr ""
+"ایپلی کیشن کا پس منظر میں انسٹالیشن مکمل ہو رہا ہے، یہ چند منٹ میں مینو میں "
+"ظاہر ہو جائے گا"

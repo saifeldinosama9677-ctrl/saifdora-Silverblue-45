@@ -202,3 +202,10 @@ msgstr "Ruang kerja dicipta secara automatik semasa anda membuka tetingkap."
 
 msgid "Get Started"
 msgstr "Mulakan"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr ""
+"Pemasangan aplikasi sedang diselesaikan di latar belakang, ia akan muncul "
+"dalam menu dalam beberapa minit"

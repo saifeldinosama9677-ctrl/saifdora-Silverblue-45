@@ -201,3 +201,10 @@ msgstr "विंडोज़ खोलने पर वर्कस्पेस
 
 msgid "Get Started"
 msgstr "शुरू करें"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr ""
+"एप्लिकेशन इंस्टॉलेशन पृष्ठभूमि में पूरा हो रहा है, यह कुछ ही मिनटों में मेनू"
+" में दिखाई देगा"

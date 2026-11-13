@@ -205,3 +205,10 @@ msgstr "Los espacios se crean automáticamente para mantener el orden."
 
 msgid "Get Started"
 msgstr "Comenzar"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr ""
+"La instalación de la aplicación se está completando en segundo plano, "
+"aparecerá en el menú en unos minutos"

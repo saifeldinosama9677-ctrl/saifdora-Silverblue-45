@@ -2,7 +2,7 @@
 """
 Saifdora Welcome App (saifdora-welcome)
 Interactive onboarding application for Saifdora Silverblue 45.
-Built with Python 3, GTK 4, and Libadwaita.
+Built with Python 3, GTK 4, and Libadwaita following GNOME 51 Human Interface Guidelines.
 """
 
 import sys
@@ -22,7 +22,7 @@ CONFIG_DIR = os.path.expanduser("~/.config/saifdora")
 SEEN_FILE = os.path.join(CONFIG_DIR, "welcome-seen")
 LOCALE_DIR = "/usr/share/locale"
 
-# Local translation directory fallback for development
+# Development locale fallback
 if not os.path.exists(os.path.join(LOCALE_DIR, "ar/LC_MESSAGES/saifdora-welcome.mo")):
     dev_locale = os.path.abspath(os.path.join(os.path.dirname(__file__), "../share/locale"))
     if os.path.exists(dev_locale):
@@ -84,45 +84,69 @@ class WelcomeWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.set_title(_("Welcome to Saifdora"))
-        self.set_default_size(880, 640)
+        self.set_default_size(760, 580)
+        self.set_resizable(True)
 
-        # Main Layout Box
-        main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
-        self.set_content(main_box)
+        # Root ToastOverlay
+        self.toast_overlay = Adw.ToastOverlay()
+        self.set_content(self.toast_overlay)
 
-        # HeaderBar
-        header = Adw.HeaderBar()
-        self.prev_btn = Gtk.Button(icon_name="go-previous-symbolic")
-        self.prev_btn.set_tooltip_text(_("Previous"))
-        self.prev_btn.connect("clicked", self.on_prev_clicked)
-        self.prev_btn.set_sensitive(False)
-        header.pack_start(self.prev_btn)
+        # Main ToolbarView
+        self.toolbar_view = Adw.ToolbarView()
+        self.toast_overlay.set_child(self.toolbar_view)
 
-        self.next_btn = Gtk.Button(icon_name="go-next-symbolic")
-        self.next_btn.set_tooltip_text(_("Next"))
-        self.next_btn.connect("clicked", self.on_next_clicked)
-        header.pack_end(self.next_btn)
+        # Flat HeaderBar with Centered Indicator Dots
+        self.header_bar = Adw.HeaderBar()
+        self.header_bar.add_css_class("flat")
+        self.toolbar_view.add_top_bar(self.header_bar)
 
-        main_box.append(header)
-
-        # NVIDIA Banner
+        # NVIDIA Notification Banner
         self.banner = Adw.Banner()
         self.banner.set_title(_("NVIDIA graphics card detected! Official drivers are not installed."))
         self.banner.set_button_label(_("Install NVIDIA & CUDA Driver"))
         self.banner.connect("button-clicked", self.on_install_nvidia)
-        main_box.append(self.banner)
+        self.toolbar_view.add_top_bar(self.banner)
 
         # Check NVIDIA status
         has_nvidia, driver_installed = check_nvidia_status()
         if has_nvidia and not driver_installed:
             self.banner.set_revealed(True)
 
-        # Carousel Container
+        # Carousel Container (Disable scroll wheel to avoid touchpad conflict)
         self.carousel = Adw.Carousel()
-        self.carousel.set_vexpand(True)
+        self.carousel.set_allow_scroll_wheel(False)
         self.carousel.set_hexpand(True)
+        self.carousel.set_vexpand(True)
         self.carousel.connect("page-changed", self.on_page_changed)
-        main_box.append(self.carousel)
+        self.toolbar_view.set_content(self.carousel)
+
+        # Set Centered Indicator Dots in HeaderBar
+        self.dots = Adw.CarouselIndicatorDots()
+        self.dots.set_carousel(self.carousel)
+        self.header_bar.set_title_widget(self.dots)
+
+        # Bottom Action Bar
+        self.action_bar = Gtk.ActionBar()
+
+        # Start: Previous button (hidden on first page) & Startup checkbox
+        self.prev_btn = Gtk.Button(label=_("Previous"))
+        self.prev_btn.set_visible(False)
+        self.prev_btn.connect("clicked", self.on_prev_clicked)
+        self.action_bar.pack_start(self.prev_btn)
+
+        self.startup_check = Gtk.CheckButton(label=_("Show on startup"))
+        self.startup_check.set_active(not os.path.exists(SEEN_FILE))
+        self.startup_check.connect("toggled", self.on_startup_toggled)
+        self.action_bar.pack_start(self.startup_check)
+
+        # End: Next / Get Started button
+        self.next_btn = Gtk.Button(label=_("Next"))
+        self.next_btn.add_css_class("suggested-action")
+        self.next_btn.add_css_class("pill")
+        self.next_btn.connect("clicked", self.on_next_clicked)
+        self.action_bar.pack_end(self.next_btn)
+
+        self.toolbar_view.add_bottom_bar(self.action_bar)
 
         # Build 5 Carousel Slides
         self.build_slide_ready()
@@ -131,51 +155,30 @@ class WelcomeWindow(Adw.ApplicationWindow):
         self.build_slide_hardware()
         self.build_slide_navigation()
 
-        # Bottom Controls Bar
-        bottom_box = Gtk.CenterBox()
-        bottom_box.set_margin_start(24)
-        bottom_box.set_margin_end(24)
-        bottom_box.set_margin_top(12)
-        bottom_box.set_margin_bottom(16)
-
-        # Left / Start: Show on startup toggle
-        switch_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-        switch_label = Gtk.Label(label=_("Show on startup"))
-        self.startup_switch = Gtk.Switch()
-        self.startup_switch.set_active(not os.path.exists(SEEN_FILE))
-        self.startup_switch.connect("state-set", self.on_switch_toggled)
-        switch_box.append(self.startup_switch)
-        switch_box.append(switch_label)
-        bottom_box.set_start_widget(switch_box)
-
-        # Center: Indicator Dots
-        dots = Adw.CarouselIndicatorDots()
-        dots.set_carousel(self.carousel)
-        bottom_box.set_center_widget(dots)
-
-        main_box.append(bottom_box)
-
     def create_slide_container(self, icon_name, title, subtitle):
-        """Helper to create a standard clamped, scrolled slide layout."""
+        """Helper to create standard clamped, non-horizontal scrolling slide layout."""
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        scrolled.set_hexpand(True)
+        scrolled.set_vexpand(True)
 
         clamp = Adw.Clamp()
-        clamp.set_maximum_size(740)
-        clamp.set_tightening_threshold(540)
+        clamp.set_maximum_size(560)
+        clamp.set_margin_top(24)
+        clamp.set_margin_bottom(24)
+        clamp.set_margin_start(24)
+        clamp.set_margin_end(24)
+        clamp.set_valign(Gtk.Align.CENTER)
         scrolled.set_child(clamp)
 
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=18)
-        box.set_margin_top(28)
-        box.set_margin_bottom(28)
-        box.set_margin_start(16)
-        box.set_margin_end(16)
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=16)
         clamp.set_child(box)
 
         # Header Icon & Titles
         if icon_name:
             img = Gtk.Image.new_from_icon_name(icon_name)
             img.set_pixel_size(64)
+            img.set_halign(Gtk.Align.CENTER)
             img.add_css_class("accent")
             box.append(img)
 
@@ -208,6 +211,8 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Multimedia & Hardware Acceleration"),
             subtitle=_("Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel and AMD.")
         )
+        r1.set_title_lines(2)
+        r1.set_subtitle_lines(3)
         r1.add_prefix(Gtk.Image.new_from_icon_name("video-x-generic-symbolic"))
         listbox.append(r1)
 
@@ -215,6 +220,8 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Curated Repositories"),
             subtitle=_("Flathub and RPM Fusion (Free & Non-Free) enabled out of the box.")
         )
+        r2.set_title_lines(2)
+        r2.set_subtitle_lines(3)
         r2.add_prefix(Gtk.Image.new_from_icon_name("software-properties-symbolic"))
         listbox.append(r2)
 
@@ -222,6 +229,8 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Global Localization"),
             subtitle=_("Full support for 12 languages with completed GNOME 51 translations and international fonts.")
         )
+        r3.set_title_lines(2)
+        r3.set_subtitle_lines(3)
         r3.add_prefix(Gtk.Image.new_from_icon_name("preferences-desktop-locale-symbolic"))
         listbox.append(r3)
 
@@ -229,6 +238,8 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Archiving & Documents"),
             subtitle=_("Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance image processing.")
         )
+        r4.set_title_lines(2)
+        r4.set_subtitle_lines(3)
         r4.add_prefix(Gtk.Image.new_from_icon_name("package-x-generic-symbolic"))
         listbox.append(r4)
 
@@ -250,11 +261,13 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Rumman (File & Media Converter)"),
             subtitle=_("High-performance media converter and file optimizer.")
         )
+        r1.set_title_lines(2)
+        r1.set_subtitle_lines(3)
         r1.add_prefix(Gtk.Image.new_from_icon_name("system-run-symbolic"))
         btn1 = Gtk.Button(label=_("Launch Rumman"))
         btn1.add_css_class("pill")
         btn1.set_valign(Gtk.Align.CENTER)
-        btn1.connect("clicked", lambda *a: self.launch_app(["/usr/bin/rumman"]))
+        btn1.connect("clicked", lambda *a: self.launch_local_app(["/usr/bin/rumman"]))
         r1.add_suffix(btn1)
         listbox.append(r1)
 
@@ -263,11 +276,13 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Mister Download Manager"),
             subtitle=_("Fast download manager automatically integrated with Firefox.")
         )
+        r2.set_title_lines(2)
+        r2.set_subtitle_lines(3)
         r2.add_prefix(Gtk.Image.new_from_icon_name("folder-download-symbolic"))
         btn2 = Gtk.Button(label=_("Launch MDM"))
         btn2.add_css_class("pill")
         btn2.set_valign(Gtk.Align.CENTER)
-        btn2.connect("clicked", lambda *a: self.launch_app(["/usr/bin/misterdownloadmanager"]))
+        btn2.connect("clicked", lambda *a: self.launch_local_app(["/usr/bin/misterdownloadmanager"]))
         r2.add_suffix(btn2)
         listbox.append(r2)
 
@@ -276,11 +291,13 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("ZapFast"),
             subtitle=_("Fast native desktop WhatsApp client built with Rust.")
         )
+        r3.set_title_lines(2)
+        r3.set_subtitle_lines(3)
         r3.add_prefix(Gtk.Image.new_from_icon_name("chat-message-new-symbolic"))
         btn3 = Gtk.Button(label=_("Launch ZapFast"))
         btn3.add_css_class("pill")
         btn3.set_valign(Gtk.Align.CENTER)
-        btn3.connect("clicked", lambda *a: self.launch_app(["/usr/bin/zapfast"]))
+        btn3.connect("clicked", lambda *a: self.launch_local_app(["/usr/bin/zapfast"]))
         r3.add_suffix(btn3)
         listbox.append(r3)
 
@@ -301,30 +318,38 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Pre-Activated Extensions"),
             subtitle=_("ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock.")
         )
+        r1.set_title_lines(2)
+        r1.set_subtitle_lines(3)
         r1.add_prefix(Gtk.Image.new_from_icon_name("emblem-favorite-symbolic"))
         listbox.append(r1)
 
+        # Extension Manager (Smart Flatpak Launcher)
         r2 = Adw.ActionRow(
             title=_("Extension Manager"),
             subtitle=_("Search, install, and update GNOME Shell extensions seamlessly.")
         )
+        r2.set_title_lines(2)
+        r2.set_subtitle_lines(3)
         r2.add_prefix(Gtk.Image.new_from_icon_name("application-x-addon-symbolic"))
         btn2 = Gtk.Button(label=_("Manage Extensions"))
         btn2.add_css_class("pill")
         btn2.set_valign(Gtk.Align.CENTER)
-        btn2.connect("clicked", lambda *a: self.launch_app(["flatpak", "run", "com.mattjakeman.ExtensionManager"]))
+        btn2.connect("clicked", lambda *a: self.launch_flatpak_app("com.mattjakeman.ExtensionManager"))
         r2.add_suffix(btn2)
         listbox.append(r2)
 
+        # Refine (Smart Flatpak Launcher)
         r3 = Adw.ActionRow(
             title=_("Refine"),
             subtitle=_("Tweak hidden GNOME settings, fonts, and desktop behavior.")
         )
+        r3.set_title_lines(2)
+        r3.set_subtitle_lines(3)
         r3.add_prefix(Gtk.Image.new_from_icon_name("preferences-system-symbolic"))
         btn3 = Gtk.Button(label=_("Customize Desktop"))
         btn3.add_css_class("pill")
         btn3.set_valign(Gtk.Align.CENTER)
-        btn3.connect("clicked", lambda *a: self.launch_app(["flatpak", "run", "page.tesk.Refine"]))
+        btn3.connect("clicked", lambda *a: self.launch_flatpak_app("page.tesk.Refine"))
         r3.add_suffix(btn3)
         listbox.append(r3)
 
@@ -345,6 +370,8 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Intel & AMD Acceleration"),
             subtitle=_("Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-configured and active.")
         )
+        r1.set_title_lines(2)
+        r1.set_subtitle_lines(3)
         r1.add_prefix(Gtk.Image.new_from_icon_name("video-joined-displays-symbolic"))
         listbox.append(r1)
 
@@ -352,12 +379,14 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("NVIDIA & CUDA Drivers"),
             subtitle=_("Detect your GPU model, install official drivers, configure CUDA, and manage Secure Boot.")
         )
+        r2.set_title_lines(2)
+        r2.set_subtitle_lines(3)
         r2.add_prefix(Gtk.Image.new_from_icon_name("display-projector-symbolic"))
         btn2 = Gtk.Button(label=_("Open NVIDIA Manager"))
         btn2.add_css_class("pill")
         btn2.add_css_class("suggested-action")
         btn2.set_valign(Gtk.Align.CENTER)
-        btn2.connect("clicked", lambda *a: self.launch_app(["/usr/bin/saifdora-nvidia-manager"]))
+        btn2.connect("clicked", lambda *a: self.launch_local_app(["/usr/bin/saifdora-nvidia-manager"]))
         r2.add_suffix(btn2)
         listbox.append(r2)
 
@@ -378,6 +407,8 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Super Key & Search"),
             subtitle=_("Press the Super (Windows) key to open the Activities Overview, search apps, files, or do quick math.")
         )
+        r1.set_title_lines(2)
+        r1.set_subtitle_lines(3)
         r1.add_prefix(Gtk.Image.new_from_icon_name("system-search-symbolic"))
         listbox.append(r1)
 
@@ -385,6 +416,8 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Touchpad Gestures"),
             subtitle=_("Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers to switch workspaces.")
         )
+        r2.set_title_lines(2)
+        r2.set_subtitle_lines(3)
         r2.add_prefix(Gtk.Image.new_from_icon_name("input-touchpad-symbolic"))
         listbox.append(r2)
 
@@ -392,31 +425,45 @@ class WelcomeWindow(Adw.ApplicationWindow):
             title=_("Dynamic Workspaces"),
             subtitle=_("Workspaces are created automatically as you open windows to keep your desktop organized.")
         )
+        r3.set_title_lines(2)
+        r3.set_subtitle_lines(3)
         r3.add_prefix(Gtk.Image.new_from_icon_name("view-paged-symbolic"))
         listbox.append(r3)
 
         box.append(listbox)
-
-        # Finish button
-        finish_btn = Gtk.Button(label=_("Get Started"))
-        finish_btn.add_css_class("pill")
-        finish_btn.add_css_class("suggested-action")
-        finish_btn.set_halign(Gtk.Align.CENTER)
-        finish_btn.set_margin_top(12)
-        finish_btn.connect("clicked", lambda *a: self.close())
-        box.append(finish_btn)
-
         self.carousel.append(slide)
 
-    def launch_app(self, cmd_args):
-        """Helper to safely launch applications asynchronously."""
+    def launch_local_app(self, cmd_args):
+        """Safely launch local applications asynchronously."""
         try:
             subprocess.Popen(cmd_args)
         except Exception as e:
             print(f"Error launching {cmd_args}: {e}", file=sys.stderr)
 
+    def launch_flatpak_app(self, app_id):
+        """Smart Flatpak launcher with background installation toast fallback."""
+        try:
+            res = subprocess.run(["flatpak", "info", app_id], capture_output=True, text=True, check=False)
+            if res.returncode == 0:
+                subprocess.Popen(["flatpak", "run", app_id])
+                return
+        except Exception:
+            pass
+
+        # App is not yet installed or downloading in background
+        msg = _("Application installation is completing in the background, it will appear in the menu within minutes")
+        toast = Adw.Toast.new(msg)
+        toast.set_timeout(4)
+        self.toast_overlay.add_toast(toast)
+
+        # Trigger background installation
+        try:
+            subprocess.Popen(["flatpak", "install", "-y", "--system", "flathub", app_id])
+        except Exception as e:
+            print(f"Error triggering flatpak install for {app_id}: {e}", file=sys.stderr)
+
     def on_install_nvidia(self, *args):
-        self.launch_app(["/usr/bin/saifdora-nvidia-manager"])
+        self.launch_local_app(["/usr/bin/saifdora-nvidia-manager"])
 
     def on_prev_clicked(self, *args):
         curr = int(round(self.carousel.get_position()))
@@ -433,15 +480,14 @@ class WelcomeWindow(Adw.ApplicationWindow):
 
     def on_page_changed(self, carousel, index):
         total = carousel.get_n_pages()
-        self.prev_btn.set_sensitive(index > 0)
+        self.prev_btn.set_visible(index > 0)
         if index == total - 1:
-            self.next_btn.set_icon_name("emblem-ok-symbolic")
-            self.next_btn.set_tooltip_text(_("Get Started"))
+            self.next_btn.set_label(_("Get Started"))
         else:
-            self.next_btn.set_icon_name("go-next-symbolic")
-            self.next_btn.set_tooltip_text(_("Next"))
+            self.next_btn.set_label(_("Next"))
 
-    def on_switch_toggled(self, switch, state):
+    def on_startup_toggled(self, button):
+        state = button.get_active()
         os.makedirs(CONFIG_DIR, exist_ok=True)
         if state:
             # Active means show on startup -> remove seen file
@@ -483,7 +529,7 @@ class WelcomeApplication(Adw.Application):
 
 
 def main():
-    # Direct CLI check for quick exit on autostart before GTK init
+    # Fast exit for autostart if already seen before starting GTK
     if "--autostart" in sys.argv:
         if os.path.exists(SEEN_FILE):
             sys.exit(0)

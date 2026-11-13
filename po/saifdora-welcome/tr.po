@@ -207,3 +207,10 @@ msgstr ""
 
 msgid "Get Started"
 msgstr "Başlayın"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr ""
+"Uygulama kurulumu arka planda tamamlanıyor, birkaç dakika içinde menüde "
+"görünecektir"

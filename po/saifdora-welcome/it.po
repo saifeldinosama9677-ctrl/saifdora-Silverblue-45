@@ -202,3 +202,10 @@ msgstr ""
 
 msgid "Get Started"
 msgstr "Inizia"
+
+msgid ""
+"Application installation is completing in the background, it will appear in "
+"the menu within minutes"
+msgstr ""
+"L'installazione dell'applicazione è in corso in background, apparirà nel "
+"menu entro pochi minuti"
