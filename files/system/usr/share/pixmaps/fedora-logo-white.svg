@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 96" width="340" height="96">
+  <path d="M 48 8 C 70 8 88 26 88 48 C 88 70 70 88 48 88 L 22 88 C 14 88 8 82 8 74 L 8 48 C 8 26 26 8 48 8 Z" fill="#7a1c33" stroke="#9e2a47" stroke-width="2.5"/>
+  <path d="M 63 30 C 58 21 42 20 36 29 C 30 38 40 43 48 48 C 56 53 66 58 60 67 C 54 76 38 75 33 66" fill="none" stroke="#ffffff" stroke-width="9.5" stroke-linecap="round"/>
+  <text x="104" y="64" fill="#ffffff" font-family="Cantarell, Adwaita Sans, Inter, sans-serif" font-size="48" font-weight="700" letter-spacing="-0.5">Saifdora</text>
+</svg>
