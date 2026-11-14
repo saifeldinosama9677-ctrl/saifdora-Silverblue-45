@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Windows App Runner (Bottles)
+Name[ar]=مشغّل برامج ويندوز (Bottles)
+Exec=flatpak run com.usebottles.bottles -e %f
+Type=Application
+NoDisplay=true
+MimeType=application/x-ms-dos-executable;application/x-msi;application/x-msdownload;

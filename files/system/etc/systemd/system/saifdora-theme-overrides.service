@@ -1,0 +1,14 @@
+[Unit]
+Description=Saifdora Theme and Flatpak Overrides
+After=network-online.target flatpak-configure-languages.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=-/usr/bin/flatpak override --system --filesystem=xdg-config/gtk-4.0:ro
+ExecStart=-/usr/bin/flatpak override --system --filesystem=xdg-config/gtk-3.0:ro
+ExecStart=-/usr/bin/flatpak override --system com.usebottles.bottles --filesystem=xdg-data/applications
+
+[Install]
+WantedBy=multi-user.target

@@ -103,18 +103,31 @@ modules:
           - com.github.tchx84.Flatseal
           - org.videolan.VLC
           - page.tesk.Refine
+          - com.usebottles.bottles
+          - net.davidotek.pupgui2
 
-  # Compile dconf database defaults and glib schemas
+  # Compile dconf defaults, glib schemas, update MIME database, and customize os-release
   - type: script
     snippets:
       - "glib-compile-schemas /usr/share/glib-2.0/schemas || true"
       - "dconf update"
+      - "update-desktop-database /usr/share/applications || true"
+      - |
+        sed -i 's/^NAME=.*/NAME="Saifdora"/' /usr/lib/os-release
+        sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="Saifdora 45 (Silverblue)"/' /usr/lib/os-release
+        sed -i 's/^DEFAULT_HOSTNAME=.*/DEFAULT_HOSTNAME="saifdora"/' /usr/lib/os-release
+        if grep -q '^ANSI_COLOR=' /usr/lib/os-release; then
+          sed -i 's/^ANSI_COLOR=.*/ANSI_COLOR="0;38;2;122;28;51"/' /usr/lib/os-release
+        else
+          echo 'ANSI_COLOR="0;38;2;122;28;51"' >> /usr/lib/os-release
+        fi
 
-  # Enable flatpak system language configuration service and user D-Bus reload path
+  # Enable flatpak system services and user D-Bus reload path
   - type: systemd
     system:
       enabled:
         - flatpak-configure-languages.service
+        - saifdora-theme-overrides.service
     user:
       enabled:
         - saifdora-flatpak-dbus-reload.path
