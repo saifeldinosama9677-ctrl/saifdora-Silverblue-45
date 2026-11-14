@@ -5,24 +5,41 @@ stage {
   -st-accent-fg-color: #ffffff;
 }
 
-.quick-toggle:checked {
-  background-color: #7a1c33;
-  color: #ffffff;
+.quick-toggle:checked,
+.quick-toggle-menu-button:checked {
+  background-color: #7a1c33 !important;
+  color: #ffffff !important;
 }
 
-.quick-toggle:checked:hover {
-  background-color: #8f223d;
+.quick-toggle:checked:hover,
+.quick-toggle-menu-button:checked:hover {
+  background-color: #8f223d !important;
 }
 
-.quick-toggle:checked .quick-toggle-arrow {
-  background-color: #631629;
+.quick-toggle-menu-button:checked {
+  background-color: #631629 !important;
+  border-left-color: rgba(255, 255, 255, 0.18) !important;
 }
 
-.quick-toggle:checked .quick-toggle-arrow:hover {
-  background-color: #7a1c33;
+.quick-toggle-menu-button:checked:hover {
+  background-color: #7a1c33 !important;
 }
 
 .slider {
-  -barlevel-active-background-color: #7a1c33;
-  -barlevel-active-border-color: #7a1c33;
+  -barlevel-active-background-color: #7a1c33 !important;
+  -barlevel-active-border-color: #7a1c33 !important;
+}
+
+.toggle-switch:checked {
+  background-color: #7a1c33 !important;
+}
+
+.check-box:checked StBin {
+  background-color: #7a1c33 !important;
+  border-color: #7a1c33 !important;
+}
+
+.calendar-today {
+  background-color: #7a1c33 !important;
+  color: #ffffff !important;
 }

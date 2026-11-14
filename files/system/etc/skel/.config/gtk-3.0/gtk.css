@@ -1,8 +1,8 @@
 :root {
   --accent-bg-color: #7a1c33 !important;
   --accent-fg-color: #ffffff !important;
-  --accent-color: #d4637e !important;
+  --accent-color: #e06c88 !important;
 }
 @define-color accent_bg_color #7a1c33;
 @define-color accent_fg_color #ffffff;
-@define-color accent_color #d4637e;
+@define-color accent_color #e06c88;

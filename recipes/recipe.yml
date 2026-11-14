@@ -80,6 +80,7 @@ modules:
       - adw-gtk3-theme
       - gnome-shell-extension-user-theme
       - fastfetch
+      - librsvg2-tools
 
       # Hardware detection & Secure Boot management
       - pciutils
@@ -108,14 +109,22 @@ modules:
           - com.usebottles.bottles
           - net.davidotek.pupgui2
 
-  # Compile dconf defaults, glib schemas, update MIME database, update icon cache, fastfetch hook, and customize os-release
+  # Compile dconf defaults, glib schemas, update MIME database, update logos and icon cache, fastfetch hook, and customize os-release
   - type: script
     snippets:
       - "glib-compile-schemas /usr/share/glib-2.0/schemas || true"
       - "dconf update"
       - "update-desktop-database /usr/share/applications || true"
-      - "gtk-update-icon-cache -f /usr/share/icons/hicolor || true"
       - |
+        cp -f /usr/share/pixmaps/fedora-logo-sprite.svg /usr/share/pixmaps/fedora-logo.svg
+        if command -v rsvg-convert >/dev/null 2>&1; then
+          rsvg-convert -w 340 -h 96 /usr/share/pixmaps/fedora-logo-sprite.svg -o /usr/share/pixmaps/fedora-logo-sprite.png || true
+        fi
+        cp -f /usr/share/pixmaps/fedora-logo-sprite.png /usr/share/pixmaps/fedora-logo.png || true
+        cp -f /usr/share/icons/hicolor/scalable/apps/saifdora-logo-icon.svg /usr/share/icons/hicolor/scalable/apps/fedora-logo-icon.svg
+        cp -f /usr/share/icons/hicolor/scalable/apps/saifdora-logo-icon.svg /usr/share/icons/hicolor/scalable/apps/distributor-logo.svg
+        cp -f /usr/share/icons/hicolor/scalable/apps/saifdora-logo-icon.svg /usr/share/icons/hicolor/scalable/apps/org.fedoraproject.Fedora.svg
+        gtk-update-icon-cache -f /usr/share/icons/hicolor || true
         sed -i 's/^NAME=.*/NAME="Saifdora"/' /usr/lib/os-release
         sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="Saifdora 45 (Silverblue)"/' /usr/lib/os-release
         sed -i 's/^DEFAULT_HOSTNAME=.*/DEFAULT_HOSTNAME="saifdora"/' /usr/lib/os-release
