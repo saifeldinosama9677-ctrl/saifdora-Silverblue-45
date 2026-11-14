@@ -9,3 +9,6 @@ enabled-extensions=['adwaita-lock-clock@saifeldin.osama', 'rumman-helper@rumman.
 
 [org/gnome/shell/extensions/user-theme]
 name='Saifdora-Burgundy'
+
+[org/gnome/shell/extensions/dash-to-dock]
+show-mounts=false
