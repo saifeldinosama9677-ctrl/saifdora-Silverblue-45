@@ -2,7 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: saifdora-welcome 1.0 (ur)\n"
-"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 21:35+0200\n"
 "PO-Revision-Date: 2024-11-13 12:00+0000\n"
 "Last-Translator: Saifdora Translation Team\n"
 "Language-Team: ur Translation Team\n"
@@ -12,27 +13,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: files/system/usr/bin/saifdora-welcome:92
 msgid "Welcome to Saifdora"
 msgstr "سیفڈورا میں خوش آمدید"
 
-msgid "Previous"
-msgstr "پچھلا"
-
-msgid "Next"
-msgstr "اگلا"
-
+#: files/system/usr/bin/saifdora-welcome:114
 msgid "NVIDIA graphics card detected! Official drivers are not installed."
 msgstr "NVIDIA گرافکس کارڈ کا پتہ چلا! آفیشل ڈرائیور انسٹال نہیں ہیں۔"
 
+#: files/system/usr/bin/saifdora-welcome:115
 msgid "Install NVIDIA & CUDA Driver"
-msgstr "NVIDIA اور CUDA ڈرائیور انسٹال کریں"
+msgstr "NVIDIA اور ⁦CUDA⁩ ڈرائیور انسٹال کریں"
 
+#: files/system/usr/bin/saifdora-welcome:141
+msgid "Previous"
+msgstr "پچھلا"
+
+#: files/system/usr/bin/saifdora-welcome:148
 msgid "Show on startup"
 msgstr "آغاز پر دکھائیں"
 
+#: files/system/usr/bin/saifdora-welcome:154
+#: files/system/usr/bin/saifdora-welcome:512
+msgid "Next"
+msgstr "اگلا"
+
+#: files/system/usr/bin/saifdora-welcome:272
 msgid "Ready Out of the Box"
 msgstr "استعمال کے لیے فوری تیار"
 
+#: files/system/usr/bin/saifdora-welcome:273
 msgid ""
 "Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
 " and essential utilities pre-configured."
@@ -40,168 +50,271 @@ msgstr ""
 "سیفڈورا سلوربلو 45 تمام ضروری کوڈیکس، ہارڈ ویئر ایکسلریشن اور اہم ایپلی "
 "کیشنز کے ساتھ پہلے سے تیار ہے۔"
 
+#: files/system/usr/bin/saifdora-welcome:280
 msgid "Multimedia & Hardware Acceleration"
 msgstr "ملٹی میڈیا اور ہارڈ ویئر ایکسلریشن"
 
+#: files/system/usr/bin/saifdora-welcome:281
 msgid ""
 "Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
 "and AMD."
 msgstr ""
-"Intel اور AMD کے لیے مکمل کوڈیک سپورٹ (HEVC, AV1, HEIC) اور ویڈیو ڈیکوڈنگ۔"
+"Intel اور ⁦AMD⁩ کے لیے مکمل کوڈیک سپورٹ (⁦HEVC, AV1, HEIC⁩) اور ویڈیو "
+"ڈیکوڈنگ۔"
 
+#: files/system/usr/bin/saifdora-welcome:287
 msgid "Curated Repositories"
 msgstr "تیار شدہ ریپوزیٹریز"
 
+#: files/system/usr/bin/saifdora-welcome:288
 msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
-msgstr "Flathub اور RPM Fusion پہلے سے فعال ہیں۔"
+msgstr "Flathub اور ⁦RPM Fusion⁩ پہلے سے فعال ہیں۔"
 
-msgid "Global Localization"
-msgstr "عالمی زبانوں کی سپورٹ"
+#: files/system/usr/bin/saifdora-welcome:294
+msgid "Localization & System Tools"
+msgstr "زبان اور سسٹم ٹولز"
 
+#: files/system/usr/bin/saifdora-welcome:295
 msgid ""
-"Full support for 12 languages with completed GNOME 51 translations and "
-"international fonts."
+"Full support for 12 languages with built-in tools for 7-Zip, RAR, and PDF."
 msgstr ""
-"مکمل جنوم 51 تراجم اور بین الاقوامی فونٹس کے ساتھ 12 زبانوں کی مکمل سپورٹ۔"
+"12 زبانوں کی مکمل سپورٹ اور ⁦7-Zip⁩، ⁦RAR⁩ اور ⁦PDF⁩ کے لیے بلٹ ان ٹولز۔"
 
-msgid "Archiving & Documents"
-msgstr "آرکائیونگ اور دستاویزات"
-
-msgid ""
-"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
-"image processing."
-msgstr "7-Zip, RAR, ZIP اور جدید دستاویزات کے لیے مکمل سپورٹ۔"
-
+#: files/system/usr/bin/saifdora-welcome:307
 msgid "Integrated Productivity Apps"
 msgstr "پیداواری صلاحیت کی ایپس"
 
+#: files/system/usr/bin/saifdora-welcome:308
 msgid ""
 "High-performance desktop applications installed natively in your system."
 msgstr "آپ کے سسٹم میں پہلے سے شامل تیز رفتار ڈیسک ٹاپ ایپس۔"
 
-msgid "Rumman (File & Media Converter)"
-msgstr "رُمّان (فائل و میڈیا کنورٹر)"
-
-msgid "High-performance media converter and file optimizer."
-msgstr "بہترین کارکردگی والا میڈیا کنورٹر اور فائل آپٹمائزر۔"
-
+#: files/system/usr/bin/saifdora-welcome:315
 msgid "Launch Rumman"
 msgstr "رُمّان چلائیں"
 
-msgid "Mister Download Manager"
-msgstr "Mister Download Manager"
+#: files/system/usr/bin/saifdora-welcome:317
+msgid "Rumman"
+msgstr "رُمّان"
 
-msgid "Fast download manager automatically integrated with Firefox."
-msgstr "فائر فاکس کے ساتھ خودکار منسلک تیز ڈاؤن لوڈ مینیجر۔"
+#: files/system/usr/bin/saifdora-welcome:318
+msgid ""
+"Fast, lightweight file converter: drag any file and hold Shift to drop it "
+"onto matching formats."
+msgstr ""
+"فائلز کو تبدیل اور کمپریس کرنے کا تیز ٹول: کسی بھی فائل کو ڈریگ کریں اور "
+"⁦Shift⁩ دبائیں تا کہ موزوں فارمیٹس ظاہر ہوں۔"
 
+#: files/system/usr/bin/saifdora-welcome:325
 msgid "Launch MDM"
-msgstr "ڈاؤن لوڈ مینیجر چلائیں"
+msgstr "ڈاؤن لوڈ مینیجر"
 
+#: files/system/usr/bin/saifdora-welcome:327
+msgid "Download Manager"
+msgstr "ڈاؤن لوڈ مینیجر"
+
+#: files/system/usr/bin/saifdora-welcome:328
+msgid ""
+"Fast download manager automatically integrated with Firefox (Mister Download"
+" Manager)."
+msgstr ""
+"⁦Firefox⁩ کے ساتھ خودکار طور پر مربوط تیز ڈاؤن لوڈ مینیجر (⁦Mister Download "
+"Manager⁩)۔"
+
+#: files/system/usr/bin/saifdora-welcome:335
+msgid "Launch ZapFast"
+msgstr "⁦ZapFast⁩ چلائیں"
+
+#: files/system/usr/bin/saifdora-welcome:337
 msgid "ZapFast"
 msgstr "ZapFast"
 
+#: files/system/usr/bin/saifdora-welcome:338
 msgid "Fast native desktop WhatsApp client built with Rust."
 msgstr "رسٹ لینگویج میں تیار کردہ تیز رفتار واٹس ایپ ڈیسک ٹاپ کلائنٹ۔"
 
-msgid "Launch ZapFast"
-msgstr "ZapFast چلائیں"
-
+#: files/system/usr/bin/saifdora-welcome:351
 msgid "Interface Customization & Extensions"
 msgstr "انٹرفیس اور ایکسٹینشنز کی ترتیب"
 
+#: files/system/usr/bin/saifdora-welcome:352
 msgid ""
 "Enhance and personalize your GNOME desktop with pre-configured extensions "
 "and utilities."
 msgstr "پیشگی ترتیب شدہ ایکسٹینشنز سے اپنے جنوم ڈیسک ٹاپ کو سجائیں۔"
 
-msgid "Pre-Activated Extensions"
-msgstr "پہلے سے فعال ایکسٹینشنز"
+#: files/system/usr/bin/saifdora-welcome:360
+msgid "Lockscreen Clock"
+msgstr "لاک اسکرین گھڑی"
 
-msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
-msgstr "ArcMenu، Dash to Dock، Clipboard Indicator اور Adwaita Lock Clock۔"
+#: files/system/usr/bin/saifdora-welcome:361
+msgid ""
+"Lockscreen clock with weather and smart regional dates (adapting month names"
+" and local calendars by country), fully customizable."
+msgstr ""
+"موسم اور سمارٹ علاقائی تاریخوں والی لاک اسکرین گھڑی (ملک کے لحاظ سے مہینوں "
+"اور تقویم کی مطابقت)، مکمل طور پر حسب ضرورت۔"
 
-msgid "Extension Manager"
-msgstr "ایکسٹینشن مینیجر"
-
-msgid "Search, install, and update GNOME Shell extensions seamlessly."
-msgstr "جنوم شیل ایکسٹینشنز باآسانی تلاش، انسٹال اور اپ ڈیٹ کریں۔"
-
+#: files/system/usr/bin/saifdora-welcome:367
 msgid "Manage Extensions"
 msgstr "ایکسٹینشنز کا انتظام"
 
-msgid "Refine"
-msgstr "Refine ٹول"
+#: files/system/usr/bin/saifdora-welcome:369
+msgid "Desktop Extensions"
+msgstr "ڈیسک ٹاپ ایکسٹینشنز"
 
-msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
-msgstr "پوشیدہ جنوم ترتیبات، فونٹس اور ڈیسک ٹاپ کے انداز کو تبدیل کریں۔"
+#: files/system/usr/bin/saifdora-welcome:370
+msgid "Includes ArcMenu app launcher, Dash to Dock, and Clipboard Indicator."
+msgstr ""
+"اس میں ⁦ArcMenu⁩ ایپ لانچر، ⁦Dash to Dock⁩ اور کلپ بورڈ انڈیکیٹر شامل ہیں۔"
 
+#: files/system/usr/bin/saifdora-welcome:377
 msgid "Customize Desktop"
-msgstr "ڈیسک ٹاپ ترتیب دیں"
+msgstr "ڈیسک ٹاپ کسٹمائز کریں"
 
-msgid "Hardware & Graphics Drivers"
-msgstr "ہارڈ ویئر اور گرافکس ڈرائیورز"
+#: files/system/usr/bin/saifdora-welcome:379
+msgid "Interface Tweaks"
+msgstr "انٹرفیس کی ترتیبات"
 
+#: files/system/usr/bin/saifdora-welcome:380
+msgid "Fine-tune window buttons and GNOME appearance using Refine."
+msgstr ""
+"⁦Refine⁩ کے ذریعے ونڈو کے بٹن اور گنوم کا انداز اپنی مرضی کے مطابق بنائیں۔"
+
+#: files/system/usr/bin/saifdora-welcome:393
+msgid "Hardware & System Updates"
+msgstr "ہارڈ ویئر اور سسٹم اپ ڈیٹس"
+
+#: files/system/usr/bin/saifdora-welcome:394
 msgid ""
 "Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
-msgstr "Intel, AMD اور NVIDIA پر ہموار ترین کارکردگی کے لیے تیار کردہ۔"
+msgstr "Intel, ⁦AMD⁩ اور ⁦NVIDIA⁩ پر ہموار ترین کارکردگی کے لیے تیار کردہ۔"
 
+#: files/system/usr/bin/saifdora-welcome:401
 msgid "Intel & AMD Acceleration"
-msgstr "Intel اور AMD ایکسلریشن"
+msgstr "Intel اور ⁦AMD⁩ ایکسلریشن"
 
+#: files/system/usr/bin/saifdora-welcome:402
 msgid ""
 "Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
 "configured and active."
 msgstr "ہارڈ ویئر ویڈیو ایکسلریشن پہلے سے فعال ہے۔"
 
-msgid "NVIDIA & CUDA Drivers"
-msgstr "NVIDIA اور CUDA ڈرائیورز"
+#: files/system/usr/bin/saifdora-welcome:407
+msgid "Open NVIDIA Manager"
+msgstr "⁦NVIDIA⁩ مینیجر کھولیں"
 
+#: files/system/usr/bin/saifdora-welcome:409
+msgid "NVIDIA & CUDA Drivers"
+msgstr "NVIDIA اور ⁦CUDA⁩ ڈرائیورز"
+
+#: files/system/usr/bin/saifdora-welcome:410
 msgid ""
 "Detect your GPU model, install official drivers, configure CUDA, and manage "
 "Secure Boot."
-msgstr "اپنے کارڈ کی شناخت کریں، آفیشل ڈرائیورز اور CUDA انسٹال کریں۔"
+msgstr "اپنے کارڈ کی شناخت کریں، آفیشل ڈرائیورز اور ⁦CUDA⁩ انسٹال کریں۔"
 
-msgid "Open NVIDIA Manager"
-msgstr "NVIDIA مینیجر کھولیں"
+#: files/system/usr/bin/saifdora-welcome:417
+msgid "Safe Atomic Updates"
+msgstr "محفوظ ایٹامک اپ ڈیٹس"
 
+#: files/system/usr/bin/saifdora-welcome:418
+msgid ""
+"Immutable Fedora Silverblue base protects the system and enables instant "
+"rollbacks."
+msgstr ""
+"غیر متغیر ⁦Fedora Silverblue⁩ بیس سسٹم کی حفاظت کرتا ہے اور فوری رول بیکس کو"
+" ممکن بناتا ہے۔"
+
+#: files/system/usr/bin/saifdora-welcome:430
 msgid "GNOME 51 Navigation Basics"
 msgstr "جنوم 51 میں رہنمائی کی بنیادی باتیں"
 
+#: files/system/usr/bin/saifdora-welcome:431
 msgid ""
 "Master simple gestures and shortcuts to move swiftly through your workspace."
 msgstr "ورک اسپیس میں تیزی سے کام کرنے کے لیے آسان اشارے اور شارٹ کٹس۔"
 
+#: files/system/usr/bin/saifdora-welcome:438
 msgid "Super Key & Search"
 msgstr "Super بٹن اور تلاش"
 
+#: files/system/usr/bin/saifdora-welcome:439
 msgid ""
 "Press the Super (Windows) key to open the Activities Overview, search apps, "
 "files, or do quick math."
-msgstr "سرگرمیوں کا جائزہ لینے اور تلاش کے لیے Super بٹن دبائیں۔"
+msgstr "سرگرمیوں کا جائزہ لینے اور تلاش کے لیے ⁦Super⁩ بٹن دبائیں۔"
 
+#: files/system/usr/bin/saifdora-welcome:445
 msgid "Touchpad Gestures"
 msgstr "ٹچ پیڈ کے اشارے"
 
+#: files/system/usr/bin/saifdora-welcome:446
 msgid ""
 "Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
 "to switch workspaces."
 msgstr ""
 "3 انگلیوں سے اوپر/نیچے کر کے سرگرمیاں اور دائیں/بائیں کر کے ورک اسپیس بدلیں۔"
 
+#: files/system/usr/bin/saifdora-welcome:452
 msgid "Dynamic Workspaces"
 msgstr "ڈائنامک ورک اسپیسز"
 
+#: files/system/usr/bin/saifdora-welcome:453
 msgid ""
 "Workspaces are created automatically as you open windows to keep your "
 "desktop organized."
 msgstr "کام کو منظم رکھنے کے لیے نئی ورک اسپیسز خودکار بن جاتی ہیں۔"
 
-msgid "Get Started"
-msgstr "شروع کریں"
-
+#: files/system/usr/bin/saifdora-welcome:479
 msgid ""
 "Application installation is completing in the background, it will appear in "
 "the menu within minutes"
 msgstr ""
 "ایپلی کیشن کا پس منظر میں انسٹالیشن مکمل ہو رہا ہے، یہ چند منٹ میں مینو میں "
 "ظاہر ہو جائے گا"
+
+#: files/system/usr/bin/saifdora-welcome:510
+msgid "Get Started"
+msgstr "شروع کریں"
+
+#~ msgid "Global Localization"
+#~ msgstr "عالمی زبانوں کی سپورٹ"
+
+#~ msgid ""
+#~ "Full support for 12 languages with completed GNOME 51 translations and "
+#~ "international fonts."
+#~ msgstr ""
+#~ "مکمل جنوم 51 تراجم اور بین الاقوامی فونٹس کے ساتھ 12 زبانوں کی مکمل سپورٹ۔"
+
+#~ msgid "Archiving & Documents"
+#~ msgstr "آرکائیونگ اور دستاویزات"
+
+#~ msgid ""
+#~ "Integrated support for 7-Zip, RAR, ZIP, ⁦PDF⁩ tools, and high-performance "
+#~ "image processing."
+#~ msgstr "7-Zip, RAR, ZIP اور جدید دستاویزات کے لیے مکمل سپورٹ۔"
+
+#~ msgid "Rumman (File & Media Converter)"
+#~ msgstr "رُمّان (فائل و میڈیا کنورٹر)"
+
+#~ msgid "High-performance media converter and file optimizer."
+#~ msgstr "بہترین کارکردگی والا میڈیا کنورٹر اور فائل آپٹمائزر۔"
+
+#~ msgid "Pre-Activated Extensions"
+#~ msgstr "پہلے سے فعال ایکسٹینشنز"
+
+#~ msgid "Extension Manager"
+#~ msgstr "ایکسٹینشن مینیجر"
+
+#~ msgid "Search, install, and update GNOME Shell extensions seamlessly."
+#~ msgstr "جنوم شیل ایکسٹینشنز باآسانی تلاش، انسٹال اور اپ ڈیٹ کریں۔"
+
+#~ msgid "Refine"
+#~ msgstr "Refine ٹول"
+
+#~ msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+#~ msgstr "پوشیدہ جنوم ترتیبات، فونٹس اور ڈیسک ٹاپ کے انداز کو تبدیل کریں۔"
+
+#~ msgid "Hardware & Graphics Drivers"
+#~ msgstr "ہارڈ ویئر اور گرافکس ڈرائیورز"

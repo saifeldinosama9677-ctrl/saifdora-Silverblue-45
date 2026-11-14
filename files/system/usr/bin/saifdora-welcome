@@ -14,7 +14,7 @@ import gi
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
-from gi.repository import Gtk, Adw, GLib, Gio
+from gi.repository import Gtk, Adw, GLib, Gio, Gdk
 
 # --- Configuration & Paths ---
 APP_ID = "org.saifdora.welcome"
@@ -90,8 +90,11 @@ class WelcomeWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.set_title(_("Welcome to Saifdora"))
-        self.set_default_size(760, 580)
-        self.set_resizable(True)
+        self.set_default_size(640, 620)
+        self.set_resizable(False)
+
+        # Apply cohesive GNOME HIG styling
+        self.apply_custom_css()
 
         # Root ToastOverlay
         self.toast_overlay = Adw.ToastOverlay()
@@ -131,62 +134,99 @@ class WelcomeWindow(Adw.ApplicationWindow):
         self.dots.set_carousel(self.carousel)
         self.header_bar.set_title_widget(self.dots)
 
-        # Bottom Action Bar
+        # Bottom Action Bar with transparent seamless background
         self.action_bar = Gtk.ActionBar()
 
-        # Start: Previous button (hidden on first page) & Startup checkbox
+        # Start: Previous button
         self.prev_btn = Gtk.Button(label=_("Previous"))
+        self.prev_btn.set_size_request(115, 36)
         self.prev_btn.set_visible(False)
         self.prev_btn.connect("clicked", self.on_prev_clicked)
         self.action_bar.pack_start(self.prev_btn)
 
+        # Center: Show on startup checkbox
         self.startup_check = Gtk.CheckButton(label=_("Show on startup"))
         self.startup_check.set_active(not os.path.exists(SEEN_FILE))
         self.startup_check.connect("toggled", self.on_startup_toggled)
-        self.action_bar.pack_start(self.startup_check)
+        self.action_bar.set_center_widget(self.startup_check)
 
         # End: Next / Get Started button
         self.next_btn = Gtk.Button(label=_("Next"))
         self.next_btn.add_css_class("suggested-action")
-        self.next_btn.add_css_class("pill")
+        self.next_btn.set_size_request(115, 36)
         self.next_btn.connect("clicked", self.on_next_clicked)
         self.action_bar.pack_end(self.next_btn)
 
         self.toolbar_view.add_bottom_bar(self.action_bar)
 
-        # Build 5 Carousel Slides
+        # Build 5 Carousel Slides (3 rows each)
         self.build_slide_ready()
         self.build_slide_apps()
         self.build_slide_extensions()
         self.build_slide_hardware()
         self.build_slide_navigation()
 
-    def create_slide_container(self, icon_name, title, subtitle):
-        """Helper to create standard clamped, non-horizontal scrolling slide layout."""
-        scrolled = Gtk.ScrolledWindow()
-        scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        scrolled.set_hexpand(True)
-        scrolled.set_vexpand(True)
+    def apply_custom_css(self):
+        """Apply CSS rules for seamless background, rounded buttons, and badges."""
+        css = """
+        actionbar > revealer > box {
+            background: transparent;
+            border-top: none;
+            box-shadow: none;
+            padding: 12px 24px 18px 24px;
+        }
 
+        button {
+            border-radius: 10px;
+        }
+
+        .boxed-list {
+            border-radius: 12px;
+        }
+
+        .icon-badge {
+            background-color: alpha(@accent_bg_color, 0.14);
+            color: @accent_color;
+            border-radius: 9999px;
+        }
+        """
+        provider = Gtk.CssProvider()
+        provider.load_from_string(css)
+        display = Gdk.Display.get_default()
+        if display:
+            Gtk.StyleContext.add_provider_for_display(
+                display,
+                provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            )
+
+    def create_slide_container(self, icon_name, title, subtitle):
+        """Helper to create standard clamped slide layout with circular tinted badge."""
         clamp = Adw.Clamp()
-        clamp.set_maximum_size(560)
-        clamp.set_margin_top(24)
-        clamp.set_margin_bottom(24)
+        clamp.set_maximum_size(530)
         clamp.set_margin_start(24)
         clamp.set_margin_end(24)
         clamp.set_valign(Gtk.Align.CENTER)
-        scrolled.set_child(clamp)
 
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=16)
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=14)
         clamp.set_child(box)
 
-        # Header Icon & Titles
+        # Header Circular Tinted Badge
         if icon_name:
+            badge = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+            badge.set_halign(Gtk.Align.CENTER)
+            badge.set_valign(Gtk.Align.CENTER)
+            badge.set_size_request(76, 76)
+            badge.add_css_class("icon-badge")
+
             img = Gtk.Image.new_from_icon_name(icon_name)
-            img.set_pixel_size(64)
+            img.set_pixel_size(40)
             img.set_halign(Gtk.Align.CENTER)
-            img.add_css_class("accent")
-            box.append(img)
+            img.set_valign(Gtk.Align.CENTER)
+            img.set_hexpand(True)
+            img.set_vexpand(True)
+            badge.append(img)
+            box.append(badge)
 
         title_lbl = Gtk.Label(label=title)
         title_lbl.add_css_class("title-1")
@@ -201,239 +241,218 @@ class WelcomeWindow(Adw.ApplicationWindow):
         sub_lbl.set_justify(Gtk.Justification.CENTER)
         box.append(sub_lbl)
 
-        return scrolled, box
+        return clamp, box
+
+    def create_action_row(self, title, subtitle, icon_name=None, suffix_btn=None):
+        """Helper to create an unactivatable ActionRow with uniform styling."""
+        row = Adw.ActionRow(title=title, subtitle=subtitle)
+        row.set_activatable(False)
+        row.set_title_lines(1)
+        row.set_subtitle_lines(2)
+        if icon_name:
+            row.add_prefix(Gtk.Image.new_from_icon_name(icon_name))
+        if suffix_btn:
+            row.add_suffix(suffix_btn)
+        return row
+
+    def create_row_button(self, label, on_click, suggested=False):
+        """Helper to create uniform rectangular row button (width=125, height=34)."""
+        btn = Gtk.Button(label=label)
+        btn.set_valign(Gtk.Align.CENTER)
+        btn.set_size_request(125, 34)
+        if suggested:
+            btn.add_css_class("suggested-action")
+        btn.connect("clicked", on_click)
+        return btn
 
     def build_slide_ready(self):
-        """Slide 1: Out-of-the-box readiness."""
+        """Slide 1: Out-of-the-box readiness (3 rows)."""
         slide, box = self.create_slide_container(
-            "package-x-generic-symbolic",
+            "computer-symbolic",
             _("Ready Out of the Box"),
             _("Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration, and essential utilities pre-configured.")
         )
         listbox = Gtk.ListBox()
         listbox.add_css_class("boxed-list")
+        listbox.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        r1 = Adw.ActionRow(
-            title=_("Multimedia & Hardware Acceleration"),
-            subtitle=_("Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel and AMD.")
+        r1 = self.create_action_row(
+            _("Multimedia & Hardware Acceleration"),
+            _("Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel and AMD."),
+            "video-x-generic-symbolic"
         )
-        r1.set_title_lines(2)
-        r1.set_subtitle_lines(3)
-        r1.add_prefix(Gtk.Image.new_from_icon_name("video-x-generic-symbolic"))
         listbox.append(r1)
 
-        r2 = Adw.ActionRow(
-            title=_("Curated Repositories"),
-            subtitle=_("Flathub and RPM Fusion (Free & Non-Free) enabled out of the box.")
+        r2 = self.create_action_row(
+            _("Curated Repositories"),
+            _("Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."),
+            "software-properties-symbolic"
         )
-        r2.set_title_lines(2)
-        r2.set_subtitle_lines(3)
-        r2.add_prefix(Gtk.Image.new_from_icon_name("software-properties-symbolic"))
         listbox.append(r2)
 
-        r3 = Adw.ActionRow(
-            title=_("Global Localization"),
-            subtitle=_("Full support for 12 languages with completed GNOME 51 translations and international fonts.")
+        r3 = self.create_action_row(
+            _("Localization & System Tools"),
+            _("Full support for 12 languages with built-in tools for 7-Zip, RAR, and PDF."),
+            "package-x-generic-symbolic"
         )
-        r3.set_title_lines(2)
-        r3.set_subtitle_lines(3)
-        r3.add_prefix(Gtk.Image.new_from_icon_name("preferences-desktop-locale-symbolic"))
         listbox.append(r3)
-
-        r4 = Adw.ActionRow(
-            title=_("Archiving & Documents"),
-            subtitle=_("Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance image processing.")
-        )
-        r4.set_title_lines(2)
-        r4.set_subtitle_lines(3)
-        r4.add_prefix(Gtk.Image.new_from_icon_name("package-x-generic-symbolic"))
-        listbox.append(r4)
 
         box.append(listbox)
         self.carousel.append(slide)
 
     def build_slide_apps(self):
-        """Slide 2: Integrated productivity apps."""
+        """Slide 2: Integrated productivity apps (3 rows)."""
         slide, box = self.create_slide_container(
-            "applications-accessories-symbolic",
+            "system-software-install-symbolic",
             _("Integrated Productivity Apps"),
             _("High-performance desktop applications installed natively in your system.")
         )
         listbox = Gtk.ListBox()
         listbox.add_css_class("boxed-list")
+        listbox.set_selection_mode(Gtk.SelectionMode.NONE)
 
         # Rumman
-        r1 = Adw.ActionRow(
-            title=_("Rumman (File & Media Converter)"),
-            subtitle=_("High-performance media converter and file optimizer.")
+        btn1 = self.create_row_button(_("Launch Rumman"), lambda *a: self.launch_local_app(["/usr/bin/rumman"]))
+        r1 = self.create_action_row(
+            _("Rumman"),
+            _("Fast, lightweight file converter: drag any file and hold Shift to drop it onto matching formats."),
+            "system-run-symbolic",
+            btn1
         )
-        r1.set_title_lines(2)
-        r1.set_subtitle_lines(3)
-        r1.add_prefix(Gtk.Image.new_from_icon_name("system-run-symbolic"))
-        btn1 = Gtk.Button(label=_("Launch Rumman"))
-        btn1.add_css_class("pill")
-        btn1.set_valign(Gtk.Align.CENTER)
-        btn1.connect("clicked", lambda *a: self.launch_local_app(["/usr/bin/rumman"]))
-        r1.add_suffix(btn1)
         listbox.append(r1)
 
         # Mister Download Manager
-        r2 = Adw.ActionRow(
-            title=_("Mister Download Manager"),
-            subtitle=_("Fast download manager automatically integrated with Firefox.")
+        btn2 = self.create_row_button(_("Launch MDM"), lambda *a: self.launch_local_app(["/usr/bin/misterdownloadmanager"]))
+        r2 = self.create_action_row(
+            _("Download Manager"),
+            _("Fast download manager automatically integrated with Firefox (Mister Download Manager)."),
+            "folder-download-symbolic",
+            btn2
         )
-        r2.set_title_lines(2)
-        r2.set_subtitle_lines(3)
-        r2.add_prefix(Gtk.Image.new_from_icon_name("folder-download-symbolic"))
-        btn2 = Gtk.Button(label=_("Launch MDM"))
-        btn2.add_css_class("pill")
-        btn2.set_valign(Gtk.Align.CENTER)
-        btn2.connect("clicked", lambda *a: self.launch_local_app(["/usr/bin/misterdownloadmanager"]))
-        r2.add_suffix(btn2)
         listbox.append(r2)
 
         # ZapFast
-        r3 = Adw.ActionRow(
-            title=_("ZapFast"),
-            subtitle=_("Fast native desktop WhatsApp client built with Rust.")
+        btn3 = self.create_row_button(_("Launch ZapFast"), lambda *a: self.launch_local_app(["/usr/bin/zapfast"]))
+        r3 = self.create_action_row(
+            _("ZapFast"),
+            _("Fast native desktop WhatsApp client built with Rust."),
+            "chat-message-new-symbolic",
+            btn3
         )
-        r3.set_title_lines(2)
-        r3.set_subtitle_lines(3)
-        r3.add_prefix(Gtk.Image.new_from_icon_name("chat-message-new-symbolic"))
-        btn3 = Gtk.Button(label=_("Launch ZapFast"))
-        btn3.add_css_class("pill")
-        btn3.set_valign(Gtk.Align.CENTER)
-        btn3.connect("clicked", lambda *a: self.launch_local_app(["/usr/bin/zapfast"]))
-        r3.add_suffix(btn3)
         listbox.append(r3)
 
         box.append(listbox)
         self.carousel.append(slide)
 
     def build_slide_extensions(self):
-        """Slide 3: Interface customization & extensions."""
+        """Slide 3: Interface customization & extensions (3 rows)."""
         slide, box = self.create_slide_container(
-            "preferences-desktop-theme-symbolic",
+            "preferences-desktop-appearance-symbolic",
             _("Interface Customization & Extensions"),
             _("Enhance and personalize your GNOME desktop with pre-configured extensions and utilities.")
         )
         listbox = Gtk.ListBox()
         listbox.add_css_class("boxed-list")
+        listbox.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        r1 = Adw.ActionRow(
-            title=_("Pre-Activated Extensions"),
-            subtitle=_("ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock.")
+        # Row 1: Lockscreen Clock (informational)
+        r1 = self.create_action_row(
+            _("Lockscreen Clock"),
+            _("Lockscreen clock with weather and smart regional dates (adapting month names and local calendars by country), fully customizable."),
+            "preferences-system-time-symbolic"
         )
-        r1.set_title_lines(2)
-        r1.set_subtitle_lines(3)
-        r1.add_prefix(Gtk.Image.new_from_icon_name("emblem-favorite-symbolic"))
         listbox.append(r1)
 
-        # Extension Manager (Smart Flatpak Launcher)
-        r2 = Adw.ActionRow(
-            title=_("Extension Manager"),
-            subtitle=_("Search, install, and update GNOME Shell extensions seamlessly.")
+        # Row 2: Desktop Extensions (Smart Flatpak Launcher)
+        btn2 = self.create_row_button(_("Manage Extensions"), lambda *a: self.launch_flatpak_app("com.mattjakeman.ExtensionManager"))
+        r2 = self.create_action_row(
+            _("Desktop Extensions"),
+            _("Includes ArcMenu app launcher, Dash to Dock, and Clipboard Indicator."),
+            "application-x-addon-symbolic",
+            btn2
         )
-        r2.set_title_lines(2)
-        r2.set_subtitle_lines(3)
-        r2.add_prefix(Gtk.Image.new_from_icon_name("application-x-addon-symbolic"))
-        btn2 = Gtk.Button(label=_("Manage Extensions"))
-        btn2.add_css_class("pill")
-        btn2.set_valign(Gtk.Align.CENTER)
-        btn2.connect("clicked", lambda *a: self.launch_flatpak_app("com.mattjakeman.ExtensionManager"))
-        r2.add_suffix(btn2)
         listbox.append(r2)
 
-        # Refine (Smart Flatpak Launcher)
-        r3 = Adw.ActionRow(
-            title=_("Refine"),
-            subtitle=_("Tweak hidden GNOME settings, fonts, and desktop behavior.")
+        # Row 3: Interface Tweaks (Smart Flatpak Launcher)
+        btn3 = self.create_row_button(_("Customize Desktop"), lambda *a: self.launch_flatpak_app("page.tesk.Refine"))
+        r3 = self.create_action_row(
+            _("Interface Tweaks"),
+            _("Fine-tune window buttons and GNOME appearance using Refine."),
+            "preferences-system-symbolic",
+            btn3
         )
-        r3.set_title_lines(2)
-        r3.set_subtitle_lines(3)
-        r3.add_prefix(Gtk.Image.new_from_icon_name("preferences-system-symbolic"))
-        btn3 = Gtk.Button(label=_("Customize Desktop"))
-        btn3.add_css_class("pill")
-        btn3.set_valign(Gtk.Align.CENTER)
-        btn3.connect("clicked", lambda *a: self.launch_flatpak_app("page.tesk.Refine"))
-        r3.add_suffix(btn3)
         listbox.append(r3)
 
         box.append(listbox)
         self.carousel.append(slide)
 
     def build_slide_hardware(self):
-        """Slide 4: Hardware & graphics drivers."""
+        """Slide 4: Hardware & system updates (3 rows)."""
         slide, box = self.create_slide_container(
             "video-display-symbolic",
-            _("Hardware & Graphics Drivers"),
+            _("Hardware & System Updates"),
             _("Optimized for smooth performance across Intel, AMD, and NVIDIA hardware.")
         )
         listbox = Gtk.ListBox()
         listbox.add_css_class("boxed-list")
+        listbox.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        r1 = Adw.ActionRow(
-            title=_("Intel & AMD Acceleration"),
-            subtitle=_("Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-configured and active.")
+        r1 = self.create_action_row(
+            _("Intel & AMD Acceleration"),
+            _("Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-configured and active."),
+            "video-joined-displays-symbolic"
         )
-        r1.set_title_lines(2)
-        r1.set_subtitle_lines(3)
-        r1.add_prefix(Gtk.Image.new_from_icon_name("video-joined-displays-symbolic"))
         listbox.append(r1)
 
-        r2 = Adw.ActionRow(
-            title=_("NVIDIA & CUDA Drivers"),
-            subtitle=_("Detect your GPU model, install official drivers, configure CUDA, and manage Secure Boot.")
+        btn2 = self.create_row_button(_("Open NVIDIA Manager"), lambda *a: self.launch_local_app(["/usr/bin/saifdora-nvidia-manager"]))
+        r2 = self.create_action_row(
+            _("NVIDIA & CUDA Drivers"),
+            _("Detect your GPU model, install official drivers, configure CUDA, and manage Secure Boot."),
+            "display-projector-symbolic",
+            btn2
         )
-        r2.set_title_lines(2)
-        r2.set_subtitle_lines(3)
-        r2.add_prefix(Gtk.Image.new_from_icon_name("display-projector-symbolic"))
-        btn2 = Gtk.Button(label=_("Open NVIDIA Manager"))
-        btn2.add_css_class("pill")
-        btn2.add_css_class("suggested-action")
-        btn2.set_valign(Gtk.Align.CENTER)
-        btn2.connect("clicked", lambda *a: self.launch_local_app(["/usr/bin/saifdora-nvidia-manager"]))
-        r2.add_suffix(btn2)
         listbox.append(r2)
+
+        r3 = self.create_action_row(
+            _("Safe Atomic Updates"),
+            _("Immutable Fedora Silverblue base protects the system and enables instant rollbacks."),
+            "software-update-available-symbolic"
+        )
+        listbox.append(r3)
 
         box.append(listbox)
         self.carousel.append(slide)
 
     def build_slide_navigation(self):
-        """Slide 5: GNOME 51 navigation basics."""
+        """Slide 5: GNOME 51 navigation basics (3 rows)."""
         slide, box = self.create_slide_container(
-            "input-keyboard-symbolic",
+            "preferences-desktop-keyboard-shortcuts-symbolic",
             _("GNOME 51 Navigation Basics"),
             _("Master simple gestures and shortcuts to move swiftly through your workspace.")
         )
         listbox = Gtk.ListBox()
         listbox.add_css_class("boxed-list")
+        listbox.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        r1 = Adw.ActionRow(
-            title=_("Super Key & Search"),
-            subtitle=_("Press the Super (Windows) key to open the Activities Overview, search apps, files, or do quick math.")
+        r1 = self.create_action_row(
+            _("Super Key & Search"),
+            _("Press the Super (Windows) key to open the Activities Overview, search apps, files, or do quick math."),
+            "system-search-symbolic"
         )
-        r1.set_title_lines(2)
-        r1.set_subtitle_lines(3)
-        r1.add_prefix(Gtk.Image.new_from_icon_name("system-search-symbolic"))
         listbox.append(r1)
 
-        r2 = Adw.ActionRow(
-            title=_("Touchpad Gestures"),
-            subtitle=_("Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers to switch workspaces.")
+        r2 = self.create_action_row(
+            _("Touchpad Gestures"),
+            _("Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers to switch workspaces."),
+            "input-touchpad-symbolic"
         )
-        r2.set_title_lines(2)
-        r2.set_subtitle_lines(3)
-        r2.add_prefix(Gtk.Image.new_from_icon_name("input-touchpad-symbolic"))
         listbox.append(r2)
 
-        r3 = Adw.ActionRow(
-            title=_("Dynamic Workspaces"),
-            subtitle=_("Workspaces are created automatically as you open windows to keep your desktop organized.")
+        r3 = self.create_action_row(
+            _("Dynamic Workspaces"),
+            _("Workspaces are created automatically as you open windows to keep your desktop organized."),
+            "view-paged-symbolic"
         )
-        r3.set_title_lines(2)
-        r3.set_subtitle_lines(3)
-        r3.add_prefix(Gtk.Image.new_from_icon_name("view-paged-symbolic"))
         listbox.append(r3)
 
         box.append(listbox)

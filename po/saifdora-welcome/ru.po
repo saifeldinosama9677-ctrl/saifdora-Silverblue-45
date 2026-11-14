@@ -2,7 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: saifdora-welcome 1.0 (ru)\n"
-"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 21:35+0200\n"
 "PO-Revision-Date: 2024-11-13 12:00+0000\n"
 "Last-Translator: Saifdora Translation Team\n"
 "Language-Team: ru Translation Team\n"
@@ -12,27 +13,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+#: files/system/usr/bin/saifdora-welcome:92
 msgid "Welcome to Saifdora"
 msgstr "Добро пожаловать в Saifdora"
 
-msgid "Previous"
-msgstr "Назад"
-
-msgid "Next"
-msgstr "Далее"
-
+#: files/system/usr/bin/saifdora-welcome:114
 msgid "NVIDIA graphics card detected! Official drivers are not installed."
 msgstr "Обнаружена видеокарта NVIDIA! Официальные драйверы не установлены."
 
+#: files/system/usr/bin/saifdora-welcome:115
 msgid "Install NVIDIA & CUDA Driver"
 msgstr "Установить драйвер NVIDIA и CUDA"
 
+#: files/system/usr/bin/saifdora-welcome:141
+msgid "Previous"
+msgstr "Назад"
+
+#: files/system/usr/bin/saifdora-welcome:148
 msgid "Show on startup"
 msgstr "Показывать при запуске"
 
+#: files/system/usr/bin/saifdora-welcome:154
+#: files/system/usr/bin/saifdora-welcome:512
+msgid "Next"
+msgstr "Далее"
+
+#: files/system/usr/bin/saifdora-welcome:272
 msgid "Ready Out of the Box"
 msgstr "Готовность «из коробки»"
 
+#: files/system/usr/bin/saifdora-welcome:273
 msgid ""
 "Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
 " and essential utilities pre-configured."
@@ -40,149 +50,208 @@ msgstr ""
 "Saifdora Silverblue 45 содержит все кодеки, аппаратное ускорение и "
 "необходимые утилиты."
 
+#: files/system/usr/bin/saifdora-welcome:280
 msgid "Multimedia & Hardware Acceleration"
 msgstr "Мультимедиа и аппаратное ускорение"
 
+#: files/system/usr/bin/saifdora-welcome:281
 msgid ""
 "Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
 "and AMD."
 msgstr ""
 "Полная поддержка кодеков (HEVC, AV1, HEIC) и декодирования для Intel и AMD."
 
+#: files/system/usr/bin/saifdora-welcome:287
 msgid "Curated Repositories"
 msgstr "Настроенные репозитории"
 
+#: files/system/usr/bin/saifdora-welcome:288
 msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
 msgstr "Репозитории Flathub и RPM Fusion включены по умолчанию."
 
-msgid "Global Localization"
-msgstr "Глобальная локализация"
+#: files/system/usr/bin/saifdora-welcome:294
+msgid "Localization & System Tools"
+msgstr "Локализация и системные утилиты"
 
+#: files/system/usr/bin/saifdora-welcome:295
 msgid ""
-"Full support for 12 languages with completed GNOME 51 translations and "
-"international fonts."
-msgstr "Поддержка 12 языков с завершенными переводами GNOME 51 и шрифтами."
+"Full support for 12 languages with built-in tools for 7-Zip, RAR, and PDF."
+msgstr ""
+"Поддержка 12 языков со встроенными инструментами для 7-Zip, RAR и PDF."
 
-msgid "Archiving & Documents"
-msgstr "Архивация и документы"
-
-msgid ""
-"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
-"image processing."
-msgstr "Встроенная поддержка 7-Zip, RAR, ZIP, PDF и обработки изображений."
-
+#: files/system/usr/bin/saifdora-welcome:307
 msgid "Integrated Productivity Apps"
 msgstr "Встроенные приложения для работы"
 
+#: files/system/usr/bin/saifdora-welcome:308
 msgid ""
 "High-performance desktop applications installed natively in your system."
 msgstr "Высокопроизводительные приложения, встроенные прямо в систему."
 
-msgid "Rumman (File & Media Converter)"
-msgstr "Rumman (Конвертер файлов и медиа)"
-
-msgid "High-performance media converter and file optimizer."
-msgstr "Быстрый конвертер медиа и оптимизатор файлов."
-
+#: files/system/usr/bin/saifdora-welcome:315
 msgid "Launch Rumman"
-msgstr "Запустить Rumman"
+msgstr "Запустить Румман"
 
-msgid "Mister Download Manager"
-msgstr "Mister Download Manager"
+#: files/system/usr/bin/saifdora-welcome:317
+msgid "Rumman"
+msgstr "Румман"
 
-msgid "Fast download manager automatically integrated with Firefox."
-msgstr "Быстрый менеджер загрузок, интегрированный с Firefox."
+#: files/system/usr/bin/saifdora-welcome:318
+msgid ""
+"Fast, lightweight file converter: drag any file and hold Shift to drop it "
+"onto matching formats."
+msgstr ""
+"Быстрый и лёгкий конвертер: перетащите файл и удерживайте Shift, чтобы "
+"выбрать формат."
 
+#: files/system/usr/bin/saifdora-welcome:325
 msgid "Launch MDM"
-msgstr "Запустить MDM"
+msgstr "Менеджер загрузок"
 
-msgid "ZapFast"
-msgstr "ZapFast"
+#: files/system/usr/bin/saifdora-welcome:327
+msgid "Download Manager"
+msgstr "Менеджер загрузок"
 
-msgid "Fast native desktop WhatsApp client built with Rust."
-msgstr "Быстрый нативный клиент WhatsApp, написанный на Rust."
+#: files/system/usr/bin/saifdora-welcome:328
+msgid ""
+"Fast download manager automatically integrated with Firefox (Mister Download"
+" Manager)."
+msgstr ""
+"Быстрый менеджер загрузок, интегрированный с Firefox (Mister Download "
+"Manager)."
 
+#: files/system/usr/bin/saifdora-welcome:335
 msgid "Launch ZapFast"
 msgstr "Запустить ZapFast"
 
+#: files/system/usr/bin/saifdora-welcome:337
+msgid "ZapFast"
+msgstr "ZapFast"
+
+#: files/system/usr/bin/saifdora-welcome:338
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr "Быстрый нативный клиент WhatsApp, написанный на Rust."
+
+#: files/system/usr/bin/saifdora-welcome:351
 msgid "Interface Customization & Extensions"
 msgstr "Настройка интерфейса и расширения"
 
+#: files/system/usr/bin/saifdora-welcome:352
 msgid ""
 "Enhance and personalize your GNOME desktop with pre-configured extensions "
 "and utilities."
 msgstr "Персонализируйте рабочий стол GNOME с помощью готовых расширений."
 
-msgid "Pre-Activated Extensions"
-msgstr "Предустановленные расширения"
+#: files/system/usr/bin/saifdora-welcome:360
+msgid "Lockscreen Clock"
+msgstr "Часы экрана блокировки"
 
-msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
-msgstr "ArcMenu, Dash to Dock, Clipboard Indicator и Adwaita Lock Clock."
+#: files/system/usr/bin/saifdora-welcome:361
+msgid ""
+"Lockscreen clock with weather and smart regional dates (adapting month names"
+" and local calendars by country), fully customizable."
+msgstr ""
+"Часы экрана блокировки с погодой и региональным календарём, полностью "
+"настраиваемые."
 
-msgid "Extension Manager"
-msgstr "Менеджер расширений"
-
-msgid "Search, install, and update GNOME Shell extensions seamlessly."
-msgstr "Удобный поиск, установка и обновление расширений GNOME Shell."
-
+#: files/system/usr/bin/saifdora-welcome:367
 msgid "Manage Extensions"
 msgstr "Управление расширениями"
 
-msgid "Refine"
-msgstr "Refine"
+#: files/system/usr/bin/saifdora-welcome:369
+msgid "Desktop Extensions"
+msgstr "Расширения рабочего стола"
 
-msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
-msgstr "Настройка скрытых параметров GNOME, шрифтов и поведения системы."
+#: files/system/usr/bin/saifdora-welcome:370
+msgid "Includes ArcMenu app launcher, Dash to Dock, and Clipboard Indicator."
+msgstr ""
+"Включает меню ArcMenu, панель Dash to Dock и историю буфера Clipboard "
+"Indicator."
 
+#: files/system/usr/bin/saifdora-welcome:377
 msgid "Customize Desktop"
-msgstr "Настроить интерфейс"
+msgstr "Настроить рабочий стол"
 
-msgid "Hardware & Graphics Drivers"
-msgstr "Оборудование и видеокарты"
+#: files/system/usr/bin/saifdora-welcome:379
+msgid "Interface Tweaks"
+msgstr "Настройка интерфейса"
 
+#: files/system/usr/bin/saifdora-welcome:380
+msgid "Fine-tune window buttons and GNOME appearance using Refine."
+msgstr ""
+"Тонкая настройка кнопок окон и внешнего вида GNOME с помощью утилиты Refine."
+
+#: files/system/usr/bin/saifdora-welcome:393
+msgid "Hardware & System Updates"
+msgstr "Оборудование и обновления системы"
+
+#: files/system/usr/bin/saifdora-welcome:394
 msgid ""
 "Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
 msgstr "Оптимизировано для плавной работы на Intel, AMD и NVIDIA."
 
+#: files/system/usr/bin/saifdora-welcome:401
 msgid "Intel & AMD Acceleration"
 msgstr "Ускорение Intel и AMD"
 
+#: files/system/usr/bin/saifdora-welcome:402
 msgid ""
 "Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
 "configured and active."
 msgstr ""
 "Аппаратное ускорение видео (VA-API / Mesa / Intel) настроено и активно."
 
+#: files/system/usr/bin/saifdora-welcome:407
+msgid "Open NVIDIA Manager"
+msgstr "Менеджер NVIDIA"
+
+#: files/system/usr/bin/saifdora-welcome:409
 msgid "NVIDIA & CUDA Drivers"
 msgstr "Драйверы NVIDIA и CUDA"
 
+#: files/system/usr/bin/saifdora-welcome:410
 msgid ""
 "Detect your GPU model, install official drivers, configure CUDA, and manage "
 "Secure Boot."
 msgstr "Определение модели видеокарты, установка драйверов, настройка CUDA."
 
-msgid "Open NVIDIA Manager"
-msgstr "Менеджер драйверов NVIDIA"
+#: files/system/usr/bin/saifdora-welcome:417
+msgid "Safe Atomic Updates"
+msgstr "Безопасные атомарные обновления"
 
+#: files/system/usr/bin/saifdora-welcome:418
+msgid ""
+"Immutable Fedora Silverblue base protects the system and enables instant "
+"rollbacks."
+msgstr ""
+"Неизменяемая база Fedora Silverblue защищает систему и позволяет мгновенно "
+"откатить изменения."
+
+#: files/system/usr/bin/saifdora-welcome:430
 msgid "GNOME 51 Navigation Basics"
 msgstr "Основы навигации в GNOME 51"
 
+#: files/system/usr/bin/saifdora-welcome:431
 msgid ""
 "Master simple gestures and shortcuts to move swiftly through your workspace."
 msgstr "Простые жесты и горячие клавиши для быстрой работы."
 
+#: files/system/usr/bin/saifdora-welcome:438
 msgid "Super Key & Search"
 msgstr "Клавиша Super и поиск"
 
+#: files/system/usr/bin/saifdora-welcome:439
 msgid ""
 "Press the Super (Windows) key to open the Activities Overview, search apps, "
 "files, or do quick math."
 msgstr ""
 "Нажмите Super для открытия обзора и быстрого поиска приложений и файлов."
 
+#: files/system/usr/bin/saifdora-welcome:445
 msgid "Touchpad Gestures"
 msgstr "Жесты тачпада"
 
+#: files/system/usr/bin/saifdora-welcome:446
 msgid ""
 "Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
 "to switch workspaces."
@@ -190,20 +259,64 @@ msgstr ""
 "Смахните тремя пальцами вверх/вниз для обзора, влево/вправо для смены "
 "столов."
 
+#: files/system/usr/bin/saifdora-welcome:452
 msgid "Dynamic Workspaces"
 msgstr "Динамические рабочие места"
 
+#: files/system/usr/bin/saifdora-welcome:453
 msgid ""
 "Workspaces are created automatically as you open windows to keep your "
 "desktop organized."
 msgstr "Рабочие столы создаются автоматически для поддержания порядка."
 
-msgid "Get Started"
-msgstr "Начать работу"
-
+#: files/system/usr/bin/saifdora-welcome:479
 msgid ""
 "Application installation is completing in the background, it will appear in "
 "the menu within minutes"
 msgstr ""
 "Установка приложения завершается в фоновом режиме, оно появится в меню через"
 " несколько минут"
+
+#: files/system/usr/bin/saifdora-welcome:510
+msgid "Get Started"
+msgstr "Начать работу"
+
+#~ msgid "Global Localization"
+#~ msgstr "Глобальная локализация"
+
+#~ msgid ""
+#~ "Full support for 12 languages with completed GNOME 51 translations and "
+#~ "international fonts."
+#~ msgstr "Поддержка 12 языков с завершенными переводами GNOME 51 и шрифтами."
+
+#~ msgid "Archiving & Documents"
+#~ msgstr "Архивация и документы"
+
+#~ msgid ""
+#~ "Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+#~ "image processing."
+#~ msgstr "Встроенная поддержка 7-Zip, RAR, ZIP, PDF и обработки изображений."
+
+#~ msgid "Rumman (File & Media Converter)"
+#~ msgstr "Rumman (Конвертер файлов и медиа)"
+
+#~ msgid "High-performance media converter and file optimizer."
+#~ msgstr "Быстрый конвертер медиа и оптимизатор файлов."
+
+#~ msgid "Pre-Activated Extensions"
+#~ msgstr "Предустановленные расширения"
+
+#~ msgid "Extension Manager"
+#~ msgstr "Менеджер расширений"
+
+#~ msgid "Search, install, and update GNOME Shell extensions seamlessly."
+#~ msgstr "Удобный поиск, установка и обновление расширений GNOME Shell."
+
+#~ msgid "Refine"
+#~ msgstr "Refine"
+
+#~ msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+#~ msgstr "Настройка скрытых параметров GNOME, шрифтов и поведения системы."
+
+#~ msgid "Hardware & Graphics Drivers"
+#~ msgstr "Оборудование и видеокарты"

@@ -2,7 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: saifdora-welcome 1.0 (ms)\n"
-"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 21:35+0200\n"
 "PO-Revision-Date: 2024-11-13 12:00+0000\n"
 "Last-Translator: Saifdora Translation Team\n"
 "Language-Team: ms Translation Team\n"
@@ -12,27 +13,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: files/system/usr/bin/saifdora-welcome:92
 msgid "Welcome to Saifdora"
 msgstr "Selamat Datang ke Saifdora"
 
-msgid "Previous"
-msgstr "Sebelumnya"
-
-msgid "Next"
-msgstr "Seterusnya"
-
+#: files/system/usr/bin/saifdora-welcome:114
 msgid "NVIDIA graphics card detected! Official drivers are not installed."
 msgstr "Kad grafik NVIDIA dikesan! Pemacu rasmi belum dipasang."
 
+#: files/system/usr/bin/saifdora-welcome:115
 msgid "Install NVIDIA & CUDA Driver"
 msgstr "Pasang Pemacu NVIDIA & CUDA"
 
+#: files/system/usr/bin/saifdora-welcome:141
+msgid "Previous"
+msgstr "Sebelumnya"
+
+#: files/system/usr/bin/saifdora-welcome:148
 msgid "Show on startup"
 msgstr "Tunjukkan semasa permulaan"
 
+#: files/system/usr/bin/saifdora-welcome:154
+#: files/system/usr/bin/saifdora-welcome:512
+msgid "Next"
+msgstr "Seterusnya"
+
+#: files/system/usr/bin/saifdora-welcome:272
 msgid "Ready Out of the Box"
 msgstr "Sedia Digunakan"
 
+#: files/system/usr/bin/saifdora-welcome:273
 msgid ""
 "Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
 " and essential utilities pre-configured."
@@ -40,9 +50,11 @@ msgstr ""
 "Saifdora Silverblue 45 merangkumi kodek lengkap, pecutan perkakasan dan "
 "utiliti penting."
 
+#: files/system/usr/bin/saifdora-welcome:280
 msgid "Multimedia & Hardware Acceleration"
 msgstr "Multimedia & Pecutan Perkakasan"
 
+#: files/system/usr/bin/saifdora-welcome:281
 msgid ""
 "Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
 "and AMD."
@@ -50,141 +62,194 @@ msgstr ""
 "Sokongan penuh kodek (HEVC, AV1, HEIC) dan penyahkodan video untuk Intel dan"
 " AMD."
 
+#: files/system/usr/bin/saifdora-welcome:287
 msgid "Curated Repositories"
 msgstr "Repositori Terpilih"
 
+#: files/system/usr/bin/saifdora-welcome:288
 msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
 msgstr "Flathub dan RPM Fusion diaktifkan secara lalai."
 
-msgid "Global Localization"
-msgstr "Penyetempatan Global"
+#: files/system/usr/bin/saifdora-welcome:294
+msgid "Localization & System Tools"
+msgstr "Penyetempatan & Alat Sistem"
 
+#: files/system/usr/bin/saifdora-welcome:295
 msgid ""
-"Full support for 12 languages with completed GNOME 51 translations and "
-"international fonts."
+"Full support for 12 languages with built-in tools for 7-Zip, RAR, and PDF."
 msgstr ""
-"Sokongan penuh untuk 12 bahasa dengan terjemahan GNOME 51 yang lengkap dan "
-"fon global."
+"Sokongan penuh untuk 12 bahasa dengan alat terbina dalam untuk 7-Zip, RAR, "
+"dan PDF."
 
-msgid "Archiving & Documents"
-msgstr "Pengarkiban & Dokumen"
-
-msgid ""
-"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
-"image processing."
-msgstr "Sokongan terbina untuk 7-Zip, RAR, ZIP dan alat pemprosesan dokumen."
-
+#: files/system/usr/bin/saifdora-welcome:307
 msgid "Integrated Productivity Apps"
 msgstr "Aplikasi Produktiviti Bersepadu"
 
+#: files/system/usr/bin/saifdora-welcome:308
 msgid ""
 "High-performance desktop applications installed natively in your system."
 msgstr "Aplikasi desktop berprestasi tinggi yang dipasang secara natif."
 
-msgid "Rumman (File & Media Converter)"
-msgstr "Rumman (Penukar Fail & Media)"
-
-msgid "High-performance media converter and file optimizer."
-msgstr "Penukar media dan pengoptimum fail berprestasi tinggi."
-
+#: files/system/usr/bin/saifdora-welcome:315
 msgid "Launch Rumman"
-msgstr "Buka Rumman"
+msgstr "Lancarkan Rumman"
 
-msgid "Mister Download Manager"
-msgstr "Mister Download Manager"
+#: files/system/usr/bin/saifdora-welcome:317
+msgid "Rumman"
+msgstr "Rumman"
 
-msgid "Fast download manager automatically integrated with Firefox."
-msgstr "Pengurus muat turun pantas yang disepadukan dengan Firefox."
+#: files/system/usr/bin/saifdora-welcome:318
+msgid ""
+"Fast, lightweight file converter: drag any file and hold Shift to drop it "
+"onto matching formats."
+msgstr ""
+"Penukar fail pantas dan ringan: seret mana-mana fail dan tahan Shift untuk "
+"melepaskannya pada format yang sesuai."
 
+#: files/system/usr/bin/saifdora-welcome:325
 msgid "Launch MDM"
-msgstr "Buka MDM"
+msgstr "Pengurus Muat Turun"
 
+#: files/system/usr/bin/saifdora-welcome:327
+msgid "Download Manager"
+msgstr "Pengurus Muat Turun"
+
+#: files/system/usr/bin/saifdora-welcome:328
+msgid ""
+"Fast download manager automatically integrated with Firefox (Mister Download"
+" Manager)."
+msgstr ""
+"Pengurus muat turun pantas disepadukan secara automatik dengan Firefox "
+"(Mister Download Manager)."
+
+#: files/system/usr/bin/saifdora-welcome:335
+msgid "Launch ZapFast"
+msgstr "Lancarkan ZapFast"
+
+#: files/system/usr/bin/saifdora-welcome:337
 msgid "ZapFast"
 msgstr "ZapFast"
 
+#: files/system/usr/bin/saifdora-welcome:338
 msgid "Fast native desktop WhatsApp client built with Rust."
 msgstr "Klien desktop WhatsApp yang pantas dan natif dibina dengan Rust."
 
-msgid "Launch ZapFast"
-msgstr "Buka ZapFast"
-
+#: files/system/usr/bin/saifdora-welcome:351
 msgid "Interface Customization & Extensions"
 msgstr "Penyesuaian Antara Muka & Sambungan"
 
+#: files/system/usr/bin/saifdora-welcome:352
 msgid ""
 "Enhance and personalize your GNOME desktop with pre-configured extensions "
 "and utilities."
 msgstr "Peribadikan desktop GNOME anda dengan sambungan sedia ada."
 
-msgid "Pre-Activated Extensions"
-msgstr "Sambungan Pra-Aktif"
+#: files/system/usr/bin/saifdora-welcome:360
+msgid "Lockscreen Clock"
+msgstr "Jam Skrin Kunci"
 
-msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
-msgstr "ArcMenu, Dash to Dock, Clipboard Indicator dan Adwaita Lock Clock."
+#: files/system/usr/bin/saifdora-welcome:361
+msgid ""
+"Lockscreen clock with weather and smart regional dates (adapting month names"
+" and local calendars by country), fully customizable."
+msgstr ""
+"Jam skrin kunci dengan cuaca dan tarikh serantau pintar, boleh disesuaikan "
+"sepenuhnya."
 
-msgid "Extension Manager"
-msgstr "Pengurus Sambungan"
-
-msgid "Search, install, and update GNOME Shell extensions seamlessly."
-msgstr "Cari, pasang dan kemas kini sambungan GNOME Shell dengan mudah."
-
+#: files/system/usr/bin/saifdora-welcome:367
 msgid "Manage Extensions"
 msgstr "Urus Sambungan"
 
-msgid "Refine"
-msgstr "Refine"
+#: files/system/usr/bin/saifdora-welcome:369
+msgid "Desktop Extensions"
+msgstr "Sambungan Desktop"
 
-msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
-msgstr "Ubah suai tetapan tersembunyi GNOME, fon dan tingkah laku sistem."
+#: files/system/usr/bin/saifdora-welcome:370
+msgid "Includes ArcMenu app launcher, Dash to Dock, and Clipboard Indicator."
+msgstr "Termasuk pelancar ArcMenu, Dash to Dock, dan Penunjuk Papan Keratan."
 
+#: files/system/usr/bin/saifdora-welcome:377
 msgid "Customize Desktop"
 msgstr "Sesuaikan Desktop"
 
-msgid "Hardware & Graphics Drivers"
-msgstr "Perkakasan & Pemacu Grafik"
+#: files/system/usr/bin/saifdora-welcome:379
+msgid "Interface Tweaks"
+msgstr "Ubah Suai Antara Muka"
 
+#: files/system/usr/bin/saifdora-welcome:380
+msgid "Fine-tune window buttons and GNOME appearance using Refine."
+msgstr "Perhalusi butang tetingkap dan penampilan GNOME menggunakan Refine."
+
+#: files/system/usr/bin/saifdora-welcome:393
+msgid "Hardware & System Updates"
+msgstr "Perkakasan & Kemas Kini Sistem"
+
+#: files/system/usr/bin/saifdora-welcome:394
 msgid ""
 "Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
 msgstr "Prestasi lancar untuk perkakasan Intel, AMD dan NVIDIA."
 
+#: files/system/usr/bin/saifdora-welcome:401
 msgid "Intel & AMD Acceleration"
 msgstr "Pecutan Intel & AMD"
 
+#: files/system/usr/bin/saifdora-welcome:402
 msgid ""
 "Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
 "configured and active."
 msgstr "Pecutan video perkakasan dikonfigurasikan dan aktif."
 
+#: files/system/usr/bin/saifdora-welcome:407
+msgid "Open NVIDIA Manager"
+msgstr "Pengurus NVIDIA"
+
+#: files/system/usr/bin/saifdora-welcome:409
 msgid "NVIDIA & CUDA Drivers"
 msgstr "Pemacu NVIDIA & CUDA"
 
+#: files/system/usr/bin/saifdora-welcome:410
 msgid ""
 "Detect your GPU model, install official drivers, configure CUDA, and manage "
 "Secure Boot."
 msgstr "Kesan model GPU, pasang pemacu rasmi dan konfigurasikan CUDA."
 
-msgid "Open NVIDIA Manager"
-msgstr "Buka Pengurus NVIDIA"
+#: files/system/usr/bin/saifdora-welcome:417
+msgid "Safe Atomic Updates"
+msgstr "Kemas Kini Atomik Selamat"
 
+#: files/system/usr/bin/saifdora-welcome:418
+msgid ""
+"Immutable Fedora Silverblue base protects the system and enables instant "
+"rollbacks."
+msgstr ""
+"Pangkalan tidak berubah Fedora Silverblue melindungi sistem dan membolehkan "
+"pengembalian segera."
+
+#: files/system/usr/bin/saifdora-welcome:430
 msgid "GNOME 51 Navigation Basics"
 msgstr "Asas Navigasi GNOME 51"
 
+#: files/system/usr/bin/saifdora-welcome:431
 msgid ""
 "Master simple gestures and shortcuts to move swiftly through your workspace."
 msgstr "Gerak isyarat dan pintasan mudah untuk melayari ruang kerja anda."
 
+#: files/system/usr/bin/saifdora-welcome:438
 msgid "Super Key & Search"
 msgstr "Kekunci Super & Carian"
 
+#: files/system/usr/bin/saifdora-welcome:439
 msgid ""
 "Press the Super (Windows) key to open the Activities Overview, search apps, "
 "files, or do quick math."
 msgstr ""
 "Tekan kekunci Super untuk membuka Gambaran Keseluruhan dan mencari aplikasi."
 
+#: files/system/usr/bin/saifdora-welcome:445
 msgid "Touchpad Gestures"
 msgstr "Gerak Isyarat Pad Sentuh"
 
+#: files/system/usr/bin/saifdora-welcome:446
 msgid ""
 "Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
 "to switch workspaces."
@@ -192,20 +257,66 @@ msgstr ""
 "Leret 3 jari ke atas/bawah untuk Gambaran; kiri/kanan untuk tukar ruang "
 "kerja."
 
+#: files/system/usr/bin/saifdora-welcome:452
 msgid "Dynamic Workspaces"
 msgstr "Ruang Kerja Dinamik"
 
+#: files/system/usr/bin/saifdora-welcome:453
 msgid ""
 "Workspaces are created automatically as you open windows to keep your "
 "desktop organized."
 msgstr "Ruang kerja dicipta secara automatik semasa anda membuka tetingkap."
 
-msgid "Get Started"
-msgstr "Mulakan"
-
+#: files/system/usr/bin/saifdora-welcome:479
 msgid ""
 "Application installation is completing in the background, it will appear in "
 "the menu within minutes"
 msgstr ""
 "Pemasangan aplikasi sedang diselesaikan di latar belakang, ia akan muncul "
 "dalam menu dalam beberapa minit"
+
+#: files/system/usr/bin/saifdora-welcome:510
+msgid "Get Started"
+msgstr "Mulakan"
+
+#~ msgid "Global Localization"
+#~ msgstr "Penyetempatan Global"
+
+#~ msgid ""
+#~ "Full support for 12 languages with completed GNOME 51 translations and "
+#~ "international fonts."
+#~ msgstr ""
+#~ "Sokongan penuh untuk 12 bahasa dengan terjemahan GNOME 51 yang lengkap dan "
+#~ "fon global."
+
+#~ msgid "Archiving & Documents"
+#~ msgstr "Pengarkiban & Dokumen"
+
+#~ msgid ""
+#~ "Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+#~ "image processing."
+#~ msgstr "Sokongan terbina untuk 7-Zip, RAR, ZIP dan alat pemprosesan dokumen."
+
+#~ msgid "Rumman (File & Media Converter)"
+#~ msgstr "Rumman (Penukar Fail & Media)"
+
+#~ msgid "High-performance media converter and file optimizer."
+#~ msgstr "Penukar media dan pengoptimum fail berprestasi tinggi."
+
+#~ msgid "Pre-Activated Extensions"
+#~ msgstr "Sambungan Pra-Aktif"
+
+#~ msgid "Extension Manager"
+#~ msgstr "Pengurus Sambungan"
+
+#~ msgid "Search, install, and update GNOME Shell extensions seamlessly."
+#~ msgstr "Cari, pasang dan kemas kini sambungan GNOME Shell dengan mudah."
+
+#~ msgid "Refine"
+#~ msgstr "Refine"
+
+#~ msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+#~ msgstr "Ubah suai tetapan tersembunyi GNOME, fon dan tingkah laku sistem."
+
+#~ msgid "Hardware & Graphics Drivers"
+#~ msgstr "Perkakasan & Pemacu Grafik"

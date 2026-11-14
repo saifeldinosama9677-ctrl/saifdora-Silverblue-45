@@ -2,7 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: saifdora-welcome 1.0 (zh_CN)\n"
-"Report-Msgid-Bugs-To: https://github.com/saifeldinosama9677-ctrl/saifdora-Silverblue-45\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 21:35+0200\n"
 "PO-Revision-Date: 2024-11-13 12:00+0000\n"
 "Last-Translator: Saifdora Translation Team\n"
 "Language-Team: zh_CN Translation Team\n"
@@ -12,189 +13,289 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: files/system/usr/bin/saifdora-welcome:92
 msgid "Welcome to Saifdora"
 msgstr "欢迎使用 Saifdora"
 
-msgid "Previous"
-msgstr "上一步"
-
-msgid "Next"
-msgstr "下一步"
-
+#: files/system/usr/bin/saifdora-welcome:114
 msgid "NVIDIA graphics card detected! Official drivers are not installed."
 msgstr "检测到 NVIDIA 显卡！尚未安装官方驱动程序。"
 
+#: files/system/usr/bin/saifdora-welcome:115
 msgid "Install NVIDIA & CUDA Driver"
 msgstr "安装 NVIDIA 和 CUDA 驱动"
 
+#: files/system/usr/bin/saifdora-welcome:141
+msgid "Previous"
+msgstr "上一步"
+
+#: files/system/usr/bin/saifdora-welcome:148
 msgid "Show on startup"
 msgstr "开机时显示"
 
+#: files/system/usr/bin/saifdora-welcome:154
+#: files/system/usr/bin/saifdora-welcome:512
+msgid "Next"
+msgstr "下一步"
+
+#: files/system/usr/bin/saifdora-welcome:272
 msgid "Ready Out of the Box"
 msgstr "开箱即用"
 
+#: files/system/usr/bin/saifdora-welcome:273
 msgid ""
 "Saifdora Silverblue 45 includes comprehensive codecs, hardware acceleration,"
 " and essential utilities pre-configured."
 msgstr "Saifdora Silverblue 45 预先配置了全面的解码器、硬件加速及必备实用工具。"
 
+#: files/system/usr/bin/saifdora-welcome:280
 msgid "Multimedia & Hardware Acceleration"
 msgstr "多媒体与硬件加速"
 
+#: files/system/usr/bin/saifdora-welcome:281
 msgid ""
 "Full codec support (HEVC, AV1, HEIC) and hardware video decoding for Intel "
 "and AMD."
 msgstr "全面支持主流多媒体格式 (HEVC, AV1, HEIC) 以及 Intel 和 AMD 硬件解码。"
 
+#: files/system/usr/bin/saifdora-welcome:287
 msgid "Curated Repositories"
 msgstr "精选软件源"
 
+#: files/system/usr/bin/saifdora-welcome:288
 msgid "Flathub and RPM Fusion (Free & Non-Free) enabled out of the box."
 msgstr "Flathub 与 RPM Fusion 软件源默认已预先启用。"
 
-msgid "Global Localization"
-msgstr "全局多语言支持"
+#: files/system/usr/bin/saifdora-welcome:294
+msgid "Localization & System Tools"
+msgstr "本地化与系统工具"
 
+#: files/system/usr/bin/saifdora-welcome:295
 msgid ""
-"Full support for 12 languages with completed GNOME 51 translations and "
-"international fonts."
-msgstr "完整支持 12 种主流语言，包含补全的 GNOME 51 翻译及国际字体。"
+"Full support for 12 languages with built-in tools for 7-Zip, RAR, and PDF."
+msgstr "全面支持12种语言，内置 7-Zip、RAR 和 PDF 实用工具。"
 
-msgid "Archiving & Documents"
-msgstr "归档与文档"
-
-msgid ""
-"Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
-"image processing."
-msgstr "内置支持 7-Zip、RAR、ZIP 以及 PDF 和高性能图像处理工具。"
-
+#: files/system/usr/bin/saifdora-welcome:307
 msgid "Integrated Productivity Apps"
 msgstr "集成生产力应用"
 
+#: files/system/usr/bin/saifdora-welcome:308
 msgid ""
 "High-performance desktop applications installed natively in your system."
 msgstr "系统原生预装的高性能桌面生产力工具。"
 
-msgid "Rumman (File & Media Converter)"
-msgstr "Rumman (文件与多媒体转换器)"
-
-msgid "High-performance media converter and file optimizer."
-msgstr "高性能多媒体格式转换与文件压缩优化器。"
-
+#: files/system/usr/bin/saifdora-welcome:315
 msgid "Launch Rumman"
 msgstr "启动 Rumman"
 
-msgid "Mister Download Manager"
-msgstr "Mister Download Manager"
+#: files/system/usr/bin/saifdora-welcome:317
+msgid "Rumman"
+msgstr "Rumman"
 
-msgid "Fast download manager automatically integrated with Firefox."
-msgstr "与 Firefox 浏览器深度集成的快速下载管理器。"
+#: files/system/usr/bin/saifdora-welcome:318
+msgid ""
+"Fast, lightweight file converter: drag any file and hold Shift to drop it "
+"onto matching formats."
+msgstr "快速轻量的文件转换器：拖动任意文件并按住 Shift 即可拖放到匹配的格式。"
 
+#: files/system/usr/bin/saifdora-welcome:325
 msgid "Launch MDM"
-msgstr "启动 MDM"
+msgstr "下载管理器"
 
-msgid "ZapFast"
-msgstr "ZapFast"
+#: files/system/usr/bin/saifdora-welcome:327
+msgid "Download Manager"
+msgstr "下载管理器"
 
-msgid "Fast native desktop WhatsApp client built with Rust."
-msgstr "基于 Rust 构建的原生极速 WhatsApp 桌面客户端。"
+#: files/system/usr/bin/saifdora-welcome:328
+msgid ""
+"Fast download manager automatically integrated with Firefox (Mister Download"
+" Manager)."
+msgstr "自动集成至 Firefox 的高速下载管理器（Mister Download Manager）。"
 
+#: files/system/usr/bin/saifdora-welcome:335
 msgid "Launch ZapFast"
 msgstr "启动 ZapFast"
 
+#: files/system/usr/bin/saifdora-welcome:337
+msgid "ZapFast"
+msgstr "ZapFast"
+
+#: files/system/usr/bin/saifdora-welcome:338
+msgid "Fast native desktop WhatsApp client built with Rust."
+msgstr "基于 Rust 构建的原生极速 WhatsApp 桌面客户端。"
+
+#: files/system/usr/bin/saifdora-welcome:351
 msgid "Interface Customization & Extensions"
 msgstr "界面个性化与扩展"
 
+#: files/system/usr/bin/saifdora-welcome:352
 msgid ""
 "Enhance and personalize your GNOME desktop with pre-configured extensions "
 "and utilities."
 msgstr "通过开箱即用的扩展与实用程序个性化定制您的 GNOME 桌面。"
 
-msgid "Pre-Activated Extensions"
-msgstr "预先启用的扩展"
+#: files/system/usr/bin/saifdora-welcome:360
+msgid "Lockscreen Clock"
+msgstr "锁屏时钟"
 
-msgid "ArcMenu, Dash to Dock, Clipboard Indicator, and Adwaita Lock Clock."
-msgstr "ArcMenu、Dash to Dock、剪贴板指示器与 Adwaita 锁屏时钟。"
+#: files/system/usr/bin/saifdora-welcome:361
+msgid ""
+"Lockscreen clock with weather and smart regional dates (adapting month names"
+" and local calendars by country), fully customizable."
+msgstr "带天气与智能本地化日期的锁屏时钟（按地区自适应月份名称与日历），支持高度自定义。"
 
-msgid "Extension Manager"
-msgstr "扩展管理器"
-
-msgid "Search, install, and update GNOME Shell extensions seamlessly."
-msgstr "便捷搜索、安装与更新 GNOME Shell 扩展。"
-
+#: files/system/usr/bin/saifdora-welcome:367
 msgid "Manage Extensions"
 msgstr "管理扩展"
 
-msgid "Refine"
-msgstr "Refine 定制工具"
+#: files/system/usr/bin/saifdora-welcome:369
+msgid "Desktop Extensions"
+msgstr "桌面扩展"
 
-msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
-msgstr "微调 GNOME 隐藏系统设置、字体及桌面交互行为。"
+#: files/system/usr/bin/saifdora-welcome:370
+msgid "Includes ArcMenu app launcher, Dash to Dock, and Clipboard Indicator."
+msgstr "包含 ArcMenu 应用启动器、Dash to Dock 任务栏和剪贴板历史工具。"
 
+#: files/system/usr/bin/saifdora-welcome:377
 msgid "Customize Desktop"
-msgstr "定制桌面"
+msgstr "自定义桌面"
 
-msgid "Hardware & Graphics Drivers"
-msgstr "硬件与图形驱动"
+#: files/system/usr/bin/saifdora-welcome:379
+msgid "Interface Tweaks"
+msgstr "界面微调"
 
+#: files/system/usr/bin/saifdora-welcome:380
+msgid "Fine-tune window buttons and GNOME appearance using Refine."
+msgstr "使用 Refine 工具微调窗口控制按钮与 GNOME 外观。"
+
+#: files/system/usr/bin/saifdora-welcome:393
+msgid "Hardware & System Updates"
+msgstr "硬件与系统更新"
+
+#: files/system/usr/bin/saifdora-welcome:394
 msgid ""
 "Optimized for smooth performance across Intel, AMD, and NVIDIA hardware."
 msgstr "针对 Intel、AMD 和 NVIDIA 硬件架构全面优化流畅度。"
 
+#: files/system/usr/bin/saifdora-welcome:401
 msgid "Intel & AMD Acceleration"
 msgstr "Intel 与 AMD 硬件加速"
 
+#: files/system/usr/bin/saifdora-welcome:402
 msgid ""
 "Hardware video acceleration (VA-API / Mesa / Intel Media Driver) is pre-"
 "configured and active."
 msgstr "视频硬件加速 (VA-API / Mesa / Intel Media Driver) 默认就绪并激活。"
 
+#: files/system/usr/bin/saifdora-welcome:407
+msgid "Open NVIDIA Manager"
+msgstr "NVIDIA 管理器"
+
+#: files/system/usr/bin/saifdora-welcome:409
 msgid "NVIDIA & CUDA Drivers"
 msgstr "NVIDIA 与 CUDA 驱动管理"
 
+#: files/system/usr/bin/saifdora-welcome:410
 msgid ""
 "Detect your GPU model, install official drivers, configure CUDA, and manage "
 "Secure Boot."
 msgstr "自动识别显卡型号，快速安装官方驱动，配置 CUDA 及管理安全启动。"
 
-msgid "Open NVIDIA Manager"
-msgstr "打开 NVIDIA 管理器"
+#: files/system/usr/bin/saifdora-welcome:417
+msgid "Safe Atomic Updates"
+msgstr "安全原子更新"
 
+#: files/system/usr/bin/saifdora-welcome:418
+msgid ""
+"Immutable Fedora Silverblue base protects the system and enables instant "
+"rollbacks."
+msgstr "不可变的 Fedora Silverblue 基础镜像保护系统，并支持即时安全回滚。"
+
+#: files/system/usr/bin/saifdora-welcome:430
 msgid "GNOME 51 Navigation Basics"
 msgstr "GNOME 51 操作基础"
 
+#: files/system/usr/bin/saifdora-welcome:431
 msgid ""
 "Master simple gestures and shortcuts to move swiftly through your workspace."
 msgstr "掌握简单高效的触控手势与快捷键，畅快自如地工作。"
 
+#: files/system/usr/bin/saifdora-welcome:438
 msgid "Super Key & Search"
 msgstr "Super 键与全局搜索"
 
+#: files/system/usr/bin/saifdora-welcome:439
 msgid ""
 "Press the Super (Windows) key to open the Activities Overview, search apps, "
 "files, or do quick math."
 msgstr "轻按 Super (Windows) 键快速打开概览，即时搜索应用、文件或进行快捷运算。"
 
+#: files/system/usr/bin/saifdora-welcome:445
 msgid "Touchpad Gestures"
 msgstr "触控板多点手势"
 
+#: files/system/usr/bin/saifdora-welcome:446
 msgid ""
 "Swipe up/down with 3 fingers for Overview; swipe left/right with 3 fingers "
 "to switch workspaces."
 msgstr "三指上下轻扫切换活动概览；三指左右轻扫切换工作区。"
 
+#: files/system/usr/bin/saifdora-welcome:452
 msgid "Dynamic Workspaces"
 msgstr "动态工作区"
 
+#: files/system/usr/bin/saifdora-welcome:453
 msgid ""
 "Workspaces are created automatically as you open windows to keep your "
 "desktop organized."
 msgstr "打开新窗口时自动创建动态工作区，保持桌面整洁有序。"
 
-msgid "Get Started"
-msgstr "开始探索"
-
+#: files/system/usr/bin/saifdora-welcome:479
 msgid ""
 "Application installation is completing in the background, it will appear in "
 "the menu within minutes"
 msgstr "应用程序正在后台完成安装，几分钟后将显示在菜单中"
+
+#: files/system/usr/bin/saifdora-welcome:510
+msgid "Get Started"
+msgstr "开始探索"
+
+#~ msgid "Global Localization"
+#~ msgstr "全局多语言支持"
+
+#~ msgid ""
+#~ "Full support for 12 languages with completed GNOME 51 translations and "
+#~ "international fonts."
+#~ msgstr "完整支持 12 种主流语言，包含补全的 GNOME 51 翻译及国际字体。"
+
+#~ msgid "Archiving & Documents"
+#~ msgstr "归档与文档"
+
+#~ msgid ""
+#~ "Integrated support for 7-Zip, RAR, ZIP, PDF tools, and high-performance "
+#~ "image processing."
+#~ msgstr "内置支持 7-Zip、RAR、ZIP 以及 PDF 和高性能图像处理工具。"
+
+#~ msgid "Rumman (File & Media Converter)"
+#~ msgstr "Rumman (文件与多媒体转换器)"
+
+#~ msgid "High-performance media converter and file optimizer."
+#~ msgstr "高性能多媒体格式转换与文件压缩优化器。"
+
+#~ msgid "Pre-Activated Extensions"
+#~ msgstr "预先启用的扩展"
+
+#~ msgid "Extension Manager"
+#~ msgstr "扩展管理器"
+
+#~ msgid "Search, install, and update GNOME Shell extensions seamlessly."
+#~ msgstr "便捷搜索、安装与更新 GNOME Shell 扩展。"
+
+#~ msgid "Refine"
+#~ msgstr "Refine 定制工具"
+
+#~ msgid "Tweak hidden GNOME settings, fonts, and desktop behavior."
+#~ msgstr "微调 GNOME 隐藏系统设置、字体及桌面交互行为。"
+
+#~ msgid "Hardware & Graphics Drivers"
+#~ msgstr "硬件与图形驱动"
