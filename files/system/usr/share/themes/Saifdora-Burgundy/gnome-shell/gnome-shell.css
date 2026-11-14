@@ -1,0 +1,28 @@
+@import url("resource:///org/gnome/shell/theme/gnome-shell.css");
+
+stage {
+  -st-accent-color: #7a1c33;
+  -st-accent-fg-color: #ffffff;
+}
+
+.quick-toggle:checked {
+  background-color: #7a1c33;
+  color: #ffffff;
+}
+
+.quick-toggle:checked:hover {
+  background-color: #8f223d;
+}
+
+.quick-toggle:checked .quick-toggle-arrow {
+  background-color: #631629;
+}
+
+.quick-toggle:checked .quick-toggle-arrow:hover {
+  background-color: #7a1c33;
+}
+
+.slider {
+  -barlevel-active-background-color: #7a1c33;
+  -barlevel-active-border-color: #7a1c33;
+}

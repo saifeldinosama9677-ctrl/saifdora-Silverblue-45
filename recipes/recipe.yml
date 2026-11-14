@@ -78,6 +78,7 @@ modules:
       - gnome-tweaks
       - gnome-menus
       - adw-gtk3-theme
+      - gnome-shell-extension-user-theme
       - fastfetch
 
       # Hardware detection & Secure Boot management
@@ -107,7 +108,7 @@ modules:
           - com.usebottles.bottles
           - net.davidotek.pupgui2
 
-  # Compile dconf defaults, glib schemas, update MIME database, update icon cache, and customize os-release
+  # Compile dconf defaults, glib schemas, update MIME database, update icon cache, fastfetch hook, and customize os-release
   - type: script
     snippets:
       - "glib-compile-schemas /usr/share/glib-2.0/schemas || true"
@@ -128,8 +129,10 @@ modules:
         else
           echo 'LOGO="saifdora-logo-icon"' >> /usr/lib/os-release
         fi
+        ln -sf ../usr/lib/os-release /etc/os-release
+        grep -q "SAIFDORA_FASTFETCH" /etc/bashrc || printf '\nif [ -x /usr/bin/fastfetch ] && [[ $- == *i* ]] && [ -z "$SAIFDORA_FASTFETCH" ]; then export SAIFDORA_FASTFETCH=1; fastfetch; fi\n' >> /etc/bashrc
 
-  # Enable flatpak system services and user D-Bus reload path
+  # Enable flatpak system services and user systemd units
   - type: systemd
     system:
       enabled:
@@ -138,6 +141,10 @@ modules:
     user:
       enabled:
         - saifdora-flatpak-dbus-reload.path
+        - saifdora-apply-theme.service
+
+  # Regenerate initramfs to update boot splash and Plymouth watermark
+  - type: initramfs
 
   # Container signing policy configuration
   - type: signing

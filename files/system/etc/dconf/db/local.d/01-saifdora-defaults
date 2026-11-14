@@ -1,7 +1,11 @@
 [org/gnome/desktop/interface]
 font-name='Vazirmatn 11'
 document-font-name='Noto Sans Arabic 11'
+accent-color='red'
 
 [org/gnome/shell]
 disable-user-extensions=false
-enabled-extensions=['adwaita-lock-clock@saifeldin.osama', 'rumman-helper@rumman.app', 'arcmenu@arcmenu.com', 'clipboard-indicator@tudmotu.com', 'dash-to-dock@micxgx.gmail.com']
+enabled-extensions=['adwaita-lock-clock@saifeldin.osama', 'rumman-helper@rumman.app', 'arcmenu@arcmenu.com', 'clipboard-indicator@tudmotu.com', 'dash-to-dock@micxgx.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+
+[org/gnome/shell/extensions/user-theme]
+name='Saifdora-Burgundy'

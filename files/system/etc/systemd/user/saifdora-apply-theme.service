@@ -1,0 +1,10 @@
+[Unit]
+Description=Apply Saifdora GTK theme overrides to user profile
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/sh -c 'mkdir -p "$HOME/.config/gtk-4.0" "$HOME/.config/gtk-3.0" && cmp -s /etc/skel/.config/gtk-4.0/gtk.css "$HOME/.config/gtk-4.0/gtk.css" || cp -f /etc/skel/.config/gtk-4.0/gtk.css "$HOME/.config/gtk-4.0/gtk.css"; cmp -s /etc/skel/.config/gtk-3.0/gtk.css "$HOME/.config/gtk-3.0/gtk.css" || cp -f /etc/skel/.config/gtk-3.0/gtk.css "$HOME/.config/gtk-3.0/gtk.css"'
+
+[Install]
+WantedBy=default.target
