@@ -1,0 +1,9 @@
+[Unit]
+Description=Watch Flatpak system D-Bus services directory
+
+[Path]
+PathChanged=/var/lib/flatpak/exports/share/dbus-1/services
+MakeDirectory=false
+
+[Install]
+WantedBy=default.target

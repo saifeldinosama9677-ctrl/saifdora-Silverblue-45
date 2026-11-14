@@ -1,0 +1,6 @@
+[Unit]
+Description=Reload user D-Bus daemon when Flatpak installs new services
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl --user reload dbus.service

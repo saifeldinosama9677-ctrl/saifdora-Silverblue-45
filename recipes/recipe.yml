@@ -110,11 +110,14 @@ modules:
       - "glib-compile-schemas /usr/share/glib-2.0/schemas || true"
       - "dconf update"
 
-  # Enable flatpak system language configuration service on boot
+  # Enable flatpak system language configuration service and user D-Bus reload path
   - type: systemd
     system:
       enabled:
         - flatpak-configure-languages.service
+    user:
+      enabled:
+        - saifdora-flatpak-dbus-reload.path
 
   # Container signing policy configuration
   - type: signing

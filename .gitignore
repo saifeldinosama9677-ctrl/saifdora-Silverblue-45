@@ -12,3 +12,4 @@ build-output/
 iso-output/
 __pycache__/
 *.pyc
+/.bluebuild-scripts_*
