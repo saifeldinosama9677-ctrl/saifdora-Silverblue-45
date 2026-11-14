@@ -26,7 +26,6 @@ modules:
       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
     remove:
       - gnome-tour
-      - gnome-tweaks
     install:
       # RPM Fusion release packages
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
@@ -142,13 +141,16 @@ modules:
         # Replace fedora icons across all sizes in hicolor
         for dir in /usr/share/icons/hicolor/*x*/apps; do
           if [ -d "$dir" ]; then
-            size=$(basename "$dir" | cut -d'x' -f1)
-            rm -f "$dir/fedora-logo-icon.png" "$dir/distributor-logo.png" "$dir/org.fedoraproject.Fedora.png"
-            if command -v rsvg-convert >/dev/null 2>&1; then
-              rsvg-convert -w "$size" -h "$size" /usr/share/icons/hicolor/scalable/apps/saifdora-logo-icon.svg -o "$dir/fedora-logo-icon.png" || true
+            dim=$(basename "$(dirname "$dir")" | cut -d'@' -f1)
+            size=$(echo "$dim" | cut -d'x' -f1)
+            if [ -n "$size" ] && [ "$size" -eq "$size" ] 2>/dev/null; then
+              rm -f "$dir/fedora-logo-icon.png" "$dir/distributor-logo.png" "$dir/org.fedoraproject.Fedora.png"
+              if command -v rsvg-convert >/dev/null 2>&1; then
+                rsvg-convert -w "$size" -h "$size" /usr/share/icons/hicolor/scalable/apps/saifdora-logo-icon.svg -o "$dir/fedora-logo-icon.png" || true
+              fi
+              cp -f --remove-destination "$dir/fedora-logo-icon.png" "$dir/distributor-logo.png" || true
+              cp -f --remove-destination "$dir/fedora-logo-icon.png" "$dir/org.fedoraproject.Fedora.png" || true
             fi
-            cp -f --remove-destination "$dir/fedora-logo-icon.png" "$dir/distributor-logo.png" || true
-            cp -f --remove-destination "$dir/fedora-logo-icon.png" "$dir/org.fedoraproject.Fedora.png" || true
           fi
         done
 
@@ -157,6 +159,9 @@ modules:
         cp -f --remove-destination /usr/share/icons/hicolor/scalable/apps/saifdora-logo-icon.svg /usr/share/icons/hicolor/scalable/apps/fedora-logo-icon.svg
         cp -f --remove-destination /usr/share/icons/hicolor/scalable/apps/saifdora-logo-icon.svg /usr/share/icons/hicolor/scalable/apps/distributor-logo.svg
         cp -f --remove-destination /usr/share/icons/hicolor/scalable/apps/saifdora-logo-icon.svg /usr/share/icons/hicolor/scalable/apps/org.fedoraproject.Fedora.svg
+
+        # Safely remove gnome-tweaks if present in base image
+        rpm -q gnome-tweaks >/dev/null 2>&1 && rpm -e --nodeps gnome-tweaks || true
 
         gtk-update-icon-cache -f /usr/share/icons/hicolor || true
         sed -i 's/^NAME=.*/NAME="Saifdora"/' /usr/lib/os-release
