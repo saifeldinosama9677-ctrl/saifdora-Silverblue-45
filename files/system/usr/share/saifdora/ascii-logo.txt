@@ -1,0 +1,19 @@
+$1             .',;::::;,'.
+$1         .';:cccccccccccc:;,.
+$1      .;cccccccccccccccccccccc;.
+$1    .:cccccccccccccccccccccccccc:.
+$1  .;cccccccccc;.      .,;ccccccccc;.
+$1 .:cccccccc:.            .:cccccccc:.
+$1.:cccccccc:    .,:;;;;:,.  :cccccccc:.
+$1,ccccccccc:   :cccccccccc: :ccccccccc,
+$1:ccccccccc:   :cccccccccc:.:ccccccccc:
+$1:cccccccccc:.  ';:cccccccccccccccccc:
+$1cccccccccccccc:,.  .':cccccccccccccc;
+$1ccccccccccccccccc:.   :ccccccccccccc'
+$1cccccccc: :cccccccc:   :ccccccccccc;
+$1cccccccc:  ':;;;;:'    :ccccccccc;
+$1ccccccccc:.          .:cccccccc:,
+$1cccccccccccc;..  ..;cccccccccc:,.
+$1:cccccccccccccccccccccccccc:'.
+$1.:cccccccccccccccccccccc:;,..
+$1  '::cccccccccccccc::;,.

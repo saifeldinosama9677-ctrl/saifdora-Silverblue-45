@@ -78,6 +78,7 @@ modules:
       - gnome-tweaks
       - gnome-menus
       - adw-gtk3-theme
+      - fastfetch
 
       # Hardware detection & Secure Boot management
       - pciutils
@@ -106,12 +107,13 @@ modules:
           - com.usebottles.bottles
           - net.davidotek.pupgui2
 
-  # Compile dconf defaults, glib schemas, update MIME database, and customize os-release
+  # Compile dconf defaults, glib schemas, update MIME database, update icon cache, and customize os-release
   - type: script
     snippets:
       - "glib-compile-schemas /usr/share/glib-2.0/schemas || true"
       - "dconf update"
       - "update-desktop-database /usr/share/applications || true"
+      - "gtk-update-icon-cache -f /usr/share/icons/hicolor || true"
       - |
         sed -i 's/^NAME=.*/NAME="Saifdora"/' /usr/lib/os-release
         sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="Saifdora 45 (Silverblue)"/' /usr/lib/os-release
@@ -120,6 +122,11 @@ modules:
           sed -i 's/^ANSI_COLOR=.*/ANSI_COLOR="0;38;2;122;28;51"/' /usr/lib/os-release
         else
           echo 'ANSI_COLOR="0;38;2;122;28;51"' >> /usr/lib/os-release
+        fi
+        if grep -q '^LOGO=' /usr/lib/os-release; then
+          sed -i 's/^LOGO=.*/LOGO="saifdora-logo-icon"/' /usr/lib/os-release
+        else
+          echo 'LOGO="saifdora-logo-icon"' >> /usr/lib/os-release
         fi
 
   # Enable flatpak system services and user D-Bus reload path
