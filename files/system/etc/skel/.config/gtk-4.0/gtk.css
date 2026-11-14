@@ -1,17 +1,12 @@
-:root,
-window,
-dialog,
-popover,
-toast,
-.background {
+@define-color accent_bg_color #7a1c33;
+@define-color accent_fg_color #ffffff;
+@define-color accent_color #e06c88;
+
+:root:root {
   --accent-bg-color: #7a1c33 !important;
   --accent-fg-color: #ffffff !important;
   --accent-color: #e06c88 !important;
 }
-
-@define-color accent_bg_color #7a1c33;
-@define-color accent_fg_color #ffffff;
-@define-color accent_color #e06c88;
 
 switch:checked,
 checkbutton:checked check,
@@ -21,8 +16,4 @@ progressbar progress,
 button.suggested-action {
   background-color: #7a1c33 !important;
   color: #ffffff !important;
-}
-
-.navigation-sidebar row:selected {
-  background-color: alpha(#7a1c33, 0.28) !important;
 }

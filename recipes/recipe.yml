@@ -130,19 +130,36 @@ modules:
         cp -f --remove-destination /usr/share/pixmaps/saifdora-gdm-logo.png /usr/share/pixmaps/fedora-gdm-logo.png || true
         cp -f --remove-destination /usr/share/pixmaps/saifdora-gdm-logo.png /usr/share/pixmaps/fedora-logo-small.png || true
 
-        # Settings horizontal logo (light mode and dark mode)
-        rm -f /usr/share/pixmaps/fedora-logo.svg /usr/share/pixmaps/fedora-logo.png /usr/share/pixmaps/fedora-logo-sprite.png
-        cp -f --remove-destination /usr/share/pixmaps/fedora-logo-sprite.svg /usr/share/pixmaps/fedora-logo.svg
-        if command -v rsvg-convert >/dev/null 2>&1; then
-          rsvg-convert -w 340 -h 96 /usr/share/pixmaps/fedora-logo-sprite.svg -o /usr/share/pixmaps/fedora-logo-sprite.png || true
-        fi
-        cp -f --remove-destination /usr/share/pixmaps/fedora-logo-sprite.png /usr/share/pixmaps/fedora-logo.png || true
-        if [ -f /usr/share/pixmaps/fedora-logo-white.svg ]; then
-          rm -f /usr/share/pixmaps/fedora-logo-white.png
-          if command -v rsvg-convert >/dev/null 2>&1; then
-            rsvg-convert -w 340 -h 96 /usr/share/pixmaps/fedora-logo-white.svg -o /usr/share/pixmaps/fedora-logo-white.png || true
-          fi
-        fi
+        # Replace all fedora-logos wordmarks across the system
+        for f in $(rpm -ql fedora-logos 2>/dev/null) /usr/share/pixmaps/fedora*.svg /usr/share/pixmaps/fedora*.png; do
+          [ -e "$f" ] || [ -L "$f" ] || continue
+          case "$f" in
+            *icon*|*distributor*|*watermark*|*system-logo*) continue ;;
+          esac
+          case "$f" in
+            *.svg)
+              rm -f "$f"
+              if echo "$f" | grep -qiE "dark|white"; then
+                cp -f /usr/share/saifdora/wordmark-dark.svg "$f" || true
+              else
+                cp -f /usr/share/saifdora/wordmark-light.svg "$f" || true
+              fi
+              ;;
+            *.png)
+              dims=$(python3 -c 'import struct,sys; d=open(sys.argv[1],"rb").read(24); print("%d %d"%struct.unpack(">II",d[16:24])) if len(d)>=24 and d[:8]==b"\x89PNG\r\n\x1a\n" else print("340 96")' "$f" 2>/dev/null || echo "340 96")
+              w=$(echo "$dims" | cut -d' ' -f1)
+              h=$(echo "$dims" | cut -d' ' -f2)
+              [ -n "$w" ] && [ "$w" -gt 0 ] 2>/dev/null || w=340
+              [ -n "$h" ] && [ "$h" -gt 0 ] 2>/dev/null || h=96
+              rm -f "$f"
+              if echo "$f" | grep -qiE "dark|white"; then
+                rsvg-convert -w "$w" -h "$h" /usr/share/saifdora/wordmark-dark.svg -o "$f" || true
+              else
+                rsvg-convert -w "$w" -h "$h" /usr/share/saifdora/wordmark-light.svg -o "$f" || true
+              fi
+              ;;
+          esac
+        done
 
         # Replace fedora icons across all sizes in hicolor
         for dir in /usr/share/icons/hicolor/*x*/apps; do
